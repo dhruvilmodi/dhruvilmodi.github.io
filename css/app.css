@@ -1,0 +1,67 @@
+body{
+    background-image: url(../images/bgImage.png);
+    background-size: contain;
+    background-position: fixed;
+    color: #FFF;
+}
+
+ul.menu{
+    background-color: #1D488B;
+    color: #FFF;
+}
+
+ul.menu > li > a{
+    color: #FFF;
+}
+
+.top-bar{
+    background-color: #1D488B;
+    color: #FFF;
+}
+
+#logo{
+    width: 200px;
+    margin: 40px;
+}
+
+hr{
+    transform: rotate(90deg);
+    width: 50px;
+}
+
+p{
+    text-align: justify;
+}
+
+.grid-container-big {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 100rem;
+    margin: 0 0;
+    background-image: url(../images/curve.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #1D488B;
+}
+@media print, screen and (min-width: 40em) {
+    .grid-container {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem; } }
+.grid-container.fluid {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 100%;
+    margin: 0 auto; }
+    @media print, screen and (min-width: 40em) {
+    .grid-container.fluid {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+.grid-container.full {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+    margin: 0 auto; }
+
+.grid-container{
+    background-color: #1D488B;
+}
