@@ -1,8 +1,13 @@
+h1,h2,h3,h4,h5,h6,p,div,input,button{
+    font-family: 'Nunito', sans-serif;
+}
+
 body{
     background-image: url(../images/bgImage.png);
     background-size: contain;
     background-position: fixed;
     color: #FFF;
+    font-family: 'Nunito', sans-serif;
 }
 
 ul.menu{
@@ -42,6 +47,7 @@ p{
     background-position: top;
     background-repeat: no-repeat;
     background-color: #1D488B;
+    font-family: 'Nunito', sans-serif;
 }
 @media print, screen and (min-width: 40em) {
     .grid-container {
@@ -64,4 +70,5 @@ p{
 
 .grid-container{
     background-color: #1D488B;
+    font-family: 'Nunito', sans-serif;
 }
