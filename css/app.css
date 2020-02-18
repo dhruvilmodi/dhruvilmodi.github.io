@@ -38,6 +38,27 @@ p{
     text-align: justify;
 }
 
+.icons{
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.card{
+    border-radius: 15px;
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+.padding-bottom{
+    padding-bottom: 20px;
+}
+
+.padding{
+    padding: 5px;
+}
+
 .grid-container-big {
     padding-right: 0.625rem;
     padding-left: 0.625rem;
