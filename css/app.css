@@ -68,8 +68,7 @@ p{
     padding-right: 0.625rem;
     padding-left: 0.625rem;
     max-width: 100rem;
-    margin: 0 0;
-    background-image: url(../images/curve.svg);
+    margin: 0;
     background-position: top;
     background-repeat: no-repeat;
     background-color: #1D488B;
@@ -102,17 +101,27 @@ p{
 /* homepage */
 
 #homePage{
+    height: 500px;
 }
 
-#skillSets{
-    height: 100vh;
+svg {
+    width: 100%;
+    position: relative;
+    margin-bottom: -10px;
+    margin-top: -150px;
 }
+
+/* skillsets */
+
+#skillSets{
+    height: 768px;
+}
+
+/* projects */
 
 #projects{
     height: 100vh;
 }
-
-/* projects */
 
 .card{
     transition: 0.2s all;
