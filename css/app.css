@@ -1,5 +1,6 @@
-h1,h2,h3,h4,h5,h6,p,div,input,button{
+h1,h2,h3,h4,h5,h6,p,div,input,button,div{
     font-family: 'Nunito', sans-serif;
+    outline: none;
 }
 
 body{
@@ -13,6 +14,7 @@ body{
 ul.menu{
     background-color: #1D488B;
     color: #FFF;
+    z-index: 1000;
 }
 
 a{
@@ -22,6 +24,8 @@ a{
 .top-bar{
     background-color: #1D488B;
     color: #FFF;
+    z-index: 1000;
+
 }
 
 #logo{
@@ -93,4 +97,112 @@ p{
 .grid-container{
     background-color: #1D488B;
     font-family: 'Nunito', sans-serif;
+}
+
+/* homepage */
+
+#homePage{
+}
+
+#skillSets{
+    height: 100vh;
+}
+
+#projects{
+    height: 100vh;
+}
+
+/* projects */
+
+.card{
+    transition: 0.2s all;
+    position: relative;
+    border: none;
+    height: 300px;
+}
+
+.card > img{
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.text {
+    color: #000;
+    font-size: 14px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.textHeader {
+    color: #000;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+a:visited{
+    color: white;
+}
+
+.customButton{
+    background-color: rgb(12, 114, 12);
+    padding: 10px;
+    opacity: 1;
+    z-index: 1000;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.1s all;
+    cursor: pointer;
+    outline: none;
+}
+
+.customButton:hover{
+    animation: gradient 100ms;
+    background: #f88;
+    color: #000;
+    box-shadow: none;
+}
+
+
+@keyframes gradient {
+    0% {
+        background: radial-gradient(circle at center, rgba( 255, 125 , 125, 0 ) 0%, #fff 0%, #fff 100%);
+    }
+    25% {
+        background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.3 ) 24%, #fff 25%, #fff 100%);
+    }
+    50% {
+        background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.5 ) 49%, #fff 50%, #fff 100%);
+    }
+    75% {
+        background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.8 ) 74%, #fff 75%, #fff 100%);
+    }
+    100% {
+        color: #fff;
+        background: radial-gradient(circle at center, #f88 99%, #fff 100%, #fff 100%);
+    }
 }

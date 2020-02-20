@@ -14,18 +14,19 @@
     <!-- navigation -->
     <div class="sticky navigation" data-sticky data-margin-top="0">
       <!-- <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="small">
-        <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+        <a class="menu-icon" type="button" data-toggle="responsive-menu"></a>
       </div> -->
       <div class="top-bar box-shadow" id="responsive-menu">
         <ul class="menu">
-          <li><a href="https://dhruvilmodi.com">Home</a></li>
-          <li><a href="https://dhruvilmodi.com">Projects</a></li>
+          <li><a href="#homePage">Home</a></li>
+          <li><a href="#skillSets">Skill-Sets</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="https://dhruvilmodi.com">Contact</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="grid-x grid-padding-x">
+    <div class="grid-x grid-padding-x" id="homePage">
       <div class="large-12 cell text-center">
         <img src="./images/dhruvilLogo.png" alt="logo" id="logo">
       </div>
@@ -37,7 +38,7 @@
         <!-- home page -->
         <div class="grid-x grid-padding-x">
 
-          <div class="large-12 small-12 cell margin-top">
+          <div class="large-12 small-12 cell margin-top" id="homePage">
             <h4>Who I Am?</h4>
             <hr>
             <p>A front-end UX/UI Designer graduated from Contemporary Web Design program from Durham College. I like to design SVG images, icons and creative designs of a website. I am the A/B kind of person who always have a backup plan ready if one fails.</p>
@@ -45,7 +46,7 @@
 
         </div>
 
-        <div class="grid-x grid-padding-x">
+        <div class="grid-x grid-padding-x" id="skillSets">
           <!-- skill sets -->
           <div class="large-12 cell">
             <h4>Skill-Sets</h4>
@@ -95,7 +96,7 @@
           </div>
         </div>
 
-          <div class="grid-x grid-padding-x">
+          <div class="grid-x grid-padding-x" id="projects">
             <!-- skill sets -->
             <div class="large-12 small-12 cell">
               <h4>Projects</h4>
@@ -103,55 +104,118 @@
   
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/madMovies.png" alt="mad movies">
+                <img src="./images/screenshots/madMovies.png" alt="mad movies" class="image" id="madMovies">
+                <div class="middle" id="madMoviesDetails">
+                  <div class="textHeader">Mad Movies</div>
+                  <div class="text">Fetch MySQL Database using AJAX and PHP.</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript, PHP, AJAX, MySQL, Foundation Frameworks</div>
+                  <a href="https://dhruvilmodi.com/projects/madMovies/dynamic_site/" target="_blank" class="customButton">Visit Site</a href="https://dhruvilmodi.com/projects/madMovies/dynamic_site/">
+                </div>
               </div>
             </div>
 
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/standAloneSvg.png" alt="standalone svg">
+                <img src="./images/screenshots/standAloneSvg.png" alt="standalone svg" class="image" id="standalone">
+                <div class="middle" id="standaloneDetails">
+                  <div class="textHeader">SVG Animation</div>
+                  <div class="text">Standalone SVG animations</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript, GSAP Library, Foundation Frameworks</div>
+                  <a href="https://dhruvilmodi.com/projects/standAloneSVGAnimation/" target="_blank" class="customButton">Visit Site</a>
+                </div>
               </div>
             </div>
 
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/mission.png" alt="mission chandrayaan">
+                <img src="./images/screenshots/mission.png" alt="mission chandrayaan" class="image" id="missionChandra">
+                <div class="middle" id="missionChandraDetails">
+                  <div class="textHeader">Inline SVG Animation</div>
+                  <div class="text">SVG Animation using inline svg code</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript, GSAP Library</div>
+                  <a href="https://dhruvilmodi.com/projects/missionChandrayaan/" target="_blank" class="customButton">Visit Site</a>
+                </div>
               </div>
             </div>
 
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/regexForm.png" alt="regex Form">
+                <img src="./images/screenshots/regexForm.png" alt="regex Form" class="image" id="regexForm">
+                <div class="middle" id="regexFormDetails">
+                  <div class="textHeader">Regex Form</div>
+                  <div class="text">Use of Regular Expressions for the form.</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript</div>
+                  <a href="https://dhruvilmodi.com/projects/regexForm/" target="_blank" class="customButton">Visit Site</a>
+                </div>
               </div>
             </div>
 
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/tamogotchi.png" alt="tamogotchi animation">
+                <img src="./images/screenshots/tamogotchi.png" alt="tamogotchi animation" class="image">
+                <div class="middle">
+                  <div class="textHeader">Mad Movies</div>
+                  <div class="text">Fetch MySQL Database using AJAX and PHP.</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript, PHP, AJAX, MySQL, Foundation Frameworks</div>
+                  <a class="customButton">Visit Site</a>
+                </div>
               </div>
             </div>
 
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/easyGroceries.png" alt="easy groceries">
+                <img src="./images/screenshots/easyGroceries.png" alt="easy groceries" class="image">
+                <div class="middle">
+                  <div class="textHeader">Mad Movies</div>
+                  <div class="text">Fetch MySQL Database using AJAX and PHP.</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript, PHP, AJAX, MySQL, Foundation Frameworks</div>
+                  <a class="customButton">Visit Site</a>
+                </div>
               </div>
             </div>
 
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/portHopeFair.png" alt="port hope fair">
+                <img src="./images/screenshots/portHopeFair.png" alt="port hope fair" class="image">
+                <div class="middle">
+                  <div class="textHeader">Mad Movies</div>
+                  <div class="text">Fetch MySQL Database using AJAX and PHP.</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript, PHP, AJAX, MySQL, Foundation Frameworks</div>
+                  <a class="customButton">Visit Site</a>
+                </div>
               </div>
             </div>
 
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/restaurantApp.png" alt="resaurant app">
+                <img src="./images/screenshots/restaurantApp.png" alt="resaurant app" class="image">
+                <div class="middle">
+                  <div class="textHeader">Mad Movies</div>
+                  <div class="text">Fetch MySQL Database using AJAX and PHP.</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript, PHP, AJAX, MySQL, Foundation Frameworks</div>
+                  <a class="customButton">Visit Site</a>
+                </div>
               </div>
             </div>
 
             <div class="large-4 small-12 cell">
               <div class="card">
-                <img src="./images/screenshots/infoGraphics.png" alt="infographics">
+                <img src="./images/screenshots/infoGraphics.png" alt="infographics" class="image">
+                <div class="middle">
+                  <div class="textHeader">Mad Movies</div>
+                  <div class="text">Fetch MySQL Database using AJAX and PHP.</div>
+                  <div class="textHeader">Technologies Used</div>
+                  <div class="text">JavaScript, PHP, AJAX, MySQL, Foundation Frameworks</div>
+                  <a class="customButton">Visit Site</a>
+                </div>
               </div>
             </div>            
           </div>          
@@ -159,10 +223,12 @@
       </div>
 
     </div>
-
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/smoothscroll.js"></script>
   </body>
 </html>
