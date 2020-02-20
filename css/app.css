@@ -173,6 +173,22 @@ box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
         width: 200px;
         margin: 40px;
     }
+
+    #email{
+        color: #d44638;
+    }
+    
+    #fb{
+        color: #3b5998;
+    }
+    
+    #insta{
+        color: #fe4164;
+    }
+    
+    #twitter{
+        color: #00acee;
+    }
 }
 
 svg {
@@ -293,4 +309,11 @@ a:visited{
 #contact{
     height: 100%;
     min-height: 768px;
+}
+
+/* footer and social media logo */
+
+.socialIcons{
+    margin-bottom: 30px;
+    height: 40px;
 }
