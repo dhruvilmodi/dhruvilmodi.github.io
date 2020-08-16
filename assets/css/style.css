@@ -14,6 +14,44 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.para{
+    color: #aaaaaa;
+    text-align: justify;
+}
+
+.gold{
+    color: gold;
+    font-weight: 500;
+}
+
+.orange{
+    color: orangered;
+    font-weight: 500;
+}
+
+/******************* nav *******************/
+
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background: #000000;
+    box-shadow: 0px 3px 6px #ff450050;
+    z-index: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+}
+
+nav a{
+    color: gold;
+}
+
 /******************* landing page *******************/
 
 #landingPage{
@@ -23,7 +61,7 @@ body::-webkit-scrollbar {
     flex-direction: row;
     background-image: url(../images/heroImage.svg);
     background-position: top;
-    background-size: cover;
+    background-size: 110%;
     background-repeat: no-repeat;
 }
 
@@ -50,6 +88,8 @@ body::-webkit-scrollbar {
 #welcomeSubText{
     opacity: 0;
     color: #BBBBBB;
+    position: absolute;
+    bottom: 50px;
 }
 
 /******************* about me *******************/
@@ -57,7 +97,65 @@ body::-webkit-scrollbar {
 #aboutMe{
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: row;
     background: #000;
+    padding: 100px 0;
+}
+
+/* ------------------- Mobile View ------------------- */
+
+@media screen and (min-width: 320px) and (max-width: 800px) {
+
+    .grid-container{
+        padding: 20px;
+    }
+
+    /******************* landing page *******************/
+
+    #landingPage{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        background-image: url(../images/heroImage.svg);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .logoContainer{
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .5);  
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo{
+        height: 200px;
+        border-radius: 50%;
+        opacity: 0;
+        margin-bottom: 20px;
+    }
+
+    #welcomeSubText{
+        opacity: 0;
+        color: #BBBBBB;
+        position: absolute;
+        bottom: 50px;
+    }
+
+    /******************* about me *******************/
+
+    #aboutMe{
+        height: 100vh;
+        width: 100vw;
+        background: #000;
+        padding: 50px 0;
+    }
+
 }
