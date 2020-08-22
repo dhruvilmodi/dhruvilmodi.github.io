@@ -42,7 +42,6 @@ function handleComplete(evt,comp) {
 
 /* -------------------------------------------------------------- */
 
-
-window.onload = function(){
+$(document).ready(function(){
     heroPageAnimation();
-}
+});

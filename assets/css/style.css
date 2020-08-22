@@ -33,7 +33,14 @@ nav{
 
 nav a{
     text-decoration: none;
-    color: #FFFFFF;
+    color: #4b0082;
+    transition: 0.5s;
+    font-weight: 500;
+}
+
+nav a:hover{
+    color: #000000;
+    font-weight: 600;
 }
 
 /* --------------- heropage --------------- */
@@ -56,6 +63,7 @@ canvas{
     height: 100vh;
     display: flex;
     position: relative;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 100;
