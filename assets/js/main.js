@@ -1,45 +1,48 @@
-let logo = document.querySelector("#logo");
-let welcomeText = document.querySelector("#welcomeText");
-let welcomeSubText = document.querySelector("#welcomeSubText");
-let nav = document.querySelector("nav");
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 
-function welcomeanimation() {
-    // logo
-    gsap.to(logo, {
-        opacity: 1,
-        ease: "power2.inOut"
-    });
-    // blinking animation
-    gsap.fromTo(welcomeText, {
-        opacity: 0,
-    },{
-        opacity: 1,
-        ease: "power2.inOut",
-        delay: 0.5
-    });
-    // subtext
-    gsap.fromTo(welcomeSubText, {
-        opacity: 0,
-        ease: "power2.inOut",
-    },{
-        opacity: 1,
-        ease: "power2.inOut",
-        duration: 1,
-        delay: 1,
-        repeat: -1,
-        yoyo: true
-    });
+// onload animation
+function heroPageAnimation() {
+    canvas = document.getElementById("canvas");
+    anim_container = document.getElementById("animation_container");
+    dom_overlay_container = document.getElementById("dom_overlay_container");
+    var comp=AdobeAn.getComposition("DEDC142DB8DF46A199A706DCBEC12A50");
+    var lib=comp.getLibrary();
+    var loader = new createjs.LoadQueue(false);
+    loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+    loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+    var lib=comp.getLibrary();
+    loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+    var images=comp.getImages();	
+    if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+
+    var lib=comp.getLibrary();
+    var ss=comp.getSpriteSheet();
+    var queue = evt.target;
+    var ssMetadata = lib.ssMetadata;
+    for(i=0; i<ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+    }
+    exportRoot = new lib.heroPageAnim();
+    stage = new lib.Stage(canvas);	
+    //Registers the "tick" event listener.
+    fnStartAnimation = function() {
+        stage.addChild(exportRoot);
+        createjs.Ticker.framerate = lib.properties.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+    }	    
+    //Code to support hidpi screens and responsive scaling.
+    AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+    AdobeAn.compositionLoaded(lib.properties.id);
+    fnStartAnimation();
 }
 
-$(document).ready(function(){
-    welcomeanimation();
+/* -------------------------------------------------------------- */
 
-    // on scroll animation
-    window.addEventListener("scroll", function () {
-        if (document.documentElement.scrollTop > 250) {
-            gsap.to(nav, 0.3, {display:"flex", opacity: 1, duration:0.3, ease:"power2.in", yoyo:true});
-        }else{
-            gsap.to(nav, 0.3, {display:"none", opacity: 0, duration:0.3, ease:"power2.out", yoyo:true});
-        }
-    });
-});
+
+window.onload = function(){
+    heroPageAnimation();
+}

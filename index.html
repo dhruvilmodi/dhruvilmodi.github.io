@@ -1,133 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dhurvil Modi - Web Developer</title>
-  <link rel="stylesheet" href="assets/css/foundation.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-</head>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruvil Modi: Web Developer</title>
+    <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
 <body>
   <nav>
-    <a href="#aboutMe">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
   </nav>
-  <!-- landing page -->
-  <section id="landingPage">
-    <article class="logoContainer">
-      <!-- <img src="assets/images/logo.jpg" alt="logo" id="logo"> -->
-      <h3 id="welcomeText">Hi, I am <b>Dhruvil MODI</b>. Your Web Developer.</h3>
-      <h5 id="welcomeSubText">Swipe Down</h5>
-    </article>
-  </section>
 
-  <!-- about me page -->
-  <section id="aboutMe">
-
-    <div class="grid-container">
-
-      <h5 class="gold">About Me:</h5>
-      <p class="para">Dhruvil Modi, aka <b>MODI</b>. I like to make everything simple whether it is a website or any decision of my life.</p>
-
-      <h5 class="para gold">Qualifications:</h5>
-      <ul>
-        <li>Bachelor of Computer Application - India</li>
-        <li>Contemporary Web Design - Canada</li>
-      </ul>
-
-      <h5 class="para gold">Skill Sets</h5>
-      <div class="grid-x padding-x">
-        <div class="cell small-6 medium-6 large-3">
-          <h6 class="orange">Web Development</h6>
-          <ul>
-            <li>HTML 5, CSS 3</li>
-            <li>Javascript</li>
-            <li>jQuery</li>
-            <li>npm</li>
-            <li>SVG</li>
-            <li>GSAP</li>
-            <li>Ajax</li>
-            <li>php</li>
-            <li>phpMyAdmin</li>
-            <li>Wordpress</li>
-          </ul>
-        </div>
-
-
-        <div class="cell small-6 medium-6 large-3 show-for-large">
-          <h6 class="orange">Adobe</h6>
-          <ul>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
-            <li>XD</li>
-            <li>Premier</li>
-            <li>Audition</li>
-          </ul>
-        </div>
-
-        <div class="cell small-6 medium-6 large-3 show-for-large">
-          <h6 class="orange">Frameworks</h6>
-          <ul>
-            <li>Foundation</li>
-            <li>Bootstraps</li>
-          </ul>
-        </div>
-
-        <div class="cell small-6 medium-6 large-3 show-for-large">
-          <h6 class="orange">Other Skills</h6>
-            <ul>
-              <li>Team Work</li>
-              <li>Problem Handling</li>
-              <li>Time Management</li>
-              <li>Taking the charge</li>
-              <li>Effective communication</li>
-            </ul>
-        </div>
-
-        <div class="grid-y grid-margin-y show-for-small-only">
-
-          <div class="cell small-6 medium-6 large-3">
-            <h6 class="orange">Adobe</h6>
-            <ul>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-              <li>XD</li>
-              <li>Premier</li>
-              <li>Audition</li>
-            </ul>
-          </div>
-
-          <div class="cell small-6 medium-6 large-3 grid-padding-y show-for-small-only">
-            <h6 class="orange">Frameworks</h6>
-            <ul>
-              <li>Foundation</li>
-              <li>Bootstraps</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="cell small-12 medium-12 show-for-small-only">
-          <h6 class="orange">Other Skills</h6>
-            <ul>
-              <li>Team Work</li>
-              <li>Problem Handling</li>
-              <li>Time Management</li>
-              <li>Taking the charge</li>
-              <li>Effective communication</li>
-            </ul>
-        </div>
-
-      </div>
-
+  <section class="heroPage" id="animation_container" style="background-color:rgba(0, 0, 0, 1.00);">
+    <canvas id="canvas" style="position: absolute; display: block; background-color:rgba(0, 0, 0, 1.00);"></canvas>
+    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; position: absolute; left: 0px; top: 0px; display: block;">
+    </div>
+    <div class="heroContent">
+        <h1>Dhruvil Modi</h1>
     </div>
   </section>
-  <script src="assets/js/vendor.js"></script>
-  <script src="assets/js/foundation.js"></script>
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  <section class="aboutPage"></section>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="./assets/js/jquery-3.4.1.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/heroPageAnim.js"></script>
 </body>
 </html>
