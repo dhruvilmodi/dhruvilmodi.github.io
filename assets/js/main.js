@@ -6,7 +6,7 @@ function heroPageAnimation() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("D0B52137081046E78024DFE5FF4AA5C9");
+	var comp=AdobeAn.getComposition("105762F5EC3F491B90B0CB62D761F914");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
@@ -19,7 +19,6 @@ function handleFileLoad(evt, comp) {
 	var images=comp.getImages();	
 	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
 }
-
 function handleComplete(evt,comp) {
 	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
 	var lib=comp.getLibrary();
@@ -29,7 +28,7 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.heroPageAnim2();
+	exportRoot = new lib.heroPageAnim3();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
