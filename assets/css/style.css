@@ -145,7 +145,7 @@ canvas{
 .dhruvilImage{
     max-height: 300px;
     margin-bottom: 30px;
-    border-radius: 50%;
+    border-radius: 10px;
     opacity: 0;
     z-index: 150;
 }

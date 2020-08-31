@@ -151,4 +151,13 @@ $(document).ready(function(){
 		}
 	});
 
+	window.addEventListener("scroll", function () {
+        if (document.documentElement.scrollTop > 300) {
+            gsap.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"});
+        }else{
+            gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
+        }
+    });
+
+
 });
