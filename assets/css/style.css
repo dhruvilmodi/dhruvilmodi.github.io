@@ -5,9 +5,9 @@
 }
 
 body{
-    background: #000;
+    background-color: #000;
     color: #FFFFFF;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -122,4 +122,37 @@ canvas{
     height: 40px;
     position: relative;
     top: 30vh;
+}
+
+.aboutHead{
+    opacity: 0;
+    text-align: center;
+    margin: 0px auto 20px auto;
+    z-index: 150;
+}
+
+.aboutContent{
+    /* border: 1px solid red; */
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 150;
+}
+
+.dhruvilImage{
+    max-height: 300px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 150;
+}
+
+.aboutSub{
+    text-align: justify;
+    /* margin-top: 10px; */
+    opacity: 0;
+    z-index: 150;
 }

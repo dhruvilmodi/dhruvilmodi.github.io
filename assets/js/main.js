@@ -3,6 +3,7 @@
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 
 function heroPageAnimation() {
+
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
@@ -74,10 +75,80 @@ function diveTextAnimation() {
     });
 }
 
+/* ---------------- about fish animation ---------------- */
+
+function aboutAnim() {
+
+	aboutAnimated = true;
+
+	$(".fish1About").fadeIn("fast");
+	$(".fish2About").fadeIn("fast");
+	$(".fish3About").fadeIn("fast");
+
+	// fish1
+	gsap.fromTo(".fish1About", {
+		x: "105vw"
+	},{
+		x: -300,
+		ease: "power4.in",
+		duration: 4
+	});
+
+	// fish2
+	gsap.fromTo(".fish2About", {
+		x: "105vw"
+	},{
+		x: -300,
+		ease: "power4.in",
+		duration: 4
+	});
+
+	// fish3
+	gsap.fromTo(".fish3About", {
+		x: "105vw"
+	},{
+		x: -300,
+		ease: "power4.in",
+		duration: 4
+	});
+
+	gsap.to(".aboutHead", 1, {
+		opacity: 1,
+		// delay: 4.5
+	});
+
+	gsap.to(".dhruvilImage", 1, {
+		opacity: 1,
+		// delay: 5
+	});
+
+	gsap.to(".aboutSub", 1, {
+		opacity: 1,
+		// delay: 5.5
+	});
+}
+
 /* -------------------------------------------------------------- */
 
 $(document).ready(function(){
+
+	var aboutAnimated = false;
+
+	$(".fish1About").fadeOut();
+	$(".fish2About").fadeOut();
+	$(".fish3About").fadeOut();
+
     heroPageAnimation();
     subAnimation();
-    diveTextAnimation();
+	diveTextAnimation();
+
+	$(document).on('scroll', function() {
+		// about page animation on scroll
+		if( $(this).scrollTop() >= $('.diveText').position().top){
+			if (aboutAnimated == false) {
+				aboutAnim();
+			}
+		}
+	});
+
 });
