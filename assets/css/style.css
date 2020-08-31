@@ -113,7 +113,7 @@ canvas{
 }
 
 .fish2About{
-    height: 50px;
+    height: 30px;
     position: relative;
     top: 50vh;
 }
@@ -122,6 +122,18 @@ canvas{
     height: 40px;
     position: relative;
     top: 30vh;
+}
+
+.fish4About{
+    height: 50px;
+    position: relative;
+    top: 20vh;
+}
+
+.fish5About{
+    height: 45px;
+    position: relative;
+    top: 35vh;
 }
 
 .aboutHead{

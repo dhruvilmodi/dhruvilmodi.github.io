@@ -75,42 +75,74 @@ function diveTextAnimation() {
     });
 }
 
-/* ---------------- about fish animation ---------------- */
-
-function aboutAnim() {
-
-	aboutAnimated = true;
-
+function fishAnim() {
 	$(".fish1About").fadeIn("fast");
 	$(".fish2About").fadeIn("fast");
 	$(".fish3About").fadeIn("fast");
+	$(".fish4About").fadeIn("fast");
+	$(".fish5About").fadeIn("fast");
 
 	// fish1
 	gsap.fromTo(".fish1About", {
-		x: "105vw"
+		x: "100vw"
 	},{
-		x: -300,
+		x: -700,
 		ease: "power4.in",
-		duration: 4
+		duration: 6,
+		repeat: -1,
+		repeatDelay: 3
 	});
 
 	// fish2
 	gsap.fromTo(".fish2About", {
-		x: "105vw"
+		x: "100vw"
 	},{
-		x: -300,
+		x: -700,
 		ease: "power4.in",
-		duration: 4
+		duration: 6,
+		repeat: -1,
+		repeatDelay: 3
 	});
 
 	// fish3
 	gsap.fromTo(".fish3About", {
-		x: "105vw"
+		x: "100vw"
 	},{
-		x: -300,
+		x: -700,
 		ease: "power4.in",
-		duration: 4
+		duration: 6,
+		repeat: -1,
+		repeatDelay: 3
 	});
+
+	// fish4
+	gsap.fromTo(".fish4About", {
+		x: "100vw"
+	},{
+		x: -700,
+		ease: "power4.in",
+		duration: 6,
+		repeat: -1,
+		repeatDelay: 3
+	});
+
+	// fish5
+	gsap.fromTo(".fish5About", {
+		x: "100vw"
+	},{
+		x: -800,
+		ease: "power4.in",
+		duration: 6,
+		repeat: -1,
+		repeatDelay: 3
+	});
+}
+
+/* ---------------- about animation ---------------- */
+
+function aboutAnim() {
+
+	aboutAnimated = true;
 
 	gsap.to(".aboutHead", 1, {
 		opacity: 1,
@@ -137,10 +169,13 @@ $(document).ready(function(){
 	$(".fish1About").fadeOut();
 	$(".fish2About").fadeOut();
 	$(".fish3About").fadeOut();
+	$(".fish4About").fadeOut();
+	$(".fish5About").fadeOut();
 
     heroPageAnimation();
     subAnimation();
 	diveTextAnimation();
+	fishAnim();
 
 	$(document).on('scroll', function() {
 		// about page animation on scroll
