@@ -25,6 +25,10 @@ body::-webkit-scrollbar {
     color: #DDDDDD;
 }
 
+.grid-container{
+    width: 70vw;
+}
+
 
 /* --------------- navbar --------------- */
 nav{
@@ -167,4 +171,37 @@ canvas{
     /* margin-top: 10px; */
     opacity: 0;
     z-index: 150;
+}
+
+/* --------------- skillsPage --------------- */
+
+.skillsPage{
+    height: 100vh;
+    width: 100vw;
+    background: #000000;
+    color: #FFFFFF;
+    /* background-image: url(../images/aboutPage.svg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.skillsHead{
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 3   0px;
+}
+
+.iconsContainer{
+    /* border: 1px solid red; */
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto 10px auto;
+}
+
+.skillIcons{
+    min-height: 25px;
+    max-height: 30px;
 }
