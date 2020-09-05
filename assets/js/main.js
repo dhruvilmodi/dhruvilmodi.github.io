@@ -197,9 +197,17 @@ function jellyAnimation() {
 }
 
 /* ---------------- skillsPage animation ---------------- */
+
 function skillsAnimation() {
 	gsap.timeline().to(".skills", {opacity: 1, stagger: 0.1, duration: 1.5, ease: "back"});
 	gsap.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1});
+}
+
+/* ---------------- shark animation ---------------- */
+
+function sharkAnimation() {
+	gsap.fromTo(".shark1", {x: "0"},{x:"-130vw", repeat: -1, repeatDelay: 2, ease: "power1.in", duration: 12});
+	gsap.fromTo(".shark2", {x: "0"},{x:"-120vw", repeat: -1, repeatDelay: 2, ease: "power1.in", duration: 12});
 }
 
 
@@ -222,6 +230,7 @@ $(document).ready(function(){
 	diveTextAnimation();
 	fishAnim();
 	jellyAnimation();
+	sharkAnimation();
 	
 
 	$(document).on('scroll', function() {

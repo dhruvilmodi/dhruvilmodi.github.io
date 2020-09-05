@@ -258,5 +258,23 @@ canvas{
 .projectHead{
     text-align: center;
     padding-top: 5vh;
-    padding-bottom: 20px;
+    padding-bottom: 20px;   
+}
+
+.shark1{
+    height: 80px;
+    display: inline-block;
+    position: absolute;
+    bottom: 30vh;
+    right: -20vw;
+    opacity: 1;
+}
+
+.shark2{
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    bottom: 25vh;
+    right: -10vw;
+    opacity: 1;
 }
