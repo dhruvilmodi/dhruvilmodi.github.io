@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
 }
 
 .grid-container{
-    width: 70vw;
+    width: 65vw;
 }
 
 
@@ -110,6 +110,10 @@ canvas{
     background-position: top;
 }
 
+.about{
+    opacity: 0;
+}
+
 .fish1About{
     height: 50px;
     position: relative;
@@ -178,9 +182,10 @@ canvas{
 .skillsPage{
     height: 100vh;
     width: 100vw;
+    position: relative;
     background: #000000;
     color: #FFFFFF;
-    /* background-image: url(../images/aboutPage.svg); */
+    background-image: url(../images/skillsPage.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -189,19 +194,49 @@ canvas{
 .skillsHead{
     text-align: center;
     padding-top: 5vh;
-    padding-bottom: 3   0px;
+    padding-bottom: 20px;
 }
 
 .iconsContainer{
-    /* border: 1px solid red; */
     width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px auto 10px auto;
+    margin: 10px auto 60px auto;
+}
+
+.skills{
+    opacity: 0;
 }
 
 .skillIcons{
-    min-height: 25px;
-    max-height: 30px;
+    min-height: 30px;
+    max-height: 50px;
+}
+
+.jellyFish1{
+    height: 70px;
+    display: inline-block;
+    position: absolute;
+    bottom: 50vh;
+    right: 5vw;
+    opacity: 0.9;
+}
+
+.jellyFish2{
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    bottom: 25vh;
+    right: 8vw;
+    opacity: 0.7;
+}
+
+.jellyFish3{
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    bottom: 75vh;
+    right: 10vw;
+    opacity: 0.5;
 }

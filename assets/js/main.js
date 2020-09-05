@@ -75,6 +75,8 @@ function diveTextAnimation() {
     });
 }
 
+/* ---------------- fish animation ---------------- */
+
 function fishAnim() {
 	$(".fish1About").fadeIn("fast");
 	$(".fish2About").fadeIn("fast");
@@ -141,24 +143,65 @@ function fishAnim() {
 /* ---------------- about animation ---------------- */
 
 function aboutAnim() {
-
-	aboutAnimated = true;
-
-	gsap.to(".aboutHead", 1, {
-		opacity: 1,
-		// delay: 4.5
-	});
-
-	gsap.to(".dhruvilImage", 1, {
-		opacity: 1,
-		// delay: 5
-	});
-
-	gsap.to(".aboutSub", 1, {
-		opacity: 1,
-		// delay: 5.5
-	});
+	gsap.timeline().to(".about", {opacity: 1, stagger: 0.2, duration: 1.5, ease: "back"})
 }
+
+/* ---------------- jellyFish animation ---------------- */
+
+function jellyAnimation() {
+	// $(".jellyFish1").fadeIn("fast");
+
+	// jelly1
+	gsap.fromTo(".jellyFish1", {
+		y: 10,
+		x: -5,
+		rotate: 5
+	},{
+		y: -10,
+		x: 5,
+		rotate: -5,
+		ease: "power1.inOut",
+		duration: 3,
+		yoyo: true,
+		repeat: -1,
+	});
+
+	// jelly2
+	gsap.fromTo(".jellyFish2", {
+		y: -10,
+		x: 4,
+		rotate: 4
+	},{
+		y: 10,
+		x: -5,
+		rotate: -5,
+		ease: "power1.inOut",
+		duration: 3,
+		yoyo: true,
+		repeat: -1,
+	});
+
+	// jelly3
+	gsap.fromTo(".jellyFish3", {
+		y: -5,
+		x: 2,
+	},{
+		y: 5,
+		x: -2,
+		ease: "power2.inOut",
+		duration: 5,
+		yoyo: true,
+		repeat: -1,
+	});
+
+}
+
+/* ---------------- skillsPage animation ---------------- */
+function skillsAnimation() {
+	gsap.timeline().to(".skills", {opacity: 1, stagger: 0.1, duration: 1.5, ease: "back"});
+	gsap.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1});
+}
+
 
 /* -------------------------------------------------------------- */
 
@@ -166,16 +209,20 @@ $(document).ready(function(){
 
 	var aboutAnimated = false;
 
-	$(".fish1About").fadeOut();
-	$(".fish2About").fadeOut();
-	$(".fish3About").fadeOut();
-	$(".fish4About").fadeOut();
-	$(".fish5About").fadeOut();
+	$(".fish1About").fadeOut("fast");
+	$(".fish2About").fadeOut("fast");
+	$(".fish3About").fadeOut("fast");
+	$(".fish4About").fadeOut("fast");
+	$(".fish5About").fadeOut("fast");
+
+	// $(".jellyFish1").fadeOut("fast");
 
     heroPageAnimation();
     subAnimation();
 	diveTextAnimation();
 	fishAnim();
+	jellyAnimation();
+	
 
 	$(document).on('scroll', function() {
 		// about page animation on scroll
@@ -189,9 +236,14 @@ $(document).ready(function(){
 	window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 300) {
             gsap.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"});
-        }else{
+		}
+		if (document.documentElement.scrollTop < 300){
             gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
-        }
+		}
+		if (document.documentElement.scrollTop > 1500){
+			skillsAnimation();
+		}
+		
     });
 
 
