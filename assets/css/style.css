@@ -219,17 +219,17 @@ canvas{
     display: inline-block;
     position: absolute;
     bottom: 50vh;
-    right: 5vw;
-    opacity: 0.9;
+    right: 4vw;
+    opacity: 0.7;
 }
 
 .jellyFish2{
     height: 50px;
     display: inline-block;
     position: absolute;
-    bottom: 25vh;
-    right: 8vw;
-    opacity: 0.7;
+    bottom: 10vh;
+    left: 10vw;
+    opacity: 0.4;
 }
 
 .jellyFish3{
@@ -237,6 +237,6 @@ canvas{
     display: inline-block;
     position: absolute;
     bottom: 75vh;
-    right: 10vw;
-    opacity: 0.5;
+    left: 5vw;
+    opacity: 0.4;
 }
