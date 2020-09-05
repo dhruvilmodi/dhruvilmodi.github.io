@@ -211,7 +211,7 @@ canvas{
 
 .skillIcons{
     min-height: 30px;
-    max-height: 50px;
+    max-height: 45px;
 }
 
 .jellyFish1{
@@ -228,8 +228,8 @@ canvas{
     display: inline-block;
     position: absolute;
     bottom: 10vh;
-    left: 10vw;
-    opacity: 0.4;
+    left: 8vw;
+    opacity: 0.3;
 }
 
 .jellyFish3{
@@ -238,5 +238,25 @@ canvas{
     position: absolute;
     bottom: 75vh;
     left: 5vw;
-    opacity: 0.4;
+    opacity: 0.2;
+}
+
+/* --------------- projectPage --------------- */
+
+.projectPage{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: #000000;
+    color: #FFFFFF;
+    background-image: url(../images/projectPage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.projectHead{
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 20px;
 }
