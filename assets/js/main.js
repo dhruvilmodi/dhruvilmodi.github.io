@@ -240,7 +240,7 @@ $(document).ready(function(){
 		if (document.documentElement.scrollTop < 300){
             gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
 		}
-		if (document.documentElement.scrollTop > 1500){
+		if (document.documentElement.scrollTop > 1400){
 			skillsAnimation();
 		}
 		
