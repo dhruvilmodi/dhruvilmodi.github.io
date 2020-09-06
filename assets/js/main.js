@@ -1,8 +1,3 @@
-/* ------------ Global variable declaration ------------ */
-
-let diveButton = document.querySelector(".diveButton");
-
-
 /* ------------ heropage animation ------------ */
 
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
@@ -55,92 +50,20 @@ function subAnimation() {
     gsap.fromTo(".subMarine", 4, {y: 10, rotate: 5}, {y: -10, rotate: -5, yoyo:true, repeat: -1, ease: "power1.inOut"});
 }
 
-/* ---------------- divetext animation ---------------- */
-
-function diveTextAnimation() {
-	var diveTl = gsap.timeline();
-    diveTl.fromTo(diveButton, 1, {opacity: 0.2},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
-}
-
-/* ---------------- fish animation ---------------- */
-
-function fishAnim() {
-	$(".aboutFishes").fadeIn("fast");
-	
-	var fishTl = gsap.timeline();
-	fishTl.fromTo(".fish1About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6, repeat: -1, repeatDelay: 3})
-		.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6, repeat: -1, repeatDelay: 3})
-		.fromTo(".fish3About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6, repeat: -1, repeatDelay: 3})
-		.fromTo(".fish4About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6, repeat: -1, repeatDelay: 3})
-		.fromTo(".fish5About", {x: "100vw"}, {x: -800, ease: "power4.in", duration: 6, repeat: -1, repeatDelay: 3});
-}
-
-/* ---------------- about animation ---------------- */
-
-function aboutAnim() {
-	var aboutTl = gsap.timeline();
-	aboutTl.to(".about", {opacity: 1, stagger: 0.2, duration: 1.5, ease: "back"})
-}
-
-/* ---------------- jellyFish animation ---------------- */
-
-function jellyAnimation() {
-
-	var jellyTl = gsap.timeline();
-	jellyTl.fromTo(".jellyFish1", {y: 10, x: -5, rotate: 5}, {y: -10, x: 5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1})
-		.fromTo(".jellyFish2", {y: -10, x: 4, rotate: 4},{y: 10, x: -5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1})
-		.fromTo(".jellyFish3", {y: -5, x: 2}, {y: 5, x: -2, ease: "power2.inOut", duration: 5, yoyo: true, repeat: -1});
-
-}
-
-/* ---------------- skillsPage animation ---------------- */
-
-function skillsAnimation() {
-	var skillsTl = gsap.timeline();
-	skillsTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 1.5, ease: "back"})
-		.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1});
-}
-
-/* ---------------- shark animation ---------------- */
-
-function sharkAnimation() {
-	var sharksTl = gsap.timeline();
-	sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", repeat: -1, repeatDelay: 2, ease: "power1.in", duration: 12})
-		.fromTo(".shark2", {x: "0"},{x:"-120vw", repeat: -1, repeatDelay: 2, ease: "power1.in", duration: 12});
-}
-
-
 /* -------------------------------------------------------------- */
 
 $(document).ready(function(){
 
-	gsap.registerPlugin(ScrollToPlugin);
-
-	var aboutAnimated = false;
+	var diveTextTl = gsap.timeline();
+	var fishTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
+	var homeTl = gsap.timeline();
+	var aboutTl = gsap.timeline();
+	var jellyTl = gsap.timeline();
+	var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
 
 	$(".aboutFishes").fadeOut("fast");
 
-    heroPageAnimation();
-    subAnimation();
-	diveTextAnimation();
-	fishAnim();
-	jellyAnimation();
-	sharkAnimation();
-
-	$(document).on('click', diveButton, function() {
-		gsap.registerPlugin(ScrollToPlugin);
-		gsap.to(window, {duration: 2, scrollTo: "#aboutPage"});
-	});
-	
-
-	$(document).on('scroll', function() {
-		// about page animation on scroll
-		if( $(this).scrollTop() >= $('.diveText').position().top){
-			if (aboutAnimated == false) {
-				aboutAnim();
-			}
-		}
-	});
+	/* ---------------- submarine scroll control ---------------- */
 
 	window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 300) {
@@ -149,11 +72,79 @@ $(document).ready(function(){
 		if (document.documentElement.scrollTop < 300){
             gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
 		}
-		if (document.documentElement.scrollTop > 1400){
-			skillsAnimation();
-		}
-		
     });
+
+	/* ---------------- divetext animation ---------------- */
+	diveTextTl.fromTo(".diveButton", 1, {opacity: 0.2},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
+	diveTextTl.play();
+
+    heroPageAnimation();
+    subAnimation();
+
+	// onclick animation for homePage
+
+	$(document).on('click', 'body .diveButton', function() {
+		$(".aboutFishes").fadeIn("fast");
+	
+		fishTl.fromTo(".fish1About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
+			.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
+			.fromTo(".fish3About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
+			.fromTo(".fish4About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
+			.fromTo(".fish5About", {x: "100vw"}, {x: -800, ease: "power4.in", duration: 6}, 1);
+		fishTl.play();
+
+		gsap.to(window, {duration: 2, scrollTo: ".aboutPage"});
+
+		homeTl.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"})
+			.to(".about", {opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
+		
+		homeTl.play();
+		diveTextTl.pause();
+	});
+
+	// onclick animation for aboutPage
+
+	$(document).on('click', 'body .ascentBtnAbout', function() {
+		gsap.to(window, {duration: 2, scrollTo: ".heroPage"});
+		diveTextTl.play();
+		fishTl.pause();
+		jellyTl.pause();
+	});
+
+	$(document).on('click', 'body .descentBtnAbout', function() {
+		homeTl.pause();
+
+		jellyTl.fromTo(".jellyFish1", {y: 10, x: -5, rotate: 5}, {y: -10, x: 5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
+			.fromTo(".jellyFish2", {y: -10, x: 4, rotate: 4},{y: 10, x: -5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
+			.fromTo(".jellyFish3", {y: -5, x: 2}, {y: 5, x: -2, ease: "power2.inOut", duration: 5, yoyo: true, repeat: -1}, 0.2);
+
+		jellyTl.play();
+
+		gsap.to(window, {duration: 2, scrollTo: ".skillsPage"});
+
+		aboutTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 1.5, ease: "back"})
+			.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1})
+			.to(".skillsBtns", {opacity: 1, duration: 0.2, ease: "back"});
+		
+		aboutTl.play();
+
+	});
+
+	// onclick animation for skillsPage
+
+	$(document).on('click', 'body .ascentBtnSkills', function() {
+		gsap.to(window, {duration: 2, scrollTo: ".aboutPage"});
+		fishTl.play();
+		jellyTl.pause();
+	});
+
+	$(document).on('click', 'body .descentBtnSkills', function() {
+		gsap.to(window, {duration: 2, scrollTo: ".projectPage"});
+
+		sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", repeat: -1, repeatDelay: 2, ease: "power1.in", duration: 12}, 1)
+		.fromTo(".shark2", {x: "0"},{x:"-120vw", repeat: -1, repeatDelay: 2, ease: "power1.in", duration: 12}, 1);
+	});
+
 
 
 });

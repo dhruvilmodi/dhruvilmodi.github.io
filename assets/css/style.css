@@ -19,15 +19,45 @@ body::-webkit-scrollbar {
 
 .diveButton{
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 10vh;
-    color: #DDDDDD;
+    margin: 0 auto;
+    text-align: center;
     border: 1px solid #DDDDDD;
     padding: 10px;
+    color: #DDDDDD;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .diveButton:hover{
+    color: #222222;
+    background-color: #DDDDDD;
+    opacity: 1 !important;
+}
+
+.bottomBtnContainer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bottomButton{
+    color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0;
+    margin: auto 5px auto 5px;
+}
+
+.bottomButton:hover{
     background-color: #DDDDDD;
     color: #222222;
     opacity: 1 !important;
@@ -80,6 +110,7 @@ nav a:hover{
 .heroPage{
     height: 100vh;
     width: 100vw;
+    position: relative;
 }
 
 canvas{
@@ -116,6 +147,7 @@ canvas{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    position: relative;
 }
 
 .about{
