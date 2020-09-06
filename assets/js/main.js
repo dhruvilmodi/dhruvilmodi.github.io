@@ -56,10 +56,12 @@ $(document).ready(function(){
 
 	var diveTextTl = gsap.timeline();
 	var fishTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
+	fishTl.pause();
 	var homeTl = gsap.timeline();
 	var aboutTl = gsap.timeline();
 	var jellyTl = gsap.timeline();
 	var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
+	sharksTl.pause();
 
 	$(".aboutFishes").fadeOut("fast");
 
@@ -93,7 +95,7 @@ $(document).ready(function(){
 			.fromTo(".fish5About", {x: "100vw"}, {x: -800, ease: "power4.in", duration: 6}, 1);
 		fishTl.play();
 
-		gsap.to(window, {duration: 2, scrollTo: ".aboutPage"});
+		gsap.to(window, {duration: 1, scrollTo: ".aboutPage"});
 
 		homeTl.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"})
 			.to(".about", {opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
@@ -105,7 +107,7 @@ $(document).ready(function(){
 	// onclick animation for aboutPage
 
 	$(document).on('click', 'body .ascentBtnAbout', function() {
-		gsap.to(window, {duration: 2, scrollTo: ".heroPage"});
+		gsap.to(window, {duration: 1, scrollTo: ".heroPage"});
 		diveTextTl.play();
 		fishTl.pause();
 		jellyTl.pause();
@@ -120,7 +122,7 @@ $(document).ready(function(){
 
 		jellyTl.play();
 
-		gsap.to(window, {duration: 2, scrollTo: ".skillsPage"});
+		gsap.to(window, {duration: 1, scrollTo: ".skillsPage"});
 
 		aboutTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 1.5, ease: "back"})
 			.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1})
@@ -133,16 +135,18 @@ $(document).ready(function(){
 	// onclick animation for skillsPage
 
 	$(document).on('click', 'body .ascentBtnSkills', function() {
-		gsap.to(window, {duration: 2, scrollTo: ".aboutPage"});
+		gsap.to(window, {duration: 1, scrollTo: ".aboutPage"});
 		fishTl.play();
 		jellyTl.pause();
 	});
 
 	$(document).on('click', 'body .descentBtnSkills', function() {
-		gsap.to(window, {duration: 2, scrollTo: ".projectPage"});
+		gsap.to(window, {duration: 1, scrollTo: ".projectPage"});
 
-		sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", repeat: -1, repeatDelay: 2, ease: "power1.in", duration: 12}, 1)
-		.fromTo(".shark2", {x: "0"},{x:"-120vw", repeat: -1, repeatDelay: 2, ease: "power1.in", duration: 12}, 1);
+		sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
+		.fromTo(".shark2", {x: "0"},{x:"-120vw", ease: "power1.in", duration: 12}, 0.1);
+		
+		sharksTl.play();
 	});
 
 
