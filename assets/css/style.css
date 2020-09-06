@@ -8,6 +8,7 @@ body{
     background-color: #000;
     color: #FFFFFF;
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -16,13 +17,20 @@ body::-webkit-scrollbar {
     display: none !important;
 }
 
-.bottomPosition{
+.diveButton{
     position: absolute;
-    bottom: 10px;
+    bottom: 10vh;
+    color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.subText{
-    color: #DDDDDD;
+.diveButton:hover{
+    background-color: #DDDDDD;
+    color: #222222;
+    opacity: 1 !important;
 }
 
 .grid-container{

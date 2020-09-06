@@ -1,3 +1,8 @@
+/* ------------ Global variable declaration ------------ */
+
+let diveButton = document.querySelector(".diveButton");
+
+
 /* ------------ heropage animation ------------ */
 
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
@@ -65,14 +70,7 @@ function subAnimation() {
 /* ---------------- divetext animation ---------------- */
 
 function diveTextAnimation() {
-    gsap.fromTo(".diveText", 1, {
-        opacity: 0.2
-    },{
-        opacity: 1,
-        yoyo:true,
-        repeat: -1,
-        ease: "power1.inOut"
-    });
+    gsap.timeline().fromTo(diveButton, 1, {opacity: 0.2},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
 }
 
 /* ---------------- fish animation ---------------- */
