@@ -148,7 +148,4 @@ $(document).ready(function(){
 		
 		sharksTl.play();
 	});
-
-
-
 });
