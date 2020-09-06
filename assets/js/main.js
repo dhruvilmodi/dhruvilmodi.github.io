@@ -98,7 +98,7 @@ $(document).ready(function(){
 		gsap.to(window, {duration: 1, scrollTo: ".aboutPage"});
 
 		homeTl.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"})
-			.to(".about", {opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
+			.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
 		
 		homeTl.play();
 		diveTextTl.pause();
@@ -124,9 +124,9 @@ $(document).ready(function(){
 
 		gsap.to(window, {duration: 1, scrollTo: ".skillsPage"});
 
-		aboutTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 1.5, ease: "back"})
-			.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1})
-			.to(".skillsBtns", {opacity: 1, duration: 0.2, ease: "back"});
+		aboutTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 1, ease: "back"})
+			.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1}, 1)
+			.to(".skillsBtns", {display: "inline", opacity: 1, duration: 1, ease: "back"}, 2.5);
 		
 		aboutTl.play();
 

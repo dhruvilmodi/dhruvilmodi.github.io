@@ -151,6 +151,7 @@ canvas{
 }
 
 .about{
+    display: none;
     opacity: 0;
 }
 
@@ -246,6 +247,11 @@ canvas{
 }
 
 .skills{
+    opacity: 0;
+}
+
+.skillsBtns{
+    display: none;
     opacity: 0;
 }
 
