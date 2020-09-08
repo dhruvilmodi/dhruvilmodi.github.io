@@ -61,23 +61,24 @@ $(document).ready(function(){
 	var aboutTl = gsap.timeline();
 	var jellyTl = gsap.timeline();
 	var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
+	var projectsT1 = gsap.timeline();
 	sharksTl.pause();
 
 	$(".aboutFishes").fadeOut("fast");
 
 	/* ---------------- submarine scroll control ---------------- */
 
-	window.addEventListener("scroll", function () {
-        if (document.documentElement.scrollTop > 300) {
-            gsap.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"});
-		}
-		if (document.documentElement.scrollTop < 300){
-            gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
-		}
-    });
+	// window.addEventListener("scroll", function () {
+    //     if (document.documentElement.scrollTop > 300) {
+    //         gsap.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"});
+	// 	}
+	// 	if (document.documentElement.scrollTop < 300){
+    //         gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
+	// 	}
+    // });
 
 	/* ---------------- divetext animation ---------------- */
-	diveTextTl.fromTo(".diveButton", 1, {opacity: 0.2},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
+	diveTextTl.fromTo(".diveButton", 1, {opacity: 0, scale: 0.8},{opacity: 1.5, scale: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
 	diveTextTl.play();
 
     heroPageAnimation();
@@ -87,7 +88,7 @@ $(document).ready(function(){
 
 	$(document).on('click', 'body .diveButton', function() {
 		$(".aboutFishes").fadeIn("fast");
-	
+
 		fishTl.fromTo(".fish1About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
 			.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
 			.fromTo(".fish3About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
@@ -97,7 +98,7 @@ $(document).ready(function(){
 
 		gsap.to(window, {duration: 1, scrollTo: ".aboutPage"});
 
-		homeTl.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"})
+		homeTl.to(".subMarine", 1, {bottom: "60vh", ease:"power1.inOut"})
 			.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
 		
 		homeTl.play();
@@ -108,6 +109,7 @@ $(document).ready(function(){
 
 	$(document).on('click', 'body .ascentBtnAbout', function() {
 		gsap.to(window, {duration: 1, scrollTo: ".heroPage"});
+		gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
 		diveTextTl.play();
 		fishTl.pause();
 		jellyTl.pause();
@@ -123,6 +125,7 @@ $(document).ready(function(){
 		jellyTl.play();
 
 		gsap.to(window, {duration: 1, scrollTo: ".skillsPage"});
+		gsap.to(".subMarine", 1, {bottom: "50vh", ease:"power1.inOut"});
 
 		aboutTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 1, ease: "back"})
 			.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1}, 1)
@@ -136,16 +139,49 @@ $(document).ready(function(){
 
 	$(document).on('click', 'body .ascentBtnSkills', function() {
 		gsap.to(window, {duration: 1, scrollTo: ".aboutPage"});
+		gsap.to(".subMarine", 1, {bottom: "60vh", ease:"power1.inOut"});
 		fishTl.play();
 		jellyTl.pause();
 	});
 
 	$(document).on('click', 'body .descentBtnSkills', function() {
 		gsap.to(window, {duration: 1, scrollTo: ".projectPage"});
+		gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 2, delay: 1});
+		projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 2});
+
 
 		sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
 		.fromTo(".shark2", {x: "0"},{x:"-120vw", ease: "power1.in", duration: 12}, 0.1);
 		
 		sharksTl.play();
 	});
+
+	// onclick animation for projectsPage
+
+	$(document).on('click', 'body .ascentBtnProjects', function() {
+		gsap.to(window, {duration: 1, scrollTo: ".skillsPage"});
+		gsap.to(".subMarine", 1, {x: 0, bottom: "50vh", ease:"power1.inOut"});
+		sharksTl.pause();
+		jellyTl.play();
+	});
+
+	$(document).on('click', 'body .descentBtnProjects', function() {
+		gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0.2});
+		gsap.to(window, {duration: 1, scrollTo: ".contactPage"});
+		gsap.to(".contactBtn", {display: "inline", opacity: 1, duration: 1, ease: "back"});
+		
+		sharksTl.pause();
+		jellyTl.pause();
+	});
+
+	// onclick animation for contactPage
+
+	$(document).on('click', 'body .backToTopBtnContact', function() {
+		gsap.to(window, {duration: 4, scrollTo: "body"});
+		gsap.to(".subMarine", {x: 0, bottom: "20vh", ease:"power1.inOut", opacity: 1, duration: 0.1, delay: 0.2});
+		sharksTl.pause();
+		jellyTl.pause();
+		diveTextTl.play();
+	});
+
 });

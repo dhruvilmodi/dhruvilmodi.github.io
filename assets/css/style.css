@@ -29,6 +29,7 @@ body::-webkit-scrollbar {
     color: #DDDDDD;
     cursor: pointer;
     transition: 0.5s;
+    opacity: 0;
 }
 
 .diveButton:hover{
@@ -67,31 +68,31 @@ body::-webkit-scrollbar {
     width: 65vw;
 }
 
-
-/* --------------- navbar --------------- */
-nav{
-    width: 100vw;
-    height: 50px;
-    position: fixed;
-    top: 0;
+.middle{
+    height: 30vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    z-index: 200;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
-nav a{
-    text-decoration: none;
-    color: #4b0082;
-    transition: 0.5s;
-    font-weight: 500;
-}
 
-nav a:hover{
-    color: #000000;
-    font-weight: 600;
+/* --------------- depthMeter --------------- */
+.depthMeter{
+    /* width: 5vw; */
+    height: 60vh;
+    position: fixed;
+    z-index: 300;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+    left: 0.5vw;
 }
 
 /* --------------- submarine --------------- */
@@ -101,7 +102,7 @@ nav a:hover{
     position: fixed;
     z-index: 300;
     bottom: 20vh;
-    left: 5vw;
+    left: 6vw;
     opacity: 0;
 }
 
@@ -311,16 +312,44 @@ canvas{
     height: 80px;
     display: inline-block;
     position: absolute;
-    bottom: 30vh;
+    bottom: 36vh;
     right: -15vw;
-    opacity: 1;
+    opacity: 0.6;
+    z-index: 0;
+
 }
 
 .shark2{
     height: 40px;
     display: inline-block;
     position: absolute;
-    bottom: 25vh;
+    bottom: 47vh;
     right: -10vw;
-    opacity: 1;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.nukeBlueprint{
+    height: max-content;
+    z-index: 200;
+    margin: 20px auto 20px auto;
+    cursor: pointer;
+}
+
+.project{
+    opacity: 0;
+}
+
+/* --------------- contactPage --------------- */
+
+.contactPage{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: #131922;
+    color: #FFFFFF;
+    /* background-image: url(../images/projectPage.svg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
 }
