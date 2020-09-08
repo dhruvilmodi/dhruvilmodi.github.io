@@ -93,6 +93,7 @@ body::-webkit-scrollbar {
     top: 0;
     margin: auto 0;
     left: 0.5vw;
+    opacity: 0;
 }
 
 /* --------------- submarine --------------- */

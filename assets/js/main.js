@@ -43,6 +43,14 @@ function handleComplete(evt,comp) {
 	fnStartAnimation();
 }
 
+let meter = document.querySelector('#depthMeter').contentDocument;
+
+let meterSurface = meter.querySelector(".meterSurface");
+let meterAbout = meter.querySelector(".meterAbout");
+let meterSkills = meter.querySelector(".meterSkills");
+let meterProjects = meter.querySelector(".meterProjects");
+let meterContact = meter.querySelector(".meterContact");
+
 /* ---------------- submarine animation ---------------- */
 
 function subAnimation() {
@@ -66,16 +74,9 @@ $(document).ready(function(){
 
 	$(".aboutFishes").fadeOut("fast");
 
-	/* ---------------- submarine scroll control ---------------- */
-
-	// window.addEventListener("scroll", function () {
-    //     if (document.documentElement.scrollTop > 300) {
-    //         gsap.to(".subMarine", 1, {bottom: 400, ease:"power1.inOut"});
-	// 	}
-	// 	if (document.documentElement.scrollTop < 300){
-    //         gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
-	// 	}
-    // });
+	gsap.fromTo(".depthMeter", {scale: 2}, {opacity: 1, scale: 1, delay: 2, ease: "back.out"});
+	
+	gsap.fromTo("#depthMeter .meterSurface", 1,  {stroke: "#777"}, {stroke: "#FFF"});
 
 	/* ---------------- divetext animation ---------------- */
 	diveTextTl.fromTo(".diveButton", 1, {opacity: 0, scale: 0.8},{opacity: 1.5, scale: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
@@ -125,7 +126,7 @@ $(document).ready(function(){
 		jellyTl.play();
 
 		gsap.to(window, {duration: 1, scrollTo: ".skillsPage"});
-		gsap.to(".subMarine", 1, {bottom: "50vh", ease:"power1.inOut"});
+		gsap.to(".subMarine", 1, {bottom: "47vh", ease:"power1.inOut"});
 
 		aboutTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 1, ease: "back"})
 			.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1}, 1)
@@ -145,9 +146,12 @@ $(document).ready(function(){
 	});
 
 	$(document).on('click', 'body .descentBtnSkills', function() {
+		projectsT1.play();
 		gsap.to(window, {duration: 1, scrollTo: ".projectPage"});
-		gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 2, delay: 1});
-		projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 2});
+		gsap.to(".subMarine", {bottom: "35vh", ease: "power1", duration: 1});
+		gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 2, delay: 1.5});
+		projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 3})
+			.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 1, repeat: 2});
 
 
 		sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
@@ -159,29 +163,35 @@ $(document).ready(function(){
 	// onclick animation for projectsPage
 
 	$(document).on('click', 'body .ascentBtnProjects', function() {
-		gsap.to(window, {duration: 1, scrollTo: ".skillsPage"});
-		gsap.to(".subMarine", 1, {x: 0, bottom: "50vh", ease:"power1.inOut"});
+		gsap.to(".subMarine", 1, {x: 0, ease:"power1.inOut"});
+		gsap.to(".subMarine", 1, {bottom: "47vh", ease:"power1.inOut", delay: 1});
+		gsap.to(window, {duration: 1, scrollTo: ".skillsPage", delay: 1.25});
 		sharksTl.pause();
 		jellyTl.play();
+		projectsT1.pause();
 	});
 
 	$(document).on('click', 'body .descentBtnProjects', function() {
-		gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0.2});
+		gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0});
 		gsap.to(window, {duration: 1, scrollTo: ".contactPage"});
 		gsap.to(".contactBtn", {display: "inline", opacity: 1, duration: 1, ease: "back"});
 		
 		sharksTl.pause();
 		jellyTl.pause();
+		projectsT1.pause();
 	});
 
 	// onclick animation for contactPage
 
 	$(document).on('click', 'body .backToTopBtnContact', function() {
-		gsap.to(window, {duration: 4, scrollTo: "body"});
-		gsap.to(".subMarine", {x: 0, bottom: "20vh", ease:"power1.inOut", opacity: 1, duration: 0.1, delay: 0.2});
+		gsap.to(".depthMeter", {opacity: 0});
+		gsap.to(".subMarine", {x: 0, bottom: "20vh", duration: 0.1, ease:"power1.inOut"});
+		gsap.to(window, {duration: 4, scrollTo: "body", delay: 0.1});
+		gsap.to(".subMarine", {opacity: 1, duration: 0.1, delay: 0.5});
 		sharksTl.pause();
 		jellyTl.pause();
 		diveTextTl.play();
+		gsap.to(".depthMeter", {opacity: 1, delay: 4});
 	});
 
 });
