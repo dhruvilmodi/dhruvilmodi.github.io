@@ -43,14 +43,6 @@ function handleComplete(evt,comp) {
 	fnStartAnimation();
 }
 
-let meter = document.querySelector('#depthMeter').contentDocument;
-
-let meterSurface = meter.querySelector(".meterSurface");
-let meterAbout = meter.querySelector(".meterAbout");
-let meterSkills = meter.querySelector(".meterSkills");
-let meterProjects = meter.querySelector(".meterProjects");
-let meterContact = meter.querySelector(".meterContact");
-
 /* ---------------- submarine animation ---------------- */
 
 function subAnimation() {
@@ -61,6 +53,14 @@ function subAnimation() {
 /* -------------------------------------------------------------- */
 
 $(document).ready(function(){
+
+	let meter = document.querySelector('#depthMeter').contentDocument;
+
+	let meterSurface = meter.querySelector("#meterSurface");
+	let meterAbout = meter.querySelector(".meterAbout");
+	let meterSkills = meter.querySelector(".meterSkills");
+	let meterProjects = meter.querySelector(".meterProjects");
+	let meterContact = meter.querySelector(".meterContact");
 
 	var diveTextTl = gsap.timeline();
 	var fishTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
@@ -76,7 +76,7 @@ $(document).ready(function(){
 
 	gsap.fromTo(".depthMeter", {scale: 2}, {opacity: 1, scale: 1, delay: 2, ease: "back.out"});
 	
-	gsap.fromTo("#depthMeter .meterSurface", 1,  {stroke: "#777"}, {stroke: "#FFF"});
+	TweenMax.to(meterSurface, 1, {stroke: "#FFFFFF"});
 
 	/* ---------------- divetext animation ---------------- */
 	diveTextTl.fromTo(".diveButton", 1, {opacity: 0, scale: 0.8},{opacity: 1.5, scale: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
