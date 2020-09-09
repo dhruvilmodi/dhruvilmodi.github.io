@@ -377,3 +377,55 @@ canvas{
     background-size: cover;
     background-position: top;
 }
+
+.contactHead{
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+.contactContainer{
+    position: relative;
+    top: 20vh;
+}
+
+.contactIcons{
+    min-height: 30px;
+    max-height: 50px;
+    cursor: pointer;
+}
+
+.footerContainer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contactBtn{
+    color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0;
+    margin: auto 5px auto 5px;
+}
+
+.contactBtn:hover{
+    background-color: #DDDDDD;
+    color: #222222;
+    opacity: 1 !important;
+}
+
+.copyright{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 5vh;
+    text-align: center;
+}
