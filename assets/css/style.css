@@ -17,6 +17,14 @@ body::-webkit-scrollbar {
     display: none !important;
 }
 
+.ascentBtnAbout,
+.meterAbout,
+.descentBtnAbout,
+.descentBtnSkills,
+.descentBtnProjects{
+    cursor: pointer;
+}
+
 .diveButton{
     position: absolute;
     left: 0;
