@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 	let plane = document.querySelector(".plane");
 	var planeTl = gsap.timeline();
-	planeTl.fromTo(plane, {x: "-20vw"},{x: "120vw", duration: 13, ease: "power4.in"});
+	planeTl.fromTo(plane, {x: "-20vw"},{x: "120vw", duration: 10, ease: "power1.inOut", repeat: -1});
 	planeTl.play();
 
 	let meterSurface = document.querySelector(".meterSurface");
