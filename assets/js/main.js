@@ -54,6 +54,13 @@ function subAnimation() {
 
 $(document).ready(function(){
 
+	// plane animation
+
+	let plane = document.querySelector(".plane");
+	var planeTl = gsap.timeline();
+	planeTl.fromTo(plane, {x: "-20vw"},{x: "120vw", duration: 13, ease: "power4.in"});
+	planeTl.play();
+
 	let meterSurface = document.querySelector(".meterSurface");
 	let meterAbout = document.querySelector(".meterAbout");
 	let meterSkills = document.querySelector(".meterSkills");
