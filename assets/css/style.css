@@ -150,10 +150,35 @@ canvas{
     position: absolute;
     width: 100vw;
     top: 5vh;
+    z-index: 0;
 }
 
 .plane{
     height: 75px;
+    z-index: 0 !important;
+}
+
+.cloud1{
+    height: 150px;
+    z-index: 100 !important;
+}
+
+.cloud2{
+    height: 150px;
+    z-index: 200 !important;
+}
+.cloud1{
+    height: 150px;
+    z-index: 100 !important;
+}
+
+.ship1{
+    position: absolute;
+    height: 125px;
+    bottom: 20vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .heroContent{
