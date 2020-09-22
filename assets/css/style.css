@@ -34,12 +34,16 @@ body::-webkit-scrollbar {
     letter-spacing: 1pt;
 }
 
+.padding-bottom{
+    padding-bottom: 20px;
+}
+
 .diveButton{
     width: 150px;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 10vh;
+    bottom: 7vh;
     margin: 0 auto;
     text-align: center;
     border: 1px solid #DDDDDD;
@@ -176,7 +180,7 @@ canvas{
 .ship1{
     position: absolute;
     height: 125px;
-    bottom: 20vh;
+    bottom: 19vh;
     left: 0;
     right: 0;
     margin: 0 auto;

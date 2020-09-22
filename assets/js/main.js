@@ -12,15 +12,15 @@ $(document).ready(function(){
 	// plane animation
 	let plane = document.querySelector(".plane");
 	var planeTl = gsap.timeline();
-	planeTl.fromTo(plane, {x: "-20vw"},{x: "120vw", duration: 10, ease: "power1.inOut", repeat: -1}, 0);
+	planeTl.fromTo(plane, {x: "-20vw"},{x: "120vw", duration: 10, ease: "none", repeat: -1}, 0);
 	planeTl.play();
 
 	// cloud animation
 	let cloud1 = document.querySelector(".cloud1");
 	let cloud2 = document.querySelector(".cloud2");
 	var cloudTl = gsap.timeline();
-	cloudTl.fromTo(cloud1, {x: "-30vw"}, {x: "100vw", duration: 15, ease: "power1.inOut", repeat: -1}, 0)
-		.fromTo(cloud2, {x: "-50vw"}, {x: "100vw", duration: 17, ease: "power1.inOut", repeat: -1}, 0);
+	cloudTl.fromTo(cloud1, {x: "-30vw"}, {x: "100vw", duration: 15, ease: "none", repeat: -1}, 0)
+		.fromTo(cloud2, {x: "-50vw"}, {x: "100vw", duration: 20, ease: "none", repeat: -1}, 1);
 
 	// ship1 animation
 	let ship1 = document.querySelector(".ship1");
