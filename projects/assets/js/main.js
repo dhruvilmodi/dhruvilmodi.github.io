@@ -34,8 +34,8 @@ $(document).ready(function(){
 	let cloud1 = document.querySelector(".cloud1");
 	let cloud2 = document.querySelector(".cloud2");
 	var cloudTl = gsap.timeline();
-	cloudTl.fromTo(cloud1, {x: "-30vw"}, {x: "100vw", duration: 15, ease: "none", repeat: -1}, 0)
-		.fromTo(cloud2, {x: "-50vw"}, {x: "100vw", duration: 20, ease: "none", repeat: -1}, 1);
+	cloudTl.fromTo(cloud1, {x: "-40vw"}, {x: "100vw", duration: 15, ease: "none", repeat: -1}, 0)
+		.fromTo(cloud2, {x: "-60vw"}, {x: "100vw", duration: 20, ease: "none", repeat: -1}, 1);
 
 	// ship1 animation
 	let ship1 = document.querySelector(".ship1");
