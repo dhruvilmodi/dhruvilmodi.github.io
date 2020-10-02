@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Quicksand', sans-serif !important; */
+    font-family: 'Raleway', sans-serif !important;
+}
+
+svg{
+    font-family: 'Raleway', sans-serif !important;
+}
+
+body{
+    background-color: #000;
+    color: #FFFFFF;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none !important;
+}
+
+.textShadow{
+    text-shadow: 0px 1px #70707050;
+}
+
+.ascentBtnAbout,
+.meterAbout,
+.descentBtnAbout,
+.descentBtnSkills,
+.descentBtnProjects{
+    cursor: pointer;
+}
+
+.letterSpacing{
+    letter-spacing: 1pt;
+}
+
+.padding-bottom{
+    padding-bottom: 20px;
+}
+
+.diveButton{
+    width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 7vh;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    color: #DDDDDD;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.diveButton:hover{
+    color: #222222;
+    background-color: #DDDDDD;
+    opacity: 1 !important;
+}
+
+.bottomBtnContainer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bottomButton{
+    color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0;
+    margin: auto 5px auto 5px;
+}
+
+.bottomButton:hover{
+    background-color: #DDDDDD;
+    color: #222222;
+    opacity: 1 !important;
+}
+
+.grid-container{
+    width: 65vw;
+}
+
+.middle{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* --------------- depthMeter --------------- */
+.depthMeter{
+    /* width: 5vw; */
+    height: 60vh;
+    position: fixed;
+    z-index: 300;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+    left: 0.5vw;
+    opacity: 0;
+}
+
+/* --------------- submarine --------------- */
+
+.subMarine{
+    height: 60px;
+    position: fixed;
+    z-index: 300;
+    bottom: 20vh;
+    left: 6vw;
+    opacity: 0;
+}
+
+/* --------------- heropage --------------- */
+
+.heroPage{
+    height: 100vh;
+    width: 100vw;
+    background: #000000;
+    color: #FFFFFF;
+    background-image: url(../images/heroPage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+canvas{
+    position: absolute !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow-x: hidden;
+}
+
+.airSpace{
+    position: absolute;
+    width: 100vw;
+    top: 5vh;
+    z-index: 0;
+}
+
+.plane{
+    height: 75px;
+    z-index: 0 !important;
+}
+
+.cloud1{
+    height: 150px;
+    z-index: 100 !important;
+}
+
+.cloud2{
+    height: 150px;
+    z-index: 200 !important;
+}
+.cloud1{
+    height: 150px;
+    z-index: 100 !important;
+}
+
+.ship1{
+    position: absolute;
+    height: 125px;
+    bottom: 19vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.heroContent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#animation_container{
+    height: 100vh !important;
+}
+
+/* --------------- aboutpage --------------- */
+
+.aboutPage{
+    height: 100vh;
+    width: 100vw;
+    background: #000000;
+    color: #FFFFFF;
+    background-image: url(../images/aboutPage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.about{
+    display: none;
+    opacity: 0;
+}
+
+.fish1About{
+    height: 50px;
+    position: relative;
+    top: 40vh;
+}
+
+.fish2About{
+    height: 30px;
+    position: relative;
+    top: 50vh;
+}
+
+.fish3About{
+    height: 40px;
+    position: relative;
+    top: 30vh;
+}
+
+.fish4About{
+    height: 50px;
+    position: relative;
+    top: 20vh;
+}
+
+.fish5About{
+    height: 45px;
+    position: relative;
+    top: 35vh;
+}
+
+.aboutHead{
+    opacity: 0;
+    text-align: center;
+    margin: 0px auto 20px auto;
+    z-index: 150;
+}
+
+.aboutContent{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 150;
+}
+
+.aboutContainer{
+    /* width: 70vw; */
+    height: 50vh;
+    position: relative;
+    top: 10vh;
+}
+
+.dhruvilImage{
+    max-height: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: 150;
+}
+
+.aboutSub{
+    text-align: justify;
+    /* margin-top: 10px; */
+    opacity: 0;
+    z-index: 150;
+}
+
+/* --------------- skillsPage --------------- */
+
+.skillsPage{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: #000000;
+    color: #FFFFFF;
+    background-image: url(../images/skillsPage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.skillsHead{
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 20px;
+}
+
+.iconsContainer{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto 60px auto;
+}
+
+.skills{
+    opacity: 0;
+}
+
+.skillsBtns{
+    display: none;
+    opacity: 0;
+}
+
+.skillIcons{
+    min-height: 30px;
+    max-height: 45px;
+}
+
+.jellyFish1{
+    height: 70px;
+    display: inline-block;
+    position: absolute;
+    bottom: 50vh;
+    right: 4vw;
+    opacity: 0.7;
+}
+
+.jellyFish2{
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    bottom: 10vh;
+    left: 8vw;
+    opacity: 0.3;
+}
+
+.jellyFish3{
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    bottom: 75vh;
+    left: 5vw;
+    opacity: 0.2;
+}
+
+/* --------------- projectPage --------------- */
+
+.projectPage{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: #000000;
+    color: #FFFFFF;
+    background-image: url(../images/projectPage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.projectHead{
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 20px;   
+}
+
+.shark1{
+    height: 80px;
+    display: inline-block;
+    position: absolute;
+    bottom: 36vh;
+    right: -15vw;
+    opacity: 0.6;
+    z-index: 0;
+
+}
+
+.shark2{
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    bottom: 47vh;
+    right: -10vw;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.nukeBlueprint{
+    height: 200px;
+    z-index: 200;
+    margin: 20px auto 20px auto;
+    cursor: pointer;
+}
+
+.project{
+    opacity: 0;
+}
+
+/* --------------- contactPage --------------- */
+
+.contactPage{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: #131922;
+    color: #FFFFFF;
+    /* background-image: url(../images/projectPage.svg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.contactHead{
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+.contactContainer{
+    position: relative;
+    top: 20vh;
+}
+
+.contactIcons{
+    min-height: 30px;
+    max-height: 50px;
+    cursor: pointer;
+}
+
+.footerContainer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contactBtn{
+    color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0;
+    margin: auto 5px auto 5px;
+}
+
+.contactBtn:hover{
+    background-color: #DDDDDD;
+    color: #222222;
+    opacity: 1 !important;
+}
+
+.copyright{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 5vh;
+    text-align: center;
+}
