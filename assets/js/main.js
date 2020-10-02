@@ -9,6 +9,21 @@ function subAnimation() {
 
 $(document).ready(function(){
 
+	// welcomeContainer
+	let welcomeContainer = document.querySelector(".welcomeContainer");
+	let welcomeText1 = document.querySelector(".welcomeText1");
+	let welcomeText2 = document.querySelector(".welcomeText2");
+	let homeName = document.querySelector(".homeName");
+	let homeSubText = document.querySelector(".homeSubText");
+	var welcomeTl = gsap.timeline();
+	welcomeTl.fromTo(welcomeText1, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 1})
+		.fromTo(welcomeText2, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 1}, 1)
+		.fromTo(welcomeText1, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 1}, 0)
+		.fromTo(welcomeText2, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 1}, 0)
+		.fromTo(welcomeContainer, {opacity: 1, display: "flex"}, {opacity: 0, display: "none", ease: "power1.inOut", duration: 1, delay: 2})
+		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 1, delay: 0.5})
+		.fromTo(homeSubText, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 1, delay: 0.1});
+
 	let cls1 = document.querySelectorAll(".cls-1");
 	let cls2 = document.querySelectorAll(".cls-2");
 	let cls3 = document.querySelectorAll(".cls-3");
@@ -257,8 +272,17 @@ $(document).ready(function(){
 		gsap.to(".depthMeter", {opacity: 1, delay: 4});
 	});
 
-	$(document).on('click', 'body .nukeBlueprint', function() {
+	function loadProjects() {
 		window.location.href = "./projects/";
+	}
+
+	$(document).on('click', 'body .nukeBlueprint', function() {
+		welcomeTl.kill();
+		let loadingContainer = document.querySelector(".loadingContainer");
+		let loadingText = document.querySelector(".loadingText");
+		var loadProjectsTl = gsap.timeline();
+		loadProjectsTl.fromTo(loadingContainer,{display: "none", opacity: 0}, {display: "flex", opacity: 1, duration: 1})
+			.fromTo(loadingText, {opacity: 0}, {opacity: 1, repeat: 2, yoyo: true, duration: 1, onComplete : loadProjects});
 	});
 
 
