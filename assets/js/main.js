@@ -9,6 +9,22 @@ function subAnimation() {
 
 $(document).ready(function(){
 
+	let cls1 = document.querySelectorAll(".cls-1");
+	let cls2 = document.querySelectorAll(".cls-2");
+	let cls3 = document.querySelectorAll(".cls-3");
+	// window.addEventListener("scroll", function () {
+    //     if (document.documentElement.scrollTop > 0) {
+    //         gsap.to(cls1, 0.5, {stroke: "#999", ease: "none"});
+    //         gsap.to(cls2, 0.5, {stroke: "#999", ease: "none"});
+    //         gsap.to(cls3, 0.5, {stroke: "#999", ease: "none"});
+    //     }else{
+	// 		gsap.to(cls1, 0.5, {stroke: "#999", ease: "none"}, 0);
+	// 		gsap.to(cls2, 0.5, {stroke: "#999", ease: "none"}, 0);
+	// 		gsap.to(cls3, 0.5, {stroke: "#999", ease: "none"});
+	// 		gsap.to(meterSurface, 1, {stroke: "#FFF"});
+    //     }
+    // });
+
 	// plane animation
 	let plane = document.querySelector(".plane");
 	var planeTl = gsap.timeline();
@@ -48,7 +64,7 @@ $(document).ready(function(){
 	$(".aboutFishes").fadeOut("fast");
 
 	gsap.fromTo(".depthMeter", {scale: 2}, {opacity: 1, scale: 1, delay: 2, ease: "back.out"});
-	gsap.to(meterSurface, 1, {stroke: "#FFFFFF"});
+	gsap.to(meterSurface, 1, {stroke: "#eeea80"});
 
 	/* ---------------- divetext animation ---------------- */
 	diveTextTl.fromTo(".diveButton", 1, {opacity: 0},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
@@ -60,11 +76,11 @@ $(document).ready(function(){
 
 	$(document).on('click', 'body .diveButton', function() {
 		$(".aboutFishes").fadeIn("fast");
-		gsap.to(meterSurface, 1, {stroke: "#777"});
-		gsap.to(meterAbout, 1, {stroke: "#FFF"});
-		gsap.to(meterSkills, 1, {stroke: "#777"});
-		gsap.to(meterProjects, 1, {stroke: "#777"});
-		gsap.to(meterContact, 1, {stroke: "#777"});
+		gsap.to(meterSurface, 1, {stroke: "#999"});
+		gsap.to(meterAbout, 1, {stroke: "#eeea80"});
+		gsap.to(meterSkills, 1, {stroke: "#999"});
+		gsap.to(meterProjects, 1, {stroke: "#999"});
+		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		fishTl.fromTo(".fish1About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
 			.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
@@ -83,11 +99,11 @@ $(document).ready(function(){
 
 	$(document).on('click', 'body .meterAbout', function() {
 		$(".aboutFishes").fadeIn("fast");
-		gsap.to(meterSurface, 1, {stroke: "#777"});
-		gsap.to(meterAbout, 1, {stroke: "#FFF"});
-		gsap.to(meterSkills, 1, {stroke: "#777"});
-		gsap.to(meterProjects, 1, {stroke: "#777"});
-		gsap.to(meterContact, 1, {stroke: "#777"});
+		gsap.to(meterSurface, 1, {stroke: "#999"});
+		gsap.to(meterAbout, 1, {stroke: "#eeea80"});
+		gsap.to(meterSkills, 1, {stroke: "#999"});
+		gsap.to(meterProjects, 1, {stroke: "#999"});
+		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		fishTl.fromTo(".fish1About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
 			.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
@@ -109,11 +125,11 @@ $(document).ready(function(){
 	// onclick animation for aboutPage
 
 	$(document).on('click', 'body .ascentBtnAbout', function() {
-		gsap.to(meterSurface, 1, {stroke: "#FFF"});
-		gsap.to(meterAbout, 1, {stroke: "#777"});
-		gsap.to(meterSkills, 1, {stroke: "#777"});
-		gsap.to(meterProjects, 1, {stroke: "#777"});
-		gsap.to(meterContact, 1, {stroke: "#777"});
+		gsap.to(meterSurface, 1, {stroke: "#eeea80"});
+		gsap.to(meterAbout, 1, {stroke: "#999"});
+		gsap.to(meterSkills, 1, {stroke: "#999"});
+		gsap.to(meterProjects, 1, {stroke: "#999"});
+		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		gsap.to(window, {duration: 1, scrollTo: ".heroPage"});
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
@@ -126,11 +142,11 @@ $(document).ready(function(){
 	$(document).on('click', 'body .descentBtnAbout', function() {
 		homeTl.pause();
 
-		gsap.to(meterSurface, 1, {stroke: "#777"});
-		gsap.to(meterAbout, 1, {stroke: "#777"});
-		gsap.to(meterSkills, 1, {stroke: "#FFF"});
-		gsap.to(meterProjects, 1, {stroke: "#777"});
-		gsap.to(meterContact, 1, {stroke: "#777"});
+		gsap.to(meterSurface, 1, {stroke: "#999"});
+		gsap.to(meterAbout, 1, {stroke: "#999"});
+		gsap.to(meterSkills, 1, {stroke: "#eeea80"});
+		gsap.to(meterProjects, 1, {stroke: "#999"});
+		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		jellyTl.fromTo(".jellyFish1", {y: 10, x: -5, rotate: 5}, {y: -10, x: 5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
 			.fromTo(".jellyFish2", {y: -10, x: 4, rotate: 4},{y: 10, x: -5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
@@ -153,11 +169,11 @@ $(document).ready(function(){
 	// onclick animation for skillsPage
 
 	$(document).on('click', 'body .ascentBtnSkills', function() {
-		gsap.to(meterSurface, 1, {stroke: "#777"});
-		gsap.to(meterAbout, 1, {stroke: "#FFF"});
-		gsap.to(meterSkills, 1, {stroke: "#777"});
-		gsap.to(meterProjects, 1, {stroke: "#777"});
-		gsap.to(meterContact, 1, {stroke: "#777"});
+		gsap.to(meterSurface, 1, {stroke: "#999"});
+		gsap.to(meterAbout, 1, {stroke: "#eeea80"});
+		gsap.to(meterSkills, 1, {stroke: "#999"});
+		gsap.to(meterProjects, 1, {stroke: "#999"});
+		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		gsap.to(window, {duration: 1, scrollTo: ".aboutPage"});
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
@@ -167,11 +183,11 @@ $(document).ready(function(){
 	});
 
 	$(document).on('click', 'body .descentBtnSkills', function() {
-		gsap.to(meterSurface, 1, {stroke: "#777"});
-		gsap.to(meterAbout, 1, {stroke: "#777"});
-		gsap.to(meterSkills, 1, {stroke: "#777"});
-		gsap.to(meterProjects, 1, {stroke: "#FFF"});
-		gsap.to(meterContact, 1, {stroke: "#777"});
+		gsap.to(meterSurface, 1, {stroke: "#999"});
+		gsap.to(meterAbout, 1, {stroke: "#999"});
+		gsap.to(meterSkills, 1, {stroke: "#999"});
+		gsap.to(meterProjects, 1, {stroke: "#eeea80"});
+		gsap.to(meterContact, 1, {stroke: "#999"});
 		
 		projectsT1.play();
 		gsap.to(window, {duration: 1, scrollTo: ".projectPage"});
@@ -191,11 +207,11 @@ $(document).ready(function(){
 
 	$(document).on('click', 'body .ascentBtnProjects', function() {
 
-		gsap.to(meterSurface, 1, {stroke: "#777"});
-		gsap.to(meterAbout, 1, {stroke: "#777"});
-		gsap.to(meterSkills, 1, {stroke: "#FFF"});
-		gsap.to(meterProjects, 1, {stroke: "#777"});
-		gsap.to(meterContact, 1, {stroke: "#777"});
+		gsap.to(meterSurface, 1, {stroke: "#999"});
+		gsap.to(meterAbout, 1, {stroke: "#999"});
+		gsap.to(meterSkills, 1, {stroke: "#eeea80"});
+		gsap.to(meterProjects, 1, {stroke: "#999"});
+		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
 		gsap.to(".subMarine", 1, {bottom: "47vh", ease:"power1.inOut", delay: 1});
@@ -206,11 +222,11 @@ $(document).ready(function(){
 	});
 
 	$(document).on('click', 'body .descentBtnProjects', function() {
-		gsap.to(meterSurface, 1, {stroke: "#777"});
-		gsap.to(meterAbout, 1, {stroke: "#777"});
-		gsap.to(meterSkills, 1, {stroke: "#777"});
-		gsap.to(meterProjects, 1, {stroke: "#777"});
-		gsap.to(meterContact, 1, {stroke: "#FFF"});
+		gsap.to(meterSurface, 1, {stroke: "#999"});
+		gsap.to(meterAbout, 1, {stroke: "#999"});
+		gsap.to(meterSkills, 1, {stroke: "#999"});
+		gsap.to(meterProjects, 1, {stroke: "#999"});
+		gsap.to(meterContact, 1, {stroke: "#eeea80"});
 
 		gsap.to(".subMarine", 1, {x: 0, ease:"power1.inOut"});
 		gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0});
@@ -225,11 +241,11 @@ $(document).ready(function(){
 	// onclick animation for contactPage
 
 	$(document).on('click', 'body .backToTopBtnContact', function() {
-		gsap.to(meterSurface, 1, {stroke: "#FFF"});
-		gsap.to(meterAbout, 1, {stroke: "#777"});
-		gsap.to(meterSkills, 1, {stroke: "#777"});
-		gsap.to(meterProjects, 1, {stroke: "#777"});
-		gsap.to(meterContact, 1, {stroke: "#777"});
+		gsap.to(meterSurface, 1, {stroke: "#eeea80"});
+		gsap.to(meterAbout, 1, {stroke: "#999"});
+		gsap.to(meterSkills, 1, {stroke: "#999"});
+		gsap.to(meterProjects, 1, {stroke: "#999"});
+		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		gsap.to(".depthMeter", {opacity: 0});
 		gsap.to(".subMarine", {x: 0, bottom: "20vh", duration: 0.1, ease:"power1.inOut"});
