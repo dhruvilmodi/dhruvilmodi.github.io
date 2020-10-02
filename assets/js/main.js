@@ -257,4 +257,9 @@ $(document).ready(function(){
 		gsap.to(".depthMeter", {opacity: 1, delay: 4});
 	});
 
+	$(document).on('click', 'body .nukeBlueprint', function() {
+		window.location.href = "./projects/";
+	});
+
+
 });

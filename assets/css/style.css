@@ -147,14 +147,6 @@ body::-webkit-scrollbar {
     position: relative;
 }
 
-canvas{
-    position: absolute !important;
-    margin: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow-x: hidden;
-}
-
 .airSpace{
     position: absolute;
     width: 100vw;
