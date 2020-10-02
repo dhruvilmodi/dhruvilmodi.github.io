@@ -2,7 +2,7 @@
 
 function subAnimation() {
     gsap.to(".subMarine", 1, {opacity: 1, delay: 1});
-    gsap.fromTo(".subMarine", 4, {y: 10, rotate: 5}, {y: -10, rotate: -5, yoyo:true, repeat: -1, ease: "power1.inOut"});
+    gsap.fromTo(".subMarine", 4, {y: 5, rotate: 2}, {y: -5, rotate: -2, yoyo:true, repeat: -1, ease: "power1.inOut"});
 }
 
 /* -------------------------------------------------------------- */
@@ -27,8 +27,10 @@ $(document).ready(function(){
 
 	// plane animation
 	let plane = document.querySelector(".plane");
+	let plane2 = document.querySelector(".plane2");
 	var planeTl = gsap.timeline();
-	planeTl.fromTo(plane, {x: "-20vw"},{x: "120vw", duration: 10, ease: "none", repeat: -1}, 0);
+	planeTl.fromTo(plane, {x: "-20vw"},{x: "120vw", duration: 10, ease: "none", repeat: -1}, 0)
+		.fromTo(plane2, {x: "-40vw", y: 75},{x: "120vw", duration: 11, ease: "none", repeat: -1}, 0);
 	planeTl.play();
 
 	// cloud animation
@@ -41,7 +43,7 @@ $(document).ready(function(){
 	// ship1 animation
 	let ship1 = document.querySelector(".ship1");
 	var ship1Tl = gsap.timeline();
-	ship1Tl.fromTo(ship1, {rotate: 1}, {rotate: -2, repeat: -2, duration: 2, yoyo: true, ease: "power1.inOut"});
+	ship1Tl.fromTo(ship1, {rotate: 1}, {rotate: -1, repeat: -2, duration: 2, yoyo: true, ease: "power1.inOut"});
 
 
 	let meterSurface = document.querySelector(".meterSurface");

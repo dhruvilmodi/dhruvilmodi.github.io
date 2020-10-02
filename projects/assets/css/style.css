@@ -108,20 +108,6 @@ body::-webkit-scrollbar {
     margin: auto;
 }
 
-
-/* --------------- depthMeter --------------- */
-.depthMeter{
-    /* width: 5vw; */
-    height: 60vh;
-    position: fixed;
-    z-index: 300;
-    bottom: 0;
-    top: 0;
-    margin: auto 0;
-    left: 0.5vw;
-    opacity: 0;
-}
-
 /* --------------- submarine --------------- */
 
 .subMarine{
@@ -162,7 +148,7 @@ canvas{
     z-index: 0;
 }
 
-.plane{
+.plane, .plane2{
     height: 50px;
     z-index: 0 !important;
 }
@@ -183,7 +169,7 @@ canvas{
 
 .ship1{
     position: absolute;
-    height: 125px;
+    height: 100px;
     bottom: 19vh;
     left: 0;
     right: 0;
