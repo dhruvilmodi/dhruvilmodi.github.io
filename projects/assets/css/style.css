@@ -108,6 +108,25 @@ body::-webkit-scrollbar {
     margin: auto;
 }
 
+/* --------------- welcomeContainer --------------- */
+
+.welcomeContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #131922;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcomeText1, .welcomeText2{
+    transition: 1s;
+    opacity: 0;
+}
+
 /* --------------- submarine --------------- */
 
 .subMarine{
@@ -170,9 +189,8 @@ canvas{
 .ship1{
     position: absolute;
     height: 100px;
-    bottom: 19vh;
-    left: 0;
-    right: 0;
+    bottom: 25vh;
+    right: 6vw;
     margin: 0 auto;
 }
 

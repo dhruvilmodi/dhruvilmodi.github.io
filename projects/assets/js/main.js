@@ -9,21 +9,18 @@ function subAnimation() {
 
 $(document).ready(function(){
 
-	let cls1 = document.querySelectorAll(".cls-1");
-	let cls2 = document.querySelectorAll(".cls-2");
-	let cls3 = document.querySelectorAll(".cls-3");
-	// window.addEventListener("scroll", function () {
-    //     if (document.documentElement.scrollTop > 0) {
-    //         gsap.to(cls1, 0.5, {stroke: "#999", ease: "none"});
-    //         gsap.to(cls2, 0.5, {stroke: "#999", ease: "none"});
-    //         gsap.to(cls3, 0.5, {stroke: "#999", ease: "none"});
-    //     }else{
-	// 		gsap.to(cls1, 0.5, {stroke: "#999", ease: "none"}, 0);
-	// 		gsap.to(cls2, 0.5, {stroke: "#999", ease: "none"}, 0);
-	// 		gsap.to(cls3, 0.5, {stroke: "#999", ease: "none"});
-	// 		gsap.to(meterSurface, 1, {stroke: "#FFF"});
-    //     }
-    // });
+	// welcomeContainer
+	let welcomeContainer = document.querySelector(".welcomeContainer");
+	let welcomeText1 = document.querySelector(".welcomeText1");
+	let welcomeText2 = document.querySelector(".welcomeText2");
+	let homeName = document.querySelector(".homeName");
+	var welcomeTl = gsap.timeline();
+	welcomeTl.fromTo(welcomeText1, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 1})
+		.fromTo(welcomeText2, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 1}, 1)
+		.fromTo(welcomeText1, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 1}, 0)
+		.fromTo(welcomeText2, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 1}, 0)
+		.fromTo(welcomeContainer, {opacity: 1, display: "flex"}, {opacity: 0, display: "none", ease: "power1.inOut", duration: 1, delay: 2})
+		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 1, delay: 0.5});
 
 	// plane animation
 	let plane = document.querySelector(".plane");
