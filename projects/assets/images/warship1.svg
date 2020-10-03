@@ -1,1 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.37 110.78"><defs><style>.cls-1,.cls-4,.cls-5{fill:none;stroke:#000;stroke-miterlimit:10;}.cls-1,.cls-4{stroke-linecap:round;}.cls-1{stroke-width:2px;}.cls-2{fill:#545556;}.cls-3{fill:#2f3030;}</style></defs><title>warship1</title><g id="Layer_2" data-name="Layer 2"><g id="master"><line class="cls-1" x1="296.32" y1="63.02" x2="296.32" y2="70.52"/><polygon class="cls-1" points="355.09 13 344.19 70.52 367.6 70.52 358.84 13 367.59 13 367.59 10.5 343.83 10.5 343.83 13 355.09 13"/><line class="cls-1" x1="387.59" y1="34.26" x2="387.59" y2="40.51"/><polygon class="cls-2" points="23.76 110.78 503.87 110.78 511.38 89.9 502.62 89.9 502.62 82.44 456.36 82.44 452.61 70.52 292.57 70.52 290.07 82.44 105.03 82.44 105.03 91.39 93.77 91.39 67.52 70.52 0 70.52 23.76 110.78"/><polygon class="cls-3" points="263.81 92.22 502.62 90.55 502.62 80.52 105.03 80.52 105.03 90.55 263.81 92.22"/><rect class="cls-2" x="372.59" y="40.51" width="20" height="15"/><rect class="cls-3" x="365.09" y="55.51" width="45.01" height="8.75"/><rect class="cls-3" x="311.33" y="64.27" width="96.27" height="6.25"/><rect class="cls-3" x="312.58" y="48.01" width="35.01" height="16.25"/><line class="cls-4" x1="351.34" y1="0.5" x2="351.34" y2="10.5"/><rect class="cls-2" x="308.83" y="40.51" width="32.51" height="11.25"/><line class="cls-4" x1="347.58" y1="4.25" x2="347.58" y2="10.5"/><line class="cls-4" x1="347.58" y1="28.01" x2="347.58" y2="36.76"/><line class="cls-4" x1="345.08" y1="36.76" x2="367.59" y2="36.76"/><line class="cls-4" x1="352.59" y1="26.76" x2="361.34" y2="26.76"/><line class="cls-5" x1="365.09" y1="50.51" x2="347.58" y2="50.51"/><rect x="31.26" y="64.27" width="15" height="6.25"/><rect x="26.26" y="53.01" width="26.26" height="11.25" rx="4.5"/><line class="cls-1" x1="5.37" y1="50.78" x2="26.26" y2="56.76"/><rect x="467.63" y="74.27" width="15" height="6.25" transform="translate(950.26 154.78) rotate(-180)"/><rect x="461.37" y="63.01" width="26.26" height="11.25" rx="4.5" transform="translate(949.01 137.28) rotate(-180)"/><line class="cls-1" x1="508.51" y1="60.78" x2="487.63" y2="66.76"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 511.4 110.8" style="enable-background:new 0 0 511.4 110.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:#545556;}
+	.st2{fill:#2F3030;}
+	.st3{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;}
+</style>
+<title>warship1</title>
+<g id="Layer_2_1_">
+	<g id="master">
+		<line class="st0" x1="296.3" y1="63" x2="296.3" y2="70.5"/>
+		<polygon class="st0" points="355.1,13 344.2,70.5 367.6,70.5 358.8,13 367.6,13 367.6,10.5 343.8,10.5 343.8,13 		"/>
+		<line class="st0" x1="387.6" y1="34.3" x2="387.6" y2="40.5"/>
+		<polygon class="st1" points="23.8,110.8 503.9,110.8 511.4,89.9 502.6,89.9 502.6,82.4 456.4,82.4 452.6,70.5 292.6,70.5 
+			290.1,82.4 105,82.4 105,91.4 93.8,91.4 67.5,70.5 0,70.5 		"/>
+		<polygon class="st2" points="263.8,92.2 502.6,90.6 502.6,80.5 105,80.5 105,90.6 		"/>
+		<rect x="372.6" y="40.5" class="st1" width="20" height="15"/>
+		<rect x="365.1" y="55.5" class="st2" width="45" height="8.7"/>
+		<rect x="311.3" y="64.3" class="st2" width="96.3" height="6.3"/>
+		<rect x="312.6" y="48" class="st2" width="35" height="16.2"/>
+		<line class="st3" x1="351.3" y1="0.5" x2="351.3" y2="10.5"/>
+		<rect x="308.8" y="40.5" class="st1" width="32.5" height="11.3"/>
+		<line class="st3" x1="347.6" y1="4.3" x2="347.6" y2="10.5"/>
+		<line class="st3" x1="347.6" y1="28" x2="347.6" y2="36.8"/>
+		<line class="st3" x1="345.1" y1="36.8" x2="367.6" y2="36.8"/>
+		<line class="st3" x1="352.6" y1="26.8" x2="361.3" y2="26.8"/>
+		<line class="st4" x1="365.1" y1="50.5" x2="347.6" y2="50.5"/>
+		<rect x="31.3" y="64.3" width="15" height="6.3"/>
+		<path d="M30.8,53H48c2.5,0,4.5,2,4.5,4.5v2.2c0,2.5-2,4.5-4.5,4.5H30.8c-2.5,0-4.5-2-4.5-4.5v-2.2C26.3,55,28.3,53,30.8,53z"/>
+		<line class="st0" x1="5.4" y1="50.8" x2="26.3" y2="56.8"/>
+		<rect x="467.6" y="74.3" width="15" height="6.3"/>
+		<path d="M483.1,74.3h-17.3c-2.5,0-4.5-2-4.5-4.5v-2.3c0-2.5,2-4.5,4.5-4.5h17.3c2.5,0,4.5,2,4.5,4.5v2.3
+			C487.6,72.3,485.6,74.3,483.1,74.3z"/>
+		<line class="st0" x1="508.5" y1="60.8" x2="487.6" y2="66.8"/>
+	</g>
+</g>
+<rect x="324" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="328.9" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="333.3" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="338.1" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="342.6" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="347.5" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="351.9" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="356.7" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="361.2" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="366.1" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="370.5" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="375.3" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="379.6" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="384.4" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="388.8" y="65.5" class="st5" width="3.2" height="3.2"/>
+<rect x="393.7" y="65.5" class="st5" width="3.2" height="3.2"/>
+</svg>
