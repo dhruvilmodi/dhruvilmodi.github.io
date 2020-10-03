@@ -143,7 +143,7 @@ body::-webkit-scrollbar {
 .heroPage{
     height: 100vh;
     width: 100vw;
-    background: #000000;
+    background: #131922;
     color: #FFFFFF;
     background-image: url(../images/projects_heroPage.svg);
     background-repeat: no-repeat;
@@ -214,9 +214,9 @@ canvas{
 .aboutPage{
     height: 100vh;
     width: 100vw;
-    background: #000000;
+    background: #131922;
     color: #FFFFFF;
-    background-image: url(../images/aboutPage.svg);
+    background-image: url(../images/projects_aboutPage.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
