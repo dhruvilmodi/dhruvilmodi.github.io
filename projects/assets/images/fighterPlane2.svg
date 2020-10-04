@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 484.5 162.3" style="enable-background:new 0 0 484.5 162.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#173566;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#0B192D;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st4{fill:#F2BF1D;stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<title>fighterPlane</title>
+<g id="Layer_2_1_">
+	<g id="master">
+		<g id="fighterPlane">
+			<path class="st0" d="M437.8,7.8c11.1-8.7,23-8.9,35.7,0c5-1.1,10.7,49.5,10.5,61c-0.2,11.3-4.3,29.4-16.9,31.5
+				s-121.9,16.8-121.9,16.8c-58.8,35.7-119.8,29.4-128.2,29.4s-10.5-12.6-10.5-12.6c-46.2,6.3-166-16.8-166-16.8v-12.6
+				c0,0-40-6.3-40-25.2s165.9-16.8,172.3-25.2s25.2-14.7,48.4-14.7s69.4,23.1,69.4,23.1s48.4,8.4,65.2,6.3
+				c16.8-2.1,56.7-12.6,56.7-12.6L437.8,7.8z"/>
+			<path class="st1" d="M204.3,131.8c-21,4.4-45.6,3.5-72.5-0.6c0,0-1-16.2,5.3-20.4s50.4-25.2,77.8-12.6s61,25.2,61,25.2
+				L204.3,131.8z"/>
+			
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="275.662" y1="658.3378" x2="243.9569" y2="713.252" gradientTransform="matrix(-1 0 0 1 484.4949 -628)">
+				<stop  offset="0" style="stop-color:#CCE0F4"/>
+				<stop  offset="0.11" style="stop-color:#D5E6F6"/>
+				<stop  offset="0.26" style="stop-color:#EBF4FA"/>
+				<stop  offset="0.37" style="stop-color:#CDD9DF"/>
+				<stop  offset="0.62" style="stop-color:#829299"/>
+				<stop  offset="0.97" style="stop-color:#122A32"/>
+			</linearGradient>
+			<path class="st2" d="M225.4,39.4c-30.4-4-63.8,17.5-60.2,17.2c0,0,20.2,14.3,60.2,14.3s59.4-11.2,59.4-11.2
+				C284.7,58.5,250.7,42.7,225.4,39.4z"/>
+			<line class="st3" x1="185.2" y1="65.3" x2="185.2" y2="45.9"/>
+			<path class="st4" d="M453.8,1.2c-17.6,3.9-17.2,8.8-17.2,8.8h39C475.6,10,471.4-2.7,453.8,1.2z"/>
+			<path class="st4" d="M0.6,79.3c-2.1-8.4,39.9-12.7,39.9-12.7v37.9C4.7,98.2,2.7,87.7,0.6,79.3z"/>
+			<path class="st1" d="M455.7,82.5c-6.4,2.1-48.4,2.1-58.9-2.1s8.4-8.4,8.4-8.4l52.5,2.1C457.7,74.1,462.1,80.4,455.7,82.5z"/>
+			<line class="st5" x1="26.5" y1="159.8" x2="26.5" y2="21.8"/>
+		</g>
+	</g>
+</g>
+</svg>

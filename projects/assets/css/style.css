@@ -168,9 +168,38 @@ canvas{
     z-index: 0;
 }
 
-.plane, .plane2{
+.plane, .plane2, .plane3, .plane4{
     height: 35px;
     z-index: 0 !important;
+}
+
+.blast1, .blast2, .blast3, .blast4{
+    z-index: 300 !important;
+    position: absolute;
+}
+
+.blast1{
+    height: 50px;
+    left: 10vw;
+    top: 22vh;
+}
+
+.blast2{
+    height: 60px;
+    right: 10vw;
+    top: 12vh;
+}
+
+.blast3{
+    height: 40px;
+    left: 45vw;
+    top: 32vh;
+}
+
+.blast4{
+    height: 50px;
+    right: 35vw;
+    top: 25vh;
 }
 
 .cloud1{
