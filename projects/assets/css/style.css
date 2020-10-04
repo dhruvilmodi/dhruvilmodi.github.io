@@ -169,7 +169,7 @@ canvas{
 }
 
 .plane, .plane2{
-    height: 50px;
+    height: 35px;
     z-index: 0 !important;
 }
 
@@ -306,7 +306,7 @@ canvas{
     position: relative;
     background: #000000;
     color: #FFFFFF;
-    background-image: url(../images/skillsPage.svg);
+    background-image: url(../images/skillsPage_copy.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

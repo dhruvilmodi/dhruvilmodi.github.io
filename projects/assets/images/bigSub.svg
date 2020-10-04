@@ -3,8 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 645 190" style="enable-background:new 0 0 645 190;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#333333;}
-	.st1{fill:#FFFFFF;}
+	.st0{fill:#444444;}
+	.st1{fill:#333333;}
+	.st2{fill:#FFFFFF;}
 </style>
 <title>bigSub</title>
 <g id="Layer_2_1_">
@@ -13,26 +14,31 @@
 			c0,0-84-7-115-28c0,0-4,21-5,21H33v-24H18v-4h-7v-3l-11-5l10-7v-5h8v-2c0,0,11-6,11-7s-14-23-14-37c0,0-1-2,5-2h24l13,17
 			c0,0,75-15,88-16s77-3,77-3s12-36,15-41s14-7,14-7h1V18h2l1-15h-3V0h9v3h-2v31h3V17h2V6h4v28h6v-6h-2v-4h6v3h-1v7l46,1
 			c0,0,5,7,5,22C327.9,64.7,328.2,72.4,329,80z"/>
-		<ellipse class="st0" cx="4" cy="125" rx="4" ry="17"/>
-		<ellipse class="st0" cx="4" cy="164" rx="4" ry="17"/>
-		<rect x="304.5" y="48.5" class="st1" width="20" height="4"/>
-		<rect x="215.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="234.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="253.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="272.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="292.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="311.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="330.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="371.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="390.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="409.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="456.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="475.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="494.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="514.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="533.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="552.5" y="102.5" class="st1" width="15" height="6"/>
-		<rect x="572.5" y="102.5" class="st1" width="15" height="6"/>
+		<ellipse class="st1" cx="4" cy="125" rx="4" ry="17"/>
+		<ellipse class="st1" cx="4" cy="164" rx="4" ry="17"/>
+		<rect x="304.5" y="48.5" class="st2" width="20" height="4"/>
+		<rect x="215.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="234.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="253.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="272.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="292.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="311.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="330.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="371.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="390.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="409.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="456.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="475.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="494.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="514.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="533.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="552.5" y="102.5" class="st2" width="15" height="6"/>
+		<rect x="572.5" y="102.5" class="st2" width="15" height="6"/>
 	</g>
 </g>
+<image style="overflow:visible;" width="187" height="114" xlink:href="6003E01D.jpg"  transform="matrix(1 0 0 1 474 -207)">
+</image>
+<path class="st1" d="M0,145c231.5-11,448.5-13.4,638.8,0c-0.9,1-17.6,44.6-72.8,45c-57.6,0.4-354.3-0.5-392-2
+	C128.6,186.2-5,148.1,0,145z"/>
+<polygon class="st1" points="54,181 33,181 33,157 18,157 18,153 11,153 11,150 58.2,164 "/>
 </svg>
