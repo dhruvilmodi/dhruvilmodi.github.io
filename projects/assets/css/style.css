@@ -23,6 +23,7 @@ body::-webkit-scrollbar {
 }
 
 .textShadow{
+    color: #707070;
     text-shadow: 0px 1px #70707050;
 }
 
@@ -145,7 +146,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     background: #131922;
     color: #FFFFFF;
-    background-image: url(../images/projects_heroPage.svg);
+    background-image: url(../images/projects_heroPage_copy.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -216,7 +217,7 @@ canvas{
     width: 100vw;
     background: #131922;
     color: #FFFFFF;
-    background-image: url(../images/projects_aboutPage.svg);
+    background-image: url(../images/projects_aboutPage_copy.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
