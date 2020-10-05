@@ -134,7 +134,7 @@ body::-webkit-scrollbar {
     height: 60px;
     position: fixed;
     z-index: 300;
-    bottom: 20vh;
+    bottom: 10vh;
     left: 6vw;
     opacity: 0;
 }
@@ -153,13 +153,13 @@ body::-webkit-scrollbar {
     position: relative;
 }
 
-canvas{
+/* canvas{
     position: absolute !important;
     margin: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
     overflow-x: hidden;
-}
+} */
 
 .airSpace{
     position: absolute;
@@ -219,8 +219,16 @@ canvas{
 .ship1{
     position: absolute;
     height: 100px;
-    bottom: 25vh;
+    bottom: 27vh;
     right: 6vw;
+    margin: 0 auto;
+}
+
+.ship2{
+    position: absolute;
+    height: 100px;
+    bottom: 27vh;
+    left: 6vw;
     margin: 0 auto;
 }
 

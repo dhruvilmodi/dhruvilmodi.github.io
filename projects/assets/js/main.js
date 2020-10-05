@@ -55,8 +55,10 @@ $(document).ready(function(){
 
 	// ship1 animation
 	let ship1 = document.querySelector(".ship1");
+	let ship2 = document.querySelector(".ship2");
 	var ship1Tl = gsap.timeline();
-	ship1Tl.fromTo(ship1, {rotate: 1}, {rotate: -1, repeat: -2, duration: 2, yoyo: true, ease: "power1.inOut"});
+	ship1Tl.fromTo(ship1, {rotate: 0.5}, {rotate: -1, repeat: -2, duration: 3, yoyo: true, ease: "power1.inOut"})
+		.fromTo(ship2, {rotate: 0.5}, {rotate: -1, repeat: -2, duration: 3, yoyo: true, ease: "power1.inOut"});
 
 
 	let meterSurface = document.querySelector(".meterSurface");
@@ -148,7 +150,7 @@ $(document).ready(function(){
 
 		gsap.to(window, {duration: 1, scrollTo: ".heroPage"});
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
-		gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
+		gsap.to(".subMarine", 1, {bottom: "10vh", ease:"power4.Out"});
 		diveTextTl.play();
 		fishTl.pause();
 		jellyTl.pause();
@@ -207,7 +209,7 @@ $(document).ready(function(){
 		projectsT1.play();
 		gsap.to(window, {duration: 1, scrollTo: ".projectPage"});
 		gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 1});
-		gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 2, delay: 1.5});
+		gsap.to(".subMarine", {x: 300, bottom: "10vh", ease: "power1", duration: 2, delay: 1.5});
 		projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 3})
 			.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 1, repeat: 2});
 
@@ -263,7 +265,7 @@ $(document).ready(function(){
 		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		gsap.to(".depthMeter", {opacity: 0});
-		gsap.to(".subMarine", {x: 0, bottom: "20vh", duration: 0.1, ease:"power1.inOut"});
+		gsap.to(".subMarine", {x: 0, bottom: "10vh", duration: 0.1, ease:"power1.inOut"});
 		gsap.to(window, {duration: 4, scrollTo: "body", delay: 0.1});
 		gsap.to(".subMarine", {opacity: 1, duration: 0.1, delay: 0.5});
 		sharksTl.pause();
