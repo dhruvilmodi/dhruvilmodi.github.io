@@ -511,7 +511,7 @@ body::-webkit-scrollbar {
     position: relative;
     background: #000000;
     color: #FFFFFF;
-    background-image: url(../images/projects_thirdPage.svg);
+    background-image: url(../images/otherProjectsPage.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
