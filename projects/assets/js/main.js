@@ -40,10 +40,10 @@ $(document).ready(function(){
 	let blast3 = document.querySelector(".blast3");
 	let blast4 = document.querySelector(".blast4");
 	var blastTl = gsap.timeline();
-	blastTl.fromTo(blast1, {opacity: 1, scale: 0}, {opacity: 0, scale: 2, duration: 1.5, repeat: -1, repeatDelay: 1, ease: "back.out"}, 0)
-		.fromTo(blast2, {opacity: 1, scale: 0}, {opacity: 0, scale: 2, duration: 1.5, repeat: -1, repeatDelay: 2, ease: "back.out"}, 0.5)
-		.fromTo(blast3, {opacity: 1, scale: 0}, {opacity: 0, scale: 2, duration: 1.5, repeat: -1, repeatDelay: 3, ease: "back.out"}, 1)
-		.fromTo(blast4, {opacity: 1, scale: 0}, {opacity: 0, scale: 2, duration: 1.5, repeat: -1, repeatDelay: 4, ease: "back.out"}, 1.5);
+	blastTl.fromTo(blast1, {opacity: 1, scale: 0}, {opacity: 0, scale: 2.5, duration: 2, repeat: -1, repeatDelay: 1, ease: "back.out"}, 0)
+		.fromTo(blast2, {opacity: 1, scale: 0}, {opacity: 0, scale: 2.5, duration: 2, repeat: -1, repeatDelay: 2, ease: "back.out"}, 0.5)
+		.fromTo(blast3, {opacity: 1, scale: 0}, {opacity: 0, scale: 2.5, duration: 2, repeat: -1, repeatDelay: 3, ease: "back.out"}, 1)
+		.fromTo(blast4, {opacity: 1, scale: 0}, {opacity: 0, scale: 2.5, duration: 2, repeat: -1, repeatDelay: 4, ease: "back.out"}, 1.5);
 	blastTl.play();
 
 	// cloud animation
