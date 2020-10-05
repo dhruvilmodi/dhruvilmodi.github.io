@@ -36,6 +36,16 @@ body::-webkit-scrollbar {
     padding-bottom: 20px;
 }
 
+.align-middle{
+    position: relative;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: auto;
+    height: 70vh;
+    padding-bottom: 40px;
+}
+
 .diveButton{
     width: 150px;
     position: absolute;
@@ -292,6 +302,16 @@ body::-webkit-scrollbar {
     border-radius: 5px;
 }
 
+.otherProjectImages{
+    position: relative;
+    display: block !important;
+    text-align: center !important;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 150px;
+}
+
 .fish1About{
     height: 50px;
     position: relative;
@@ -500,6 +520,10 @@ body::-webkit-scrollbar {
 
 .sixthStagger{
     opacity: 0;
+}
+
+.captions{
+    margin-top: 10px;
 }
 
 /* --------------- projectPage --------------- */
