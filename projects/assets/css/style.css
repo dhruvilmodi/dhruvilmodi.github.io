@@ -13,7 +13,7 @@ body{
     background-color: #000;
     color: #FFFFFF;
     overflow-x: hidden !important;
-    overflow-y: hidden !important;
+    /* overflow-y: hidden !important; */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -247,14 +247,14 @@ body::-webkit-scrollbar {
     height: 100vh !important;
 }
 
-/* --------------- aboutpage --------------- */
+/* --------------- firstPage --------------- */
 
 .aboutPage{
     height: 100vh;
     width: 100vw;
     background: #131922;
     color: #FFFFFF;
-    background-image: url(../images/projects_aboutPage.svg);
+    background-image: url(../images/projects_firstPage.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -335,7 +335,7 @@ body::-webkit-scrollbar {
     z-index: 150;
 }
 
-/* --------------- skillsPage --------------- */
+/* --------------- secondPage --------------- */
 
 .skillsPage{
     height: 100vh;
@@ -343,7 +343,7 @@ body::-webkit-scrollbar {
     position: relative;
     background: #000000;
     color: #FFFFFF;
-    background-image: url(../images/skillsPage_copy.svg);
+    background-image: url(../images/projects_secondPage.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -402,6 +402,20 @@ body::-webkit-scrollbar {
     bottom: 75vh;
     left: 5vw;
     opacity: 0.2;
+}
+
+/* --------------- secondPage --------------- */
+
+.thirdPage{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: #000000;
+    color: #FFFFFF;
+    background-image: url(../images/projects_thirdPage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
 }
 
 /* --------------- projectPage --------------- */
