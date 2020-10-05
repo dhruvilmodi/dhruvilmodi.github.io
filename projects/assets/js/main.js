@@ -197,6 +197,30 @@ $(document).ready(function(){
 		fifthPageTl.play();
 	});
 
+	// onclick animation for sixthPage
+
+	$(document).on('click', 'body .ascentToFifth', function() {
+		firstPageTl.pause();
+		secondPageTl.pause();
+		thirdPageTl.pause();
+		forthPageTl.pause();
+
+		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
+		gsap.to(window, {duration: 1, scrollTo: ".fifthPage"});
+	});
+
+	$(document).on('click', 'body .descentToContact', function() {
+		firstPageTl.pause();
+		secondPageTl.pause();
+		thirdPageTl.pause();
+		forthPageTl.pause();
+
+		gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0.5});
+		gsap.to(window, {duration: 1, scrollTo: ".contactPage"});
+		fifthPageTl.fromTo(".contact", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
+		fifthPageTl.play();
+	});
+
 	// onclick animation for contactPage
 
 	$(document).on('click', 'body .backToTopBtnContact', function() {
@@ -206,9 +230,9 @@ $(document).ready(function(){
 		forthPageTl.pause();
 		fifthPageTl.pause();
 
-		gsap.to(".subMarine", {x: 0, bottom: "10vh", duration: 0.1, ease:"power1.inOut"});
 		gsap.to(window, {duration: 4, scrollTo: "body", delay: 0.1});
-		gsap.to(".subMarine", {opacity: 1, duration: 0.1, delay: 0.5});
+		gsap.to(".subMarine", {x: 0, bottom: "10vh", duration: 1, ease:"power1.inOut", delay: 2});
+		gsap.to(".subMarine", {opacity: 1, duration: 0.1, delay: 0.2});
 		diveTextTl.play();
 	});
 
