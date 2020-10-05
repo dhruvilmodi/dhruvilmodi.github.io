@@ -2,11 +2,7 @@
     margin: 0;
     padding: 0;
     /* font-family: 'Quicksand', sans-serif !important; */
-    font-family: 'Raleway', sans-serif !important;
-}
-
-svg{
-    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Special Elite', cursive !important;
 }
 
 body{
@@ -27,10 +23,11 @@ body::-webkit-scrollbar {
     text-shadow: 0px 1px #70707050;
 }
 
-.ascentBtnAbout,
+.ascentToFirst,
+.ascentToSecond,
 .meterAbout,
-.descentBtnAbout,
-.descentBtnSkills,
+.descentToSecond,
+.descentToForth,
 .descentBtnProjects{
     cursor: pointer;
 }
@@ -135,7 +132,7 @@ body::-webkit-scrollbar {
     position: fixed;
     z-index: 300;
     bottom: 10vh;
-    left: 6vw;
+    left: 3vw;
     opacity: 0;
 }
 
@@ -152,14 +149,6 @@ body::-webkit-scrollbar {
     background-position: top;
     position: relative;
 }
-
-/* canvas{
-    position: absolute !important;
-    margin: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow-x: hidden;
-} */
 
 .airSpace{
     position: absolute;
@@ -220,7 +209,7 @@ body::-webkit-scrollbar {
     position: absolute;
     height: 100px;
     bottom: 27vh;
-    right: 6vw;
+    right: 3vw;
     margin: 0 auto;
 }
 
@@ -228,7 +217,7 @@ body::-webkit-scrollbar {
     position: absolute;
     height: 100px;
     bottom: 27vh;
-    left: 6vw;
+    left: 3vw;
     margin: 0 auto;
 }
 
@@ -249,7 +238,7 @@ body::-webkit-scrollbar {
 
 /* --------------- firstPage --------------- */
 
-.aboutPage{
+.firstPage{
     height: 100vh;
     width: 100vw;
     background: #131922;
@@ -259,11 +248,23 @@ body::-webkit-scrollbar {
     background-size: cover;
     background-position: top;
     position: relative;
+    padding-top: 40px;
 }
 
-.about{
+.firstPageHead{
+    position: relative;
+}
+
+.firstStagger{
     display: none;
     opacity: 0;
+}
+
+.projectImages{
+    position: relative;
+    margin-top: 20px;
+    max-height: 300px;
+    border-radius: 5px;
 }
 
 .fish1About{
@@ -337,7 +338,7 @@ body::-webkit-scrollbar {
 
 /* --------------- secondPage --------------- */
 
-.skillsPage{
+.secondPage{
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -363,7 +364,7 @@ body::-webkit-scrollbar {
     margin: 10px auto 60px auto;
 }
 
-.skills{
+.secondStagger{
     opacity: 0;
 }
 
