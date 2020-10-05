@@ -61,27 +61,14 @@ $(document).ready(function(){
 		.fromTo(ship2, {rotate: 0.5}, {rotate: -1, repeat: -2, duration: 3, yoyo: true, ease: "power1.inOut"});
 
 
-	let meterSurface = document.querySelector(".meterSurface");
-	let meterAbout = document.querySelector(".meterAbout");
-	let meterSkills = document.querySelector(".meterSkills");
-	let meterProjects = document.querySelector(".meterProjects");
-	let meterContact = document.querySelector(".meterContact");
-
 	var diveTextTl = gsap.timeline();
-	var fishTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
-	fishTl.pause();
 	var homeTl = gsap.timeline();
-	var aboutTl = gsap.timeline();
-	var jellyTl = gsap.timeline();
-	var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
-	var projectsT1 = gsap.timeline();
+	var firstPageTl = gsap.timeline();
+	var secondPageTl = gsap.timeline();
+	var thirdPageTl = gsap.timeline();
+	var forthPageTl = gsap.timeline();
+	var fifthPageTl = gsap.timeline();
 	gsap.registerPlugin(TextPlugin);
-	sharksTl.pause();
-
-	$(".aboutFishes").fadeOut("fast");
-
-	gsap.fromTo(".depthMeter", {scale: 2}, {opacity: 1, scale: 1, delay: 2, ease: "back.out"});
-	gsap.to(meterSurface, 1, {stroke: "#eeea80"});
 
 	/* ---------------- divetext animation ---------------- */
 	diveTextTl.fromTo(".diveButton", 1, {opacity: 0},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
@@ -93,18 +80,6 @@ $(document).ready(function(){
 
 	$(document).on('click', 'body .diveButton', function() {
 		$(".aboutFishes").fadeIn("fast");
-		gsap.to(meterSurface, 1, {stroke: "#999"});
-		gsap.to(meterAbout, 1, {stroke: "#eeea80"});
-		gsap.to(meterSkills, 1, {stroke: "#999"});
-		gsap.to(meterProjects, 1, {stroke: "#999"});
-		gsap.to(meterContact, 1, {stroke: "#999"});
-
-		fishTl.fromTo(".fish1About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-			.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-			.fromTo(".fish3About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-			.fromTo(".fish4About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-			.fromTo(".fish5About", {x: "100vw"}, {x: -800, ease: "power4.in", duration: 6}, 1);
-		fishTl.play();
 
 		gsap.to(window, {duration: 1, scrollTo: ".firstPage"});
 		homeTl.to(".subMarine", 1, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"})
@@ -114,161 +89,127 @@ $(document).ready(function(){
 		diveTextTl.pause();
 	});
 
-	$(document).on('click', 'body .meterAbout', function() {
-		$(".aboutFishes").fadeIn("fast");
-		gsap.to(meterSurface, 1, {stroke: "#999"});
-		gsap.to(meterAbout, 1, {stroke: "#eeea80"});
-		gsap.to(meterSkills, 1, {stroke: "#999"});
-		gsap.to(meterProjects, 1, {stroke: "#999"});
-		gsap.to(meterContact, 1, {stroke: "#999"});
-
-		fishTl.fromTo(".fish1About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-			.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-			.fromTo(".fish3About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-			.fromTo(".fish4About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-			.fromTo(".fish5About", {x: "100vw"}, {x: -800, ease: "power4.in", duration: 6}, 1);
-		fishTl.play();
-
-		gsap.to(window, {duration: 1, scrollTo: ".firstPage"});
-
-		homeTl.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"})
-		.to(".subMarine", 1, {bottom: "60vh", ease:"power1.inOut"})
-			.fromTo(".firstStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
-		
-		homeTl.play();
-		diveTextTl.pause();
-	});
-
 	// onclick animation for firstPage
 
 	$(document).on('click', 'body .ascentToHome', function() {
-		gsap.to(meterSurface, 1, {stroke: "#eeea80"});
-		gsap.to(meterAbout, 1, {stroke: "#999"});
-		gsap.to(meterSkills, 1, {stroke: "#999"});
-		gsap.to(meterProjects, 1, {stroke: "#999"});
-		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		gsap.to(window, {duration: 1, scrollTo: ".heroPage"});
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
 		gsap.to(".subMarine", 1, {bottom: "10vh", ease:"power4.Out"});
+
 		diveTextTl.play();
-		fishTl.pause();
-		jellyTl.pause();
 	});
 
 	$(document).on('click', 'body .descentToSecond', function() {
 		homeTl.pause();
 
-		gsap.to(meterSurface, 1, {stroke: "#999"});
-		gsap.to(meterAbout, 1, {stroke: "#999"});
-		gsap.to(meterSkills, 1, {stroke: "#eeea80"});
-		gsap.to(meterProjects, 1, {stroke: "#999"});
-		gsap.to(meterContact, 1, {stroke: "#999"});
-
-		// jellyTl.fromTo(".jellyFish1", {y: 10, x: -5, rotate: 5}, {y: -10, x: 5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
-		// 	.fromTo(".jellyFish2", {y: -10, x: 4, rotate: 4},{y: 10, x: -5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
-		// 	.fromTo(".jellyFish3", {y: -5, x: 2}, {y: 5, x: -2, ease: "power2.inOut", duration: 5, yoyo: true, repeat: -1}, 0.2);
-
-		// jellyTl.play();
-
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
 		gsap.to(window, {duration: 1, scrollTo: ".secondPage"});
-		gsap.to(".subMarine", 1, {bottom: "47vh", ease:"power1.inOut"});
 
-		aboutTl.fromTo(".secondStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
+		firstPageTl.fromTo(".secondStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
 		
-		aboutTl.play();
+		firstPageTl.play();
 
 	});
 
 	// onclick animation for secondPage
 
 	$(document).on('click', 'body .ascentToFirst', function() {
-		gsap.to(meterSurface, 1, {stroke: "#999"});
-		gsap.to(meterAbout, 1, {stroke: "#eeea80"});
-		gsap.to(meterSkills, 1, {stroke: "#999"});
-		gsap.to(meterProjects, 1, {stroke: "#999"});
-		gsap.to(meterContact, 1, {stroke: "#999"});
+		homeTl.pause();
+		firstPageTl.pause();
 
 		gsap.to(window, {duration: 1, scrollTo: ".firstPage"});
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
-		gsap.to(".subMarine", 1, {bottom: "60vh", ease:"power1.inOut"});
-		fishTl.play();
-		jellyTl.pause();
 	});
 
 	$(document).on('click', 'body .descentToThird', function() {
-		gsap.to(meterSurface, 1, {stroke: "#999"});
-		gsap.to(meterAbout, 1, {stroke: "#999"});
-		gsap.to(meterSkills, 1, {stroke: "#999"});
-		gsap.to(meterProjects, 1, {stroke: "#eeea80"});
-		gsap.to(meterContact, 1, {stroke: "#999"});
-		
-		projectsT1.play();
+		firstPageTl.pause();
+
 		gsap.to(window, {duration: 1, scrollTo: ".thirdPage"});
-		gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 1});
-		// gsap.to(".subMarine", {x: 300, bottom: "10vh", ease: "power1", duration: 2, delay: 1.5});
-		projectsT1.fromTo(".thirdStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
-
-
-		sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
-		.fromTo(".shark2", {x: "0"},{x:"-120vw", ease: "power1.in", duration: 12}, 0.1);
-		
-		sharksTl.play();
+		secondPageTl.fromTo(".thirdStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
+		secondPageTl.play();
 	});
 
-	// onclick animation for projectsPage
+	// onclick animation for thirdPage
 
-	$(document).on('click', 'body .ascentBtnProjects', function() {
+	$(document).on('click', 'body .ascentToSecond', function() {
+		firstPageTl.pause();
+		secondPageTl.pause();
 
-		gsap.to(meterSurface, 1, {stroke: "#999"});
-		gsap.to(meterAbout, 1, {stroke: "#999"});
-		gsap.to(meterSkills, 1, {stroke: "#eeea80"});
-		gsap.to(meterProjects, 1, {stroke: "#999"});
-		gsap.to(meterContact, 1, {stroke: "#999"});
+		gsap.to(window, {duration: 1, scrollTo: ".secondPage"});
+		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
+	});
+
+	$(document).on('click', 'body .descentToForth', function() {
+		firstPageTl.pause();
+		secondPageTl.pause();
+
+		gsap.to(window, {duration: 1, scrollTo: ".forthPage"});
+		gsap.to(".subMarine", 1, {x: 0, ease:"power1.inOut"});
+		thirdPageTl.fromTo(".forthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
+		thirdPageTl.play();
+	});
+
+	// onclick animation for forthPage
+
+	$(document).on('click', 'body .ascentToThird', function() {
+		firstPageTl.pause();
+		secondPageTl.pause();
+		thirdPageTl.pause();
 
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
-		gsap.to(".subMarine", 1, {bottom: "47vh", ease:"power1.inOut", delay: 1});
-		gsap.to(window, {duration: 1, scrollTo: ".secondPage", delay: 1.25});
-		sharksTl.pause();
-		jellyTl.play();
-		projectsT1.pause();
+		gsap.to(window, {duration: 1, scrollTo: ".thirdPage"});
+
 	});
 
-	$(document).on('click', 'body .descentBtnProjects', function() {
-		gsap.to(meterSurface, 1, {stroke: "#999"});
-		gsap.to(meterAbout, 1, {stroke: "#999"});
-		gsap.to(meterSkills, 1, {stroke: "#999"});
-		gsap.to(meterProjects, 1, {stroke: "#999"});
-		gsap.to(meterContact, 1, {stroke: "#eeea80"});
+	$(document).on('click', 'body .descentToFifth', function() {
+		firstPageTl.pause();
+		secondPageTl.pause();
+		thirdPageTl.pause();
 
 		gsap.to(".subMarine", 1, {x: 0, ease:"power1.inOut"});
-		gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0});
-		gsap.to(window, {duration: 1, scrollTo: ".contactPage"});
-		gsap.to(".contactBtn", {display: "inline", opacity: 1, duration: 1, ease: "back"});
-		
-		sharksTl.pause();
-		jellyTl.pause();
-		projectsT1.pause();
+		gsap.to(window, {duration: 1, scrollTo: ".fifthPage"});
+		forthPageTl.fromTo(".fifthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
+		forthPageTl.play();
+
+	});
+
+	// onclick animation for fifthPage
+
+	$(document).on('click', 'body .ascentToForth', function() {
+		firstPageTl.pause();
+		secondPageTl.pause();
+		thirdPageTl.pause();
+		forthPageTl.pause();
+
+		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
+		gsap.to(window, {duration: 1, scrollTo: ".forthPage"});
+	});
+
+	$(document).on('click', 'body .descentToSixth', function() {
+		firstPageTl.pause();
+		secondPageTl.pause();
+		thirdPageTl.pause();
+		forthPageTl.pause();
+
+		gsap.to(window, {duration: 1, scrollTo: ".sixthPage"});
+		fifthPageTl.fromTo(".sixthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
+		fifthPageTl.play();
 	});
 
 	// onclick animation for contactPage
 
 	$(document).on('click', 'body .backToTopBtnContact', function() {
-		gsap.to(meterSurface, 1, {stroke: "#eeea80"});
-		gsap.to(meterAbout, 1, {stroke: "#999"});
-		gsap.to(meterSkills, 1, {stroke: "#999"});
-		gsap.to(meterProjects, 1, {stroke: "#999"});
-		gsap.to(meterContact, 1, {stroke: "#999"});
+		firstPageTl.pause();
+		secondPageTl.pause();
+		thirdPageTl.pause();
+		forthPageTl.pause();
+		fifthPageTl.pause();
 
-		gsap.to(".depthMeter", {opacity: 0});
 		gsap.to(".subMarine", {x: 0, bottom: "10vh", duration: 0.1, ease:"power1.inOut"});
 		gsap.to(window, {duration: 4, scrollTo: "body", delay: 0.1});
 		gsap.to(".subMarine", {opacity: 1, duration: 0.1, delay: 0.5});
-		sharksTl.pause();
-		jellyTl.pause();
 		diveTextTl.play();
-		gsap.to(".depthMeter", {opacity: 1, delay: 4});
 	});
 
 });
