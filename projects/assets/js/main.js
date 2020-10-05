@@ -236,4 +236,8 @@ $(document).ready(function(){
 		diveTextTl.play();
 	});
 
+	$(document).on('click', 'body .backToPresentBtnContact', function() {
+		window.location.href = "../";
+	});
+
 });

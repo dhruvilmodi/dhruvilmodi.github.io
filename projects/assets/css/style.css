@@ -208,7 +208,7 @@ body::-webkit-scrollbar {
 .ship1{
     position: absolute;
     height: 100px;
-    bottom: 27vh;
+    bottom: 26vh;
     right: 3vw;
     margin: 0 auto;
 }
@@ -216,7 +216,7 @@ body::-webkit-scrollbar {
 .ship2{
     position: absolute;
     height: 100px;
-    bottom: 27vh;
+    bottom: 26vh;
     left: 3vw;
     margin: 0 auto;
 }
