@@ -108,7 +108,7 @@ $(document).ready(function(){
 
 		gsap.to(window, {duration: 1, scrollTo: ".firstPage"});
 		homeTl.to(".subMarine", 1, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"})
-			.to(".firstStagger", {display: "inline", opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
+			.to(".firstStagger", {display: "flex", opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
 		
 		homeTl.play();
 		diveTextTl.pause();

@@ -281,8 +281,8 @@ $(document).ready(function(){
 		let loadingContainer = document.querySelector(".loadingContainer");
 		let loadingText = document.querySelector(".loadingText");
 		var loadProjectsTl = gsap.timeline();
-		loadProjectsTl.fromTo(loadingContainer,{display: "none", opacity: 0}, {display: "flex", opacity: 1, duration: 1})
-			.fromTo(loadingText, {opacity: 0}, {opacity: 1, repeat: 2, yoyo: true, duration: 1, onComplete : loadProjects});
+		loadProjectsTl.fromTo(loadingContainer,{display: "none", opacity: 0}, {display: "flex", opacity: 1, duration: 0.5})
+			.fromTo(loadingText, {opacity: 0}, {opacity: 1, repeat: 2, yoyo: true, duration: 0.5, onComplete : loadProjects});
 	});
 
 
