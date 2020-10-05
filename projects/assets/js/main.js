@@ -108,7 +108,7 @@ $(document).ready(function(){
 
 		gsap.to(window, {duration: 1, scrollTo: ".firstPage"});
 		homeTl.to(".subMarine", 1, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"})
-			.to(".firstStagger", {display: "flex", opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
+		.fromTo(".firstStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back"});
 		
 		homeTl.play();
 		diveTextTl.pause();
@@ -133,7 +133,7 @@ $(document).ready(function(){
 
 		homeTl.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"})
 		.to(".subMarine", 1, {bottom: "60vh", ease:"power1.inOut"})
-			.to(".firstStagger", {display: "inline", opacity: 1, stagger: 0.2, duration: 1, ease: "back"});
+			.fromTo(".firstStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
 		
 		homeTl.play();
 		diveTextTl.pause();
@@ -141,7 +141,7 @@ $(document).ready(function(){
 
 	// onclick animation for firstPage
 
-	$(document).on('click', 'body .ascentToFirst', function() {
+	$(document).on('click', 'body .ascentToHome', function() {
 		gsap.to(meterSurface, 1, {stroke: "#eeea80"});
 		gsap.to(meterAbout, 1, {stroke: "#999"});
 		gsap.to(meterSkills, 1, {stroke: "#999"});
@@ -165,19 +165,17 @@ $(document).ready(function(){
 		gsap.to(meterProjects, 1, {stroke: "#999"});
 		gsap.to(meterContact, 1, {stroke: "#999"});
 
-		jellyTl.fromTo(".jellyFish1", {y: 10, x: -5, rotate: 5}, {y: -10, x: 5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
-			.fromTo(".jellyFish2", {y: -10, x: 4, rotate: 4},{y: 10, x: -5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
-			.fromTo(".jellyFish3", {y: -5, x: 2}, {y: 5, x: -2, ease: "power2.inOut", duration: 5, yoyo: true, repeat: -1}, 0.2);
+		// jellyTl.fromTo(".jellyFish1", {y: 10, x: -5, rotate: 5}, {y: -10, x: 5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
+		// 	.fromTo(".jellyFish2", {y: -10, x: 4, rotate: 4},{y: 10, x: -5, rotate: -5, ease: "power1.inOut", duration: 3, yoyo: true, repeat: -1}, 0.2)
+		// 	.fromTo(".jellyFish3", {y: -5, x: 2}, {y: 5, x: -2, ease: "power2.inOut", duration: 5, yoyo: true, repeat: -1}, 0.2);
 
-		jellyTl.play();
+		// jellyTl.play();
 
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
 		gsap.to(window, {duration: 1, scrollTo: ".secondPage"});
 		gsap.to(".subMarine", 1, {bottom: "47vh", ease:"power1.inOut"});
 
-		aboutTl.to(".secondStagger", {opacity: 1, stagger: 0.1, duration: 1, ease: "back"})
-			.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 1}, 1)
-			.to(".skillsBtns", {display: "inline", opacity: 1, duration: 1, ease: "back"}, 2.5);
+		aboutTl.fromTo(".secondStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
 		
 		aboutTl.play();
 
@@ -185,7 +183,7 @@ $(document).ready(function(){
 
 	// onclick animation for secondPage
 
-	$(document).on('click', 'body .ascentToSecond', function() {
+	$(document).on('click', 'body .ascentToFirst', function() {
 		gsap.to(meterSurface, 1, {stroke: "#999"});
 		gsap.to(meterAbout, 1, {stroke: "#eeea80"});
 		gsap.to(meterSkills, 1, {stroke: "#999"});
@@ -199,7 +197,7 @@ $(document).ready(function(){
 		jellyTl.pause();
 	});
 
-	$(document).on('click', 'body .descentToForth', function() {
+	$(document).on('click', 'body .descentToThird', function() {
 		gsap.to(meterSurface, 1, {stroke: "#999"});
 		gsap.to(meterAbout, 1, {stroke: "#999"});
 		gsap.to(meterSkills, 1, {stroke: "#999"});
@@ -207,11 +205,10 @@ $(document).ready(function(){
 		gsap.to(meterContact, 1, {stroke: "#999"});
 		
 		projectsT1.play();
-		gsap.to(window, {duration: 1, scrollTo: ".projectPage"});
+		gsap.to(window, {duration: 1, scrollTo: ".thirdPage"});
 		gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 1});
-		gsap.to(".subMarine", {x: 300, bottom: "10vh", ease: "power1", duration: 2, delay: 1.5});
-		projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 3})
-			.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 1, repeat: 2});
+		// gsap.to(".subMarine", {x: 300, bottom: "10vh", ease: "power1", duration: 2, delay: 1.5});
+		projectsT1.fromTo(".thirdStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
 
 
 		sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)

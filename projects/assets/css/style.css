@@ -23,6 +23,11 @@ body::-webkit-scrollbar {
     text-shadow: 0px 1px #70707050;
 }
 
+.para{
+    color: #FFFFFF;
+    text-shadow: 0px 1px #00000050;
+}
+
 .ascentToFirst,
 .ascentToSecond,
 .meterAbout,
@@ -79,7 +84,7 @@ body::-webkit-scrollbar {
     padding: 10px;
     cursor: pointer;
     transition: 0.2s;
-    opacity: 0;
+    /* opacity: 0; */
     margin: auto 5px auto 5px;
 }
 
@@ -266,14 +271,14 @@ body::-webkit-scrollbar {
     padding-top: 40px;
 }
 
-.firstPageHead{
+.pageHead{
     position: relative;
     display: block !important;
     text-align: center;
 }
 
 .firstStagger{
-    display: none;
+    /* display: none; */
     opacity: 0;
 }
 
@@ -376,6 +381,7 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    padding-top: 40px;
 }
 
 .skillsHead{
@@ -393,11 +399,6 @@ body::-webkit-scrollbar {
 }
 
 .secondStagger{
-    opacity: 0;
-}
-
-.skillsBtns{
-    display: none;
     opacity: 0;
 }
 
@@ -433,7 +434,7 @@ body::-webkit-scrollbar {
     opacity: 0.2;
 }
 
-/* --------------- secondPage --------------- */
+/* --------------- thirdPage --------------- */
 
 .thirdPage{
     height: 100vh;
@@ -445,6 +446,11 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    padding-top: 40px;
+}
+
+.thirdStagger{
+    opacity: 0;
 }
 
 /* --------------- projectPage --------------- */
