@@ -215,7 +215,7 @@ $(document).ready(function(){
 		thirdPageTl.pause();
 		forthPageTl.pause();
 
-		gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0.5});
+		gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0.3});
 		gsap.to(window, {duration: 1, scrollTo: ".contactPage"});
 		fifthPageTl.fromTo(".contact", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "back", delay: 0.5});
 		fifthPageTl.play();
