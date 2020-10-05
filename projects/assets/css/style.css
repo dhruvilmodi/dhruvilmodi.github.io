@@ -46,28 +46,6 @@ body::-webkit-scrollbar {
     padding-bottom: 40px;
 }
 
-.diveButton{
-    width: 150px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 5vh;
-    margin: 0 auto;
-    text-align: center;
-    border: 1px solid #DDDDDD;
-    padding: 10px;
-    color: #DDDDDD;
-    cursor: pointer;
-    transition: 0.5s;
-    opacity: 0;
-}
-
-.diveButton:hover{
-    color: #222222;
-    background-color: #DDDDDD;
-    opacity: 1 !important;
-}
-
 .bottomBtnContainer{
     position: absolute;
     left: 0;
@@ -256,6 +234,28 @@ body::-webkit-scrollbar {
 
 #animation_container{
     height: 100vh !important;
+}
+
+.diveButton{
+    width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5vh;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    color: #DDDDDD;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.diveButton:hover{
+    color: #222222;
+    background-color: #DDDDDD;
+    opacity: 1 !important;
 }
 
 /* --------------- firstPage --------------- */

@@ -148,7 +148,7 @@ $(document).ready(function(){
 
 		gsap.to(window, {duration: 1, scrollTo: ".heroPage"});
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
-		gsap.to(".subMarine", 1, {bottom: "20vh", ease:"power4.Out"});
+		gsap.to(".subMarine", 1, {bottom: "10vh", ease:"power4.Out"});
 		diveTextTl.play();
 		fishTl.pause();
 		jellyTl.pause();
@@ -263,7 +263,7 @@ $(document).ready(function(){
 		gsap.to(meterContact, 1, {stroke: "#999"});
 
 		gsap.to(".depthMeter", {opacity: 0});
-		gsap.to(".subMarine", {x: 0, bottom: "20vh", duration: 0.1, ease:"power1.inOut"});
+		gsap.to(".subMarine", {x: 0, bottom: "10vh", duration: 0.1, ease:"power1.inOut"});
 		gsap.to(window, {duration: 4, scrollTo: "body", delay: 0.1});
 		gsap.to(".subMarine", {opacity: 1, duration: 0.1, delay: 0.5});
 		sharksTl.pause();

@@ -23,6 +23,7 @@ body::-webkit-scrollbar {
 }
 
 .textShadow{
+    color: #707070;
     text-shadow: 0px 1px #70707050;
 }
 
@@ -40,28 +41,6 @@ body::-webkit-scrollbar {
 
 .padding-bottom{
     padding-bottom: 20px;
-}
-
-.diveButton{
-    width: 150px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 7vh;
-    margin: 0 auto;
-    text-align: center;
-    border: 1px solid #DDDDDD;
-    padding: 10px;
-    color: #DDDDDD;
-    cursor: pointer;
-    transition: 0.5s;
-    opacity: 0;
-}
-
-.diveButton:hover{
-    color: #222222;
-    background-color: #DDDDDD;
-    opacity: 1 !important;
 }
 
 .bottomBtnContainer{
@@ -165,7 +144,7 @@ body::-webkit-scrollbar {
     height: 60px;
     position: fixed;
     z-index: 300;
-    bottom: 20vh;
+    bottom: 10vh;
     left: 6vw;
     opacity: 0;
 }
@@ -212,8 +191,8 @@ body::-webkit-scrollbar {
 
 .ship1{
     position: absolute;
-    height: 125px;
-    bottom: 19vh;
+    height: 100px;
+    bottom: 27vh;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -232,6 +211,28 @@ body::-webkit-scrollbar {
 
 #animation_container{
     height: 100vh !important;
+}
+
+.diveButton{
+    width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5vh;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    color: #DDDDDD;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.diveButton:hover{
+    color: #222222;
+    background-color: #DDDDDD;
+    opacity: 1 !important;
 }
 
 /* --------------- aboutpage --------------- */
