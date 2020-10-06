@@ -9,7 +9,7 @@ body{
     background-color: #000;
     color: #FFFFFF;
     overflow-x: hidden !important;
-    overflow-y: hidden !important;
+    /* overflow-y: hidden !important; */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -645,4 +645,16 @@ body::-webkit-scrollbar {
     right: 0;
     bottom: 5vh;
     text-align: center;
+}
+
+.loadToPresent{
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: #131922;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
