@@ -122,7 +122,7 @@ $(document).ready(function(){
 		gsap.to(window, {duration: 0.5, scrollTo: ".aboutPage"});
 
 		homeTl.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"})
-		.to(".subMarine", 0.5, {bottom: "60vh", ease:"power1.inOut"})
+			.to(".subMarine", 0.5, {bottom: "60vh", ease:"power1.inOut"})
 			.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 0.5, ease: "back"});
 		
 		homeTl.play();
@@ -132,6 +132,11 @@ $(document).ready(function(){
 	// onclick animation for aboutPage
 
 	$(document).on('click', 'body .ascentBtnAbout', function() {
+		homeTl.pause();
+		diveTextTl.play();
+		fishTl.pause();
+		jellyTl.pause();
+
 		gsap.to(meterSurface, 0.5, {stroke: "#000000"});
 		gsap.to(meterAbout, 0.5, {stroke: "#999"});
 		gsap.to(meterSkills, 0.5, {stroke: "#999"});
@@ -141,9 +146,7 @@ $(document).ready(function(){
 		gsap.to(window, {duration: 0.5, scrollTo: ".heroPage"});
 		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
 		gsap.to(".subMarine", 0.5, {bottom: "10vh", ease:"power4.Out"});
-		diveTextTl.play();
-		fishTl.pause();
-		jellyTl.pause();
+		
 	});
 
 	$(document).on('click', 'body .descentBtnAbout', function() {
@@ -162,13 +165,12 @@ $(document).ready(function(){
 		jellyTl.play();
 
 		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
-		gsap.to(window, {duration: 0.5, scrollTo: ".skillsPage"});
 		gsap.to(".subMarine", 0.5, {bottom: "47vh", ease:"power1.inOut"});
+		gsap.to(window, {duration: 0.5, scrollTo: ".skillsPage"});
 
 		aboutTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 0.5, ease: "back"})
 			.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 0.5}, 1)
-			.to(".skillsBtns", {display: "inline", opacity: 1, duration: 0.5, ease: "back"}, 2);
-		
+			.to(".skillsBtns", {display: "inline", opacity: 1, duration: 0.5, ease: "back"}, 2);	
 		aboutTl.play();
 
 	});
@@ -176,6 +178,7 @@ $(document).ready(function(){
 	// onclick animation for skillsPage
 
 	$(document).on('click', 'body .ascentBtnSkills', function() {
+		aboutTl.pause();
 		gsap.to(meterSurface, 0.5, {stroke: "#999"});
 		gsap.to(meterAbout, 0.5, {stroke: "#eeea80"});
 		gsap.to(meterSkills, 0.5, {stroke: "#999"});
@@ -190,6 +193,7 @@ $(document).ready(function(){
 	});
 
 	$(document).on('click', 'body .descentBtnSkills', function() {
+		aboutTl.pause();
 		gsap.to(meterSurface, 0.5, {stroke: "#999"});
 		gsap.to(meterAbout, 0.5, {stroke: "#999"});
 		gsap.to(meterSkills, 0.5, {stroke: "#999"});

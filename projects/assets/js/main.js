@@ -97,6 +97,8 @@ $(document).ready(function(){
 
 	$(document).on('click', 'body .ascentToHome', function() {
 
+		homeTl.pause();
+
 		gsap.to(window, {duration: 0.5, scrollTo: ".heroPage"});
 		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
 		gsap.to(".subMarine", 0.5, {bottom: "10vh", ease:"power4.Out"});
