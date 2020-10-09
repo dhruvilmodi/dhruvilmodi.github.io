@@ -306,12 +306,13 @@ body::-webkit-scrollbar {
     margin-top: 20px;
     margin-bottom: 20px;
     min-height: 150px;
-    max-height: 250px;
+    max-height: 200px;
+    object-fit: fill;
     border-radius: 5px;
 }
 
 .projectImages:hover{
-    box-shadow: 0px 0px 12px #1e90ff;
+    box-shadow: 0px 0px 20px #1e90ff;
 }
 
 .otherProjectImages{
@@ -321,7 +322,15 @@ body::-webkit-scrollbar {
     left: 0;
     right: 0;
     margin: auto;
-    height: 150px;
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 150px;
+    max-height: 175px;
+    border-radius: 3px;
+}
+
+.otherProjectImages:hover{
+    box-shadow: 0px 0px 20px #1e90ff;
 }
 
 .fish1About{
