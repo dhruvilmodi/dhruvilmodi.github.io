@@ -177,7 +177,8 @@ body::-webkit-scrollbar {
 }
 
 .plane{
-    height: 75px;
+    min-height: 40px;
+    max-height: 60px;
     z-index: 0 !important;
 }
 
