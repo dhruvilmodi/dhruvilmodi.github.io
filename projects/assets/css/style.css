@@ -305,8 +305,13 @@ body::-webkit-scrollbar {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    max-height: 300px;
+    min-height: 150px;
+    max-height: 250px;
     border-radius: 5px;
+}
+
+.projectImages:hover{
+    box-shadow: 0px 0px 12px #1e90ff;
 }
 
 .otherProjectImages{
