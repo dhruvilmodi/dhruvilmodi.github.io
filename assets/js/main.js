@@ -9,6 +9,10 @@ function subAnimation() {
 
 $(document).ready(function(){
 
+	$(window).on('beforeunload', function(){
+		$(window).scrollTop(0);
+	});
+
 	// welcomeContainer
 	let welcomeContainer = document.querySelector(".welcomeContainer");
 	let welcomeText1 = document.querySelector(".welcomeText1");
@@ -79,7 +83,7 @@ $(document).ready(function(){
 	$(".aboutFishes").fadeOut("fast");
 
 	gsap.fromTo(".depthMeter", {scale: 2}, {opacity: 1, scale: 1, delay: 2, ease: "back.out"});
-	gsap.to(meterSurface, 1, {stroke: "#eeea80"});
+	gsap.to(meterSurface, 1, {stroke: "#000000"});
 
 	/* ---------------- divetext animation ---------------- */
 	diveTextTl.fromTo(".diveButton", 1, {opacity: 0},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
@@ -140,7 +144,7 @@ $(document).ready(function(){
 	// onclick animation for aboutPage
 
 	$(document).on('click', 'body .ascentBtnAbout', function() {
-		gsap.to(meterSurface, 1, {stroke: "#eeea80"});
+		gsap.to(meterSurface, 1, {stroke: "#000000"});
 		gsap.to(meterAbout, 1, {stroke: "#999"});
 		gsap.to(meterSkills, 1, {stroke: "#999"});
 		gsap.to(meterProjects, 1, {stroke: "#999"});

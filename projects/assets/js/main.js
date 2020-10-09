@@ -9,6 +9,10 @@ function subAnimation() {
 
 $(document).ready(function(){
 
+	$(window).on('beforeunload', function(){
+		$(window).scrollTop(0);
+	});
+
 	// welcomeContainer
 	let welcomeContainer = document.querySelector(".welcomeContainer");
 	let welcomeText1 = document.querySelector(".welcomeText1");
