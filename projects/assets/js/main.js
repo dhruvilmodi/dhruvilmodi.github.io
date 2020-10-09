@@ -236,8 +236,20 @@ $(document).ready(function(){
 		diveTextTl.play();
 	});
 
-	$(document).on('click', 'body .backToPresentBtnContact', function() {
+	// loading container for present
+	let loadToPresent = document.querySelector(".loadToPresent");
+	let loadPresentText = document.querySelector(".loadPresentText");
+	var loadToPresentTl = gsap.timeline();
+
+	function backToPresent() {
 		window.location.href = "../";
+	}
+
+	$(document).on('click', 'body .backToPresentBtnContact', function() {
+		welcomeTl.kill();
+
+		loadToPresentTl.fromTo(loadToPresent,{display: "none", opacity: 0}, {display: "flex", opacity: 1, duration: 0.5})
+			.fromTo(loadPresentText, {opacity: 0}, {opacity: 1, repeat: 1, yoyo: true, duration: 0.5, onComplete : backToPresent});
 	});
 
 });
