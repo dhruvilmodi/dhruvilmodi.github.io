@@ -72,6 +72,8 @@ $(document).ready(function(){
 	var thirdPageTl = gsap.timeline();
 	var forthPageTl = gsap.timeline();
 	var fifthPageTl = gsap.timeline();
+	var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
+	sharksTl.pause();
 	gsap.registerPlugin(TextPlugin);
 
 	/* ---------------- divetext animation ---------------- */
@@ -201,6 +203,11 @@ $(document).ready(function(){
 		gsap.to(window, {duration: 0.5, scrollTo: ".sixthPage"});
 		fifthPageTl.fromTo(".sixthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3});
 		fifthPageTl.play();
+
+		sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
+			.fromTo(".shark2", {x: "0"},{x:"-120vw", ease: "power1.in", duration: 12}, 0.1);
+		
+		sharksTl.play();
 	});
 
 	// onclick animation for sixthPage
@@ -210,6 +217,7 @@ $(document).ready(function(){
 		secondPageTl.pause();
 		thirdPageTl.pause();
 		forthPageTl.pause();
+		sharksTl.pause();
 
 		gsap.to(".subMarine", 1, {x: 0, opacity: 1});
 		gsap.to(window, {duration: 0.5, scrollTo: ".fifthPage"});
