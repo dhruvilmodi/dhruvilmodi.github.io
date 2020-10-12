@@ -274,7 +274,7 @@ $(document).ready(function(){
 	});
 
 	$(document).on('click', 'body .backToTopBtnContact', function() {
-		gsap.to(meterSurface, 0.5, {stroke: "#eeea80"});
+		gsap.to(meterSurface, 0.5, {stroke: "#000000"});
 		gsap.to(meterAbout, 0.5, {stroke: "#999"});
 		gsap.to(meterSkills, 0.5, {stroke: "#999"});
 		gsap.to(meterProjects, 0.5, {stroke: "#999"});
