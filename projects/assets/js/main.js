@@ -16,7 +16,8 @@ gsap.registerPlugin(TextPlugin);
 var ship1Tl = gsap.timeline();
 var loadToPresentTl = gsap.timeline();
 
-var sectionHome, section1, section2, section3, section4, section5, section6, sectionContact = false;
+var section;
+
 let welcomeContainer = document.querySelector(".welcomeContainer");
 let welcomeText1 = document.querySelector(".welcomeText1");
 let welcomeText2 = document.querySelector(".welcomeText2");
@@ -83,8 +84,14 @@ function ship1Fn() {
 		.fromTo(ship2, {rotate: 0.5}, {rotate: -1, repeat: -2, duration: 3, yoyo: true, ease: "power1.inOut"});
 }
 
+function diveTextFn() {
+	diveTextTl.fromTo(".diveButton", 1, {opacity: 0},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
+	diveTextTl.play();
+}
+
 function diveIn() {
-	sectionHome = false;
+	section = 1;
+
 	$(".aboutFishes").fadeIn("fast");
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".firstPage"});
@@ -96,6 +103,8 @@ function diveIn() {
 }
 
 function ascentToHome() {
+	section = 0;
+
 	homeTl.pause();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".heroPage"});
@@ -106,6 +115,8 @@ function ascentToHome() {
 }
 
 function descentToSecond() {
+	section = 2;
+
 	homeTl.pause();
 
 	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
@@ -117,6 +128,8 @@ function descentToSecond() {
 }
 
 function ascentToFirst() {
+	section = 1
+
 	homeTl.pause();
 	firstPageTl.pause();
 
@@ -125,6 +138,8 @@ function ascentToFirst() {
 }
 
 function descentToThird() {
+	section = 3;
+
 	firstPageTl.pause();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".thirdPage"});
@@ -133,6 +148,8 @@ function descentToThird() {
 }
 
 function ascentToSecond() {
+	section = 2;
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 
@@ -141,6 +158,8 @@ function ascentToSecond() {
 }
 
 function descentToForth() {
+	section = 4;
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 
@@ -151,6 +170,8 @@ function descentToForth() {
 }
 
 function ascentToThird() {
+	section = 3;
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
@@ -160,6 +181,8 @@ function ascentToThird() {
 }
 
 function descentToFifth() {
+	section = 5;
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
@@ -171,6 +194,8 @@ function descentToFifth() {
 }
 
 function ascentToForth() {
+	section = 4;
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
@@ -181,6 +206,8 @@ function ascentToForth() {
 }
 
 function descentToSixth() {
+	section = 6;
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
@@ -197,6 +224,8 @@ function descentToSixth() {
 }
 
 function ascentToFifth() {
+	section = 5;
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
@@ -208,6 +237,8 @@ function ascentToFifth() {
 }
 
 function descentToContact() {
+	section = 7;
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
@@ -220,12 +251,16 @@ function descentToContact() {
 }
 
 function ascentBtnContact() {
+	section = 6;
+
 	gsap.to(window, {duration: 0.5, scrollTo: ".sixthPage"});
 	gsap.to(".subMarine", 1, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"})
 	gsap.to(".subMarine", {opacity: 1, duration: 0.1, delay: 0.2});
 }
 
 function backToTopBtnContact() {
+	section = 0;
+	
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
@@ -250,7 +285,7 @@ function backToPresentBtnContact() {
 
 $(document).ready(function(){
 	$(window).on('beforeunload', function(){$(window).scrollTop(0);});
-	sectionHome = true;
+	section = 0;
 
 	// welcomeContainer
 	welcomeContainerFn();
@@ -264,11 +299,9 @@ $(document).ready(function(){
 	ship1Fn();
 	// mainSub animation
 	subAnimation();
+	// diveText animation
+	diveTextFn();
 	
-	/* ---------------- divetext animation ---------------- */
-	diveTextTl.fromTo(".diveButton", 1, {opacity: 0},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
-	diveTextTl.play();
-
 	// onclick animation for homePage
 	$(document).on('click', 'body .diveButton', function() {diveIn();});
 
@@ -305,13 +338,30 @@ $(document).ready(function(){
 	$(document).keydown(function(e){e.preventDefault()})
 	$(document).keyup(function(e){
 		var key = e.keyCode;
-		if(key == 38 && sectionHome == true){
-			alert("Already at the surface!");
+		if(key == 38){
+			switch (section) {
+				case 0: alert("Already at the surface!"); break;
+				case 1: ascentToHome(); break;
+				case 2: ascentToFirst(); break;
+				case 3: ascentToSecond(); break;
+				case 4: ascentToThird(); break;
+				case 5: ascentToForth(); break;
+				case 6: ascentToFifth(); break;
+				case 7: ascentBtnContact();
+			  }
 		}
 
-		if(key == 40 && sectionHome == true){
-			diveIn();
+		if(key == 40){
+			switch (section) {
+				case 0: diveIn(); break;
+				case 1: descentToSecond(); break;
+				case 2: descentToThird(); break;
+				case 3: descentToForth(); break;
+				case 4: descentToFifth(); break;
+				case 5: descentToSixth(); break;
+				case 6:descentToContact();
+			}
 		}
-	})
+	});
 
 });
