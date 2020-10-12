@@ -338,6 +338,7 @@ $(document).ready(function(){
 	// $(document).keydown(function(e){e.preventDefault()})
 	$(document).keyup(function(e){
 		var key = e.keyCode;
+		// dor up arrow key
 		if(key == 38){
 			switch (section) {
 				case 0: alert("Already at the surface!"); break;
@@ -350,7 +351,8 @@ $(document).ready(function(){
 				case 7: ascentBtnContact();
 			  }
 		}
-
+		
+		// for down arrow key
 		if(key == 40){
 			switch (section) {
 				case 0: diveIn(); break;
