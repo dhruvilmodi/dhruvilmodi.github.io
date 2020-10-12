@@ -349,7 +349,7 @@ $(document).ready(function(){
 				case 5: ascentToForth(); break;
 				case 6: ascentToFifth(); break;
 				case 7: ascentBtnContact();
-			  }
+			}
 		}
 		
 		// for down arrow key
