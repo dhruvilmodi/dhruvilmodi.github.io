@@ -420,6 +420,7 @@ $(document).ready(function(){
 			}
 		}
 
+		// for esc key
 		if(key == 27){
 			gsap.to(".facts", {opacity: 0, display: "none", duration: 0.5});
 		}

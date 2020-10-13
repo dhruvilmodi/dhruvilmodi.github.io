@@ -150,6 +150,8 @@ body::-webkit-scrollbar {
     transition: 0.5s;
 }
 
+/* --------------- factsContainer --------------- */
+
 .facts{
     width: 100vw;
     height: 100vh;

@@ -45,6 +45,34 @@ let loadToPresent = document.querySelector(".loadToPresent");
 let loadPresentText = document.querySelector(".loadPresentText");
 
 /* ------------------- global functions ------------------- */
+function escBlink() {
+	gsap.to(".escBlink", {opacity: 0.3, yoyo: true, ease: "power1.inOut", repeat: -1});
+}
+
+function fact1Fun() {
+	gsap.to(".fact1", {opacity: 1, display: "flex", duration: 0.5});
+}
+
+function project1Fun() {
+	window.open('https://shivani.dhruvilmodi.com', '_blank');
+}
+
+function project2Fun() {
+	window.open('https://dhruvilmodi.com/projects/launchPad/', '_blank');
+}
+
+function project3Fun() {
+	window.open('https://dhruvilmodi.com/projects/createUsers/', '_blank');
+}
+
+function project4Fun() {
+	window.open('https://dhruvilmodi.com/projects/ctmyth/', '_blank');
+}
+
+function project5Fun() {
+	window.open('https://dhruvilmodi.com/projects/lakeviewPark/', '_blank');
+}
+
 function subAnimation() {
     gsap.to(".subMarine", 1, {opacity: 1, delay: 1});
     gsap.fromTo(".subMarine", 4, {y: 5, rotate: 2}, {y: -5, rotate: -2, yoyo:true, repeat: -1, ease: "power1.inOut"});
@@ -310,6 +338,8 @@ $(document).ready(function(){
 	subAnimation();
 	// diveText animation
 	diveTextFn();
+	// esc animation
+	escBlink();
 	
 	// onclick animation for homePage
 	$(document).on('click', 'body .diveButton', function() {diveIn();});
@@ -372,6 +402,23 @@ $(document).ready(function(){
 				case 5: descentToSixth(); break;
 				case 6:descentToContact();
 			}
+		}
+
+		// for enter key
+		if(key == 13){
+			switch (section) {
+				case 0: fact1Fun(); break;
+				case 1: project1Fun(); break;
+				case 2: project2Fun(); break;
+				case 3: project3Fun(); break;
+				case 4: project4Fun(); break;
+				case 5: project5Fun();
+			}
+		}
+
+		// for esc key
+		if(key == 27){
+			gsap.to(".facts", {opacity: 0, display: "none", duration: 0.5});
 		}
 	});
 
