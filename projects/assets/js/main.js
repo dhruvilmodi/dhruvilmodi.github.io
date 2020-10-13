@@ -5,12 +5,13 @@ var planeTl = gsap.timeline();
 var blastTl = gsap.timeline();
 var cloudTl = gsap.timeline();
 var diveTextTl = gsap.timeline();
-var homeTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
-var firstPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
-var secondPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
-var thirdPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
-var forthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
-var fifthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
+var homeTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
+var firstPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
+var secondPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
+var thirdPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
+var forthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
+var fifthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
+var sixthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
 var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
 gsap.registerPlugin(TextPlugin);
 var ship1Tl = gsap.timeline();
@@ -92,11 +93,9 @@ function diveTextFn() {
 function diveIn() {
 	section = 1;
 
-	$(".aboutFishes").fadeIn("fast");
-
 	gsap.to(window, {duration: 0.5, scrollTo: ".firstPage"});
-	homeTl.to(".subMarine", 0.5, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"})
-		.fromTo(".firstStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back"});
+	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"});
+	homeTl.fromTo(".firstStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.2, ease: "back", repeat: 0});
 	
 	homeTl.play();
 	diveTextTl.pause();
@@ -119,10 +118,9 @@ function descentToSecond() {
 
 	homeTl.pause();
 
-	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".secondPage"});
 
-	firstPageTl.fromTo(".secondStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3});
+	firstPageTl.fromTo(".secondStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.2, ease: "back", repeat: 0.1});
 	
 	firstPageTl.play();
 }
@@ -134,17 +132,16 @@ function ascentToFirst() {
 	firstPageTl.pause();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".firstPage"});
-	gsap.to(".subMarine", 1, {x: 0, opacity: 1, ease:"power1.inOut"});
 }
 
 function descentToThird() {
 	section = 3;
 
+	gsap.to(window, {duration: 0.5, scrollTo: ".thirdPage"});
+	secondPageTl.fromTo(".thirdStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.2, ease: "back", delay: 0.1});
+	secondPageTl.play();
 	firstPageTl.pause();
 
-	gsap.to(window, {duration: 0.5, scrollTo: ".thirdPage"});
-	secondPageTl.fromTo(".thirdStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3});
-	secondPageTl.play();
 }
 
 function ascentToSecond() {
@@ -163,9 +160,8 @@ function descentToForth() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 
-	gsap.to(".subMarine", 0.5, {x: 0, ease:"power1.inOut"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".forthPage"});
-	thirdPageTl.fromTo(".forthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3});
+	thirdPageTl.fromTo(".forthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.2, ease: "back", delay: 0.1});
 	thirdPageTl.play();
 }
 
@@ -187,9 +183,8 @@ function descentToFifth() {
 	secondPageTl.pause();
 	thirdPageTl.pause();
 
-	gsap.to(".subMarine", 0.5, {x: 0, ease:"power1.inOut"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".fifthPage"});
-	forthPageTl.fromTo(".fifthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3});
+	forthPageTl.fromTo(".fifthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.2, ease: "back", delay: 0.1});
 	forthPageTl.play();
 }
 
@@ -199,7 +194,7 @@ function ascentToForth() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
-	// forthPageTl.pause();
+	forthPageTl.pause();
 
 	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".forthPage"});
@@ -211,16 +206,17 @@ function descentToSixth() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
-	// forthPageTl.pause();
+	forthPageTl.pause();
 
-	gsap.to(window, {duration: 0.5, scrollTo: ".sixthPage"});
-	fifthPageTl.fromTo(".sixthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.2, ease: "back", delay: 0});
-	fifthPageTl.play();
-
-	sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
-		.fromTo(".shark2", {x: "0"},{x:"-120vw", ease: "power1.in", duration: 12}, 0.1);
+	
+	sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0)
+		.fromTo(".shark2", {x: "0"},{x:"-120vw", ease: "power1.in", duration: 12}, 0);
 	
 	sharksTl.play();
+
+	gsap.to(window, {duration: 0.5, scrollTo: ".sixthPage"});
+	fifthPageTl.fromTo(".sixthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0});
+	fifthPageTl.play();
 }
 
 function ascentToFifth() {
@@ -229,8 +225,8 @@ function ascentToFifth() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
-	// forthPageTl.pause();
-	sharksTl.pause();
+	forthPageTl.pause();
+	fifthPageTl.pause();
 
 	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1});
 	gsap.to(window, {duration: 0.5, scrollTo: ".fifthPage"});
@@ -242,16 +238,24 @@ function descentToContact() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
-	// forthPageTl.pause();
+	forthPageTl.pause();
+	fifthPageTl.pause();
 
 	gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0.3});
 	gsap.to(window, {duration: 0.5, scrollTo: ".contactPage"});
-	fifthPageTl.fromTo(".contact", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3});
-	fifthPageTl.play();
+	sixthPageTl.fromTo(".contact", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.2, ease: "back", delay: 0.1});
+	sixthPageTl.play();
 }
 
 function ascentBtnContact() {
 	section = 6;
+
+	firstPageTl.pause();
+	secondPageTl.pause();
+	thirdPageTl.pause();
+	forthPageTl.pause();
+	fifthPageTl.pause();
+	sixthPageTl.pause();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".sixthPage"});
 	gsap.to(".subMarine", 1, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"})
@@ -266,6 +270,7 @@ function backToTopBtnContact() {
 	thirdPageTl.pause();
 	forthPageTl.pause();
 	fifthPageTl.pause();
+	sixthPageTl.pause();
 
 	gsap.to(window, {duration: 4, scrollTo: "body", delay: 0.1});
 	gsap.to(".subMarine", {x: 0, bottom: "10vh", duration: 0.5, ease:"power1.inOut", delay: 2});
