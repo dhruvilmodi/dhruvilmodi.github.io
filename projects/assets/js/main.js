@@ -89,7 +89,10 @@ function welcomeContainerFn() {
 		.fromTo(welcomeText1, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 0.5}, 0)
 		.fromTo(welcomeText2, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 0.5}, 0)
 		.fromTo(welcomeContainer, {opacity: 1, display: "flex"}, {opacity: 0, display: "none", ease: "power1.inOut", duration: 0.5, delay: 1})
-		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0.3})
+		.fromTo(".ship2", {x:-600}, {x: 0, ease: "power1.inOut", duration: 2}, 2)
+		.fromTo(".ship1", {x: 600}, {x: 0, ease: "power1.inOut", duration: 2}, 2.3)
+		.fromTo(".subMarine", {x: -600}, {x: 0, ease: "power1.inOut", duration: 2}, 2.5)
+		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5}, 3)
 		.to(".keyboardHint", {opacity: 1, display: "flex", duration: 0.5, delay: 0.5});
 }
 

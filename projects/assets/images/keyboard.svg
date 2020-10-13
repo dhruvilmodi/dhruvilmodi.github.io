@@ -111,11 +111,11 @@
         window.onload = function(){
 
 
-            TweenMax.to(".prefix__cls-2", 0.5, {fill:"yellow", repeat: -1, ease: "power1.inOut", yoyo: true});
+            TweenMax.fromTo(".prefix__cls-2", 0.5, {fill:"black"}, {fill:"yellow", repeat: -1, ease: "power1.inOut", yoyo: true});
  
-            TweenMax.to(".returnText", 0.5, {fill:"yellow", repeat: -1, ease: "power1.inOut", yoyo: true});
+            TweenMax.fromTo(".returnText", 0.5, {fill:"black"}, {fill:"yellow", repeat: -1, ease: "power1.inOut", yoyo: true});
 
-            TweenMax.to(".escText", 0.5, {fill:"yellow", repeat: -1, ease: "power1.inOut", yoyo: true});
+            TweenMax.fromTo(".escText", 0.5, {fill:"black"}, {fill:"yellow", repeat: -1, ease: "power1.inOut", yoyo: true});
 
 
 
