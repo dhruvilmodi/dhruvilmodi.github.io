@@ -149,6 +149,26 @@ body::-webkit-scrollbar {
 .loadingText{
     transition: 0.5s;
 }
+/* --------------- keyboardHint --------------- */
+.keyboardHint{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #000000;
+    position: fixed;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+}
+
+.keyboard{
+    min-height: 200px;
+    max-height: 300px;
+    transition: 0.5s;
+}
 
 /* --------------- factsContainer --------------- */
 
@@ -192,7 +212,7 @@ body::-webkit-scrollbar {
     text-align: left;
 }
 
-.factContainer h6{
+.escBlink{
     margin-top: 20px;
     text-align: center;
 }
