@@ -81,8 +81,8 @@ function blastFn() {
 }
 
 function cloudFn() {
-	cloudTl.fromTo(cloud1, {x: "-50vw"}, {x: "100vw", duration: 30, ease: "none", repeat: -1}, 0)
-		.fromTo(cloud2, {x: "-60vw"}, {x: "100vw", duration: 40, ease: "none", repeat: -1}, 1);
+	gsap.fromTo(cloud1, {x: "-50vw"}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -10});
+	gsap.fromTo(cloud2, {x: "-60vw"}, {x: "100vw", duration: 40, ease: "none", repeat: -1, delay: -10});
 }
 
 function ship1Fn() {
