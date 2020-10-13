@@ -150,6 +150,51 @@ body::-webkit-scrollbar {
     transition: 0.5s;
 }
 
+.facts{
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    position: fixed;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+}
+
+.factsImgs{
+    min-width: 300px;
+    max-width: 500px;
+    height: 350px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.factContainer{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top: 35px;
+    border-radius: 5px;
+}
+
+.factContainer p{
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.factContainer a{
+    width: 70vw;
+    text-align: left;
+}
+
+.factContainer h6{
+    margin-top: 20px;
+    text-align: center;
+}
+
 /* --------------- depthMeter --------------- */
 .depthMeter{
     /* width: 5vw; */

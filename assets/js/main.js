@@ -37,6 +37,22 @@ gsap.registerPlugin(TextPlugin);
 
 
 /* ------------------- global functions ------------------- */
+function escBlink() {
+	gsap.to(".escBlink", {opacity: 0.3, yoyo: true, ease: "power1.inOut", repeat: -1});
+}
+
+function fact1Fun() {
+	gsap.to(".fact1", {opacity: 1, display: "flex", duration: 0.5});
+}
+
+function fact2Fun() {
+	gsap.to(".fact2", {opacity: 1, display: "flex", duration: 0.5});
+}
+
+function fact3Fun() {
+	gsap.to(".fact3", {opacity: 1, display: "flex", duration: 0.5});
+}
+
 function subAnimation() {
     gsap.to(".subMarine", 0.5, {opacity: 1, delay: 1});
     gsap.fromTo(".subMarine", 4, {y: 10, rotate: 5}, {y: -10, rotate: -5, yoyo:true, repeat: -1, ease: "power1.inOut"});
@@ -336,6 +352,8 @@ $(document).ready(function(){
 	diveTextFn();
 	// depth meter animation
 	depthMeterFn();
+	// closeButton
+	escBlink();
 
 	$(".aboutFishes").fadeOut("fast");
 	fishTl.pause();
@@ -390,6 +408,20 @@ $(document).ready(function(){
 				case 2: descentBtnSkills(); break;
 				case 3: descentBtnProjects();
 			}
+		}
+
+		// for enter key
+		if(key == 13){
+			switch (section) {
+				case 0: fact1Fun(); break;
+				case 1: fact2Fun(); break;
+				case 2: fact3Fun(); break;
+				case 3: nukeBlueprint();
+			}
+		}
+
+		if(key == 27){
+			gsap.to(".facts", {opacity: 0, display: "none", duration: 0.5});
 		}
 	});
 
