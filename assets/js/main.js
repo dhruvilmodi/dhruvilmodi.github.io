@@ -77,7 +77,7 @@ function shipFn() {
 }
 
 function diveTextFn() {
-	diveTextTl.fromTo(".diveButton", 0.5, {opacity: 0},{opacity: 1, yoyo:true, repeat: -1, ease: "power1.inOut"});
+	diveTextTl.fromTo(".diveButton", 1, {opacity: 0.2},{opacity: 1, yoyo: true, repeat: -1, ease: "power1.inOut"}, 0);
 	diveTextTl.play();
 }
 
