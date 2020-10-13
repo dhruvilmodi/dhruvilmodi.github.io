@@ -5,12 +5,12 @@ var planeTl = gsap.timeline();
 var blastTl = gsap.timeline();
 var cloudTl = gsap.timeline();
 var diveTextTl = gsap.timeline();
-var homeTl = gsap.timeline();
-var firstPageTl = gsap.timeline();
-var secondPageTl = gsap.timeline();
-var thirdPageTl = gsap.timeline();
-var forthPageTl = gsap.timeline();
-var fifthPageTl = gsap.timeline();
+var homeTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
+var firstPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
+var secondPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
+var thirdPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
+var forthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
+var fifthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0});
 var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
 gsap.registerPlugin(TextPlugin);
 var ship1Tl = gsap.timeline();
@@ -163,8 +163,8 @@ function descentToForth() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 
-	gsap.to(window, {duration: 0.5, scrollTo: ".forthPage"});
 	gsap.to(".subMarine", 0.5, {x: 0, ease:"power1.inOut"});
+	gsap.to(window, {duration: 0.5, scrollTo: ".forthPage"});
 	thirdPageTl.fromTo(".forthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3});
 	thirdPageTl.play();
 }
@@ -199,7 +199,7 @@ function ascentToForth() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
-	forthPageTl.pause();
+	// forthPageTl.pause();
 
 	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".forthPage"});
@@ -211,10 +211,10 @@ function descentToSixth() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
-	forthPageTl.pause();
+	// forthPageTl.pause();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".sixthPage"});
-	fifthPageTl.fromTo(".sixthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3});
+	fifthPageTl.fromTo(".sixthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.2, ease: "back", delay: 0});
 	fifthPageTl.play();
 
 	sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
@@ -229,10 +229,10 @@ function ascentToFifth() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
-	forthPageTl.pause();
+	// forthPageTl.pause();
 	sharksTl.pause();
 
-	gsap.to(".subMarine", 1, {x: 0, opacity: 1});
+	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1});
 	gsap.to(window, {duration: 0.5, scrollTo: ".fifthPage"});
 }
 
@@ -242,7 +242,7 @@ function descentToContact() {
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
-	forthPageTl.pause();
+	// forthPageTl.pause();
 
 	gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0.3});
 	gsap.to(window, {duration: 0.5, scrollTo: ".contactPage"});
@@ -278,7 +278,6 @@ function backToPresent() {
 }
 
 function backToPresentBtnContact() {
-	welcomeTl.kill();
 	loadToPresentTl.fromTo(loadToPresent,{display: "none", opacity: 0}, {display: "flex", opacity: 1, duration: 0.5})
 		.fromTo(loadPresentText, {opacity: 0}, {opacity: 1, repeat: 1, yoyo: true, duration: 0.5, onComplete : backToPresent});
 }
