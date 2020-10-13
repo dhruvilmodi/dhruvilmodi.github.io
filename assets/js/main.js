@@ -42,6 +42,11 @@ function subAnimation() {
     gsap.fromTo(".subMarine", 4, {y: 10, rotate: 5}, {y: -10, rotate: -5, yoyo:true, repeat: -1, ease: "power1.inOut"});
 }
 
+function reachedTop() {
+	gsap.fromTo(".reachedTopContainer", {y:-50, opacity: 0}, {y: 0, opacity: 1, ease: "back.out"});
+	gsap.fromTo(".reachedTopContainer", {y: 0, opacity: 1}, {y: -50, opacity: 0, ease: "back.in", delay: 2});
+}
+
 function welcomeContaineFn() {
 	welcomeTl.fromTo(welcomeText1, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5})
 		.fromTo(welcomeText2, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5}, 0.5)
@@ -360,13 +365,15 @@ $(document).ready(function(){
 
 
 	// up and down arrow key functions
-	// $(document).keydown(function(e){e.preventDefault()})
+	// $(document).keydown(function(e){e.preventDefault()});
 	$(document).keyup(function(e){
+
 		var key = e.keyCode;
+		
 		// dor up arrow key
 		if(key == 38){
 			switch (section) {
-				case 0: alert("Already at the surface!"); break;
+				case 0: reachedTop(); break;
 				case 1: ascentBtnAbout(); break;
 				case 2: ascentBtnSkills(); break;
 				case 3: ascentBtnProjects(); break;

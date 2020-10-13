@@ -50,6 +50,11 @@ function subAnimation() {
     gsap.fromTo(".subMarine", 4, {y: 5, rotate: 2}, {y: -5, rotate: -2, yoyo:true, repeat: -1, ease: "power1.inOut"});
 }
 
+function reachedTop() {
+	gsap.fromTo(".reachedTopContainer", {y:-50, opacity: 0}, {y: 0, opacity: 1, ease: "back.out"});
+	gsap.fromTo(".reachedTopContainer", {y: 0, opacity: 1}, {y: -50, opacity: 0, ease: "back.in", delay: 2});
+}
+
 function welcomeContainerFn() {
 	welcomeTl.fromTo(welcomeText1, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5})
 		.fromTo(welcomeText2, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5}, 0.5)
@@ -345,7 +350,7 @@ $(document).ready(function(){
 		// dor up arrow key
 		if(key == 38){
 			switch (section) {
-				case 0: alert("Already at the surface!"); break;
+				case 0: reachedTop(); break;
 				case 1: ascentToHome(); break;
 				case 2: ascentToFirst(); break;
 				case 3: ascentToSecond(); break;
