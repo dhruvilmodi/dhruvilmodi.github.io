@@ -93,9 +93,9 @@ function diveButton() {
 		.fromTo(".fish5About", {x: "100vw"}, {x: -800, ease: "power4.in", duration: 6}, 1);
 	fishTl.play();
 
+	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"});
+	homeTl.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 0.5, ease: "back"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".aboutPage"});
-	homeTl.to(".subMarine", 0.5, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"})
-		.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 0.5, ease: "back"});
 	
 	homeTl.play();
 	diveTextTl.pause();
@@ -120,9 +120,9 @@ function meterAboutFn() {
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".aboutPage"});
 
-	homeTl.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"})
-		.to(".subMarine", 0.5, {bottom: "60vh", ease:"power1.inOut"})
-		.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 0.5, ease: "back"});
+	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
+	gsap.to(".subMarine", 0.5, {bottom: "60vh", ease:"power1.inOut"});
+	homeTl.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 0.5, ease: "back"});
 	
 	homeTl.play();
 	diveTextTl.pause();
@@ -168,9 +168,9 @@ function descentBtnAbout() {
 	gsap.to(".subMarine", 0.5, {bottom: "47vh", ease:"power1.inOut"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".skillsPage"});
 
-	aboutTl.to(".skills", {opacity: 1, stagger: 0.1, duration: 0.5, ease: "back"})
-		.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 0.5}, 1)
-		.to(".skillsBtns", {display: "inline", opacity: 1, duration: 0.5, ease: "back"}, 2);	
+	aboutTl.to(".skills", {opacity: 1, stagger: 0.05, duration: 0.1, ease: "back"})
+		.fromTo(".skillIcons", {rotate: 2},{rotate: -2, yoyo: true, ease:"power1.inOut", repeat: -1, duration: 0.5})
+		.to(".skillsBtns", {display: "inline", opacity: 1, duration: 0.5, ease: "back"}, 1);	
 	aboutTl.play();
 }
 
@@ -204,8 +204,8 @@ function descentBtnSkills() {
 	gsap.to(window, {duration: 0.5, scrollTo: ".projectPage"});
 	gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.5});
 	gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.5});
-	projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3})
-		.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 0.5, repeat: 1});
+	projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.2, repeat: 0})
+		.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 0.5, repeat: 0});
 	projectsT1.play();
 
 
@@ -217,8 +217,8 @@ function descentBtnSkills() {
 
 function ascentBtnProjects() {
 	section = 2;
-	projectsT1.pause();
 
+	projectsT1.pause();
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
 	gsap.to(meterAbout, 0.5, {stroke: "#999"});
 	gsap.to(meterSkills, 0.5, {stroke: "#eeea80"});
@@ -261,12 +261,12 @@ function ascentBtnContact() {
 	gsap.to(meterProjects, 0.5, {stroke: "#eeea80"});
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
 
+	// gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.1});
+	gsap.to(".subMarine", {opacity: 1,x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.4});
 	gsap.to(window, {duration: 0.5, scrollTo: ".projectPage"});
-	gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.5});
-	gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.5});
 
-	projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.3})
-		.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 0.5, repeat: 1});
+	projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.2,  repeat: 0})
+		.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 0.2, repeat: 0});
 	projectsT1.play();
 
 
