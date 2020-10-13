@@ -48,8 +48,8 @@ function welcomeContaineFn() {
 		.fromTo(welcomeText1, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 0.5}, 0)
 		.fromTo(welcomeText2, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 0.5}, 0)
 		.fromTo(welcomeContainer, {opacity: 1, display: "flex"}, {opacity: 0, display: "none", ease: "power1.inOut", duration: 0.5, delay: 1})
-		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0.5})
-		.fromTo(homeSubText, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0.1});
+		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0})
+		.fromTo(homeSubText, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0});
 }
 
 function planeTlFn() {
@@ -58,12 +58,12 @@ function planeTlFn() {
 }
 
 function cloudFn() {
-	cloudTl.fromTo(cloud1, {x: "-30vw", y: -70}, {x: "100vw", duration: 30, ease: "none", repeat: -1}, 0)
-		.fromTo(cloud2, {x: "-50vw", y: -70}, {x: "100vw", duration: 40, ease: "none", repeat: -1}, 1);
+	gsap.fromTo(cloud1, {x: "-30vw", y: -70}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -15});
+	gsap.fromTo(cloud2, {x: "-50vw", y: -70}, {x: "100vw", duration: 40, ease: "none", repeat: -1, delay: -15});
 }
 
 function depthMeterFn() {
-	gsap.fromTo(".depthMeter", {scale: 2}, {opacity: 1, scale: 1, delay: 2, ease: "back.out"});
+	gsap.fromTo(".depthMeter", 1, {scale: 2}, {opacity: 1, scale: 1, delay: 3, ease: "back.in"});
 	gsap.to(meterSurface, 0.5, {stroke: "#000000"});
 }
 
@@ -94,8 +94,8 @@ function diveButton() {
 	fishTl.play();
 
 	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, bottom: "60vh", ease:"power1.inOut"});
-	homeTl.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 0.5, ease: "back"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".aboutPage"});
+	homeTl.to(".about", {display: "inline", opacity: 1, stagger: 0.2, duration: 0.5, ease: "back"});
 	
 	homeTl.play();
 	diveTextTl.pause();
@@ -142,9 +142,9 @@ function ascentBtnAbout() {
 	gsap.to(meterProjects, 0.5, {stroke: "#999"});
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
 
-	gsap.to(window, {duration: 0.5, scrollTo: ".heroPage"});
 	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
 	gsap.to(".subMarine", 0.5, {bottom: "10vh", ease:"power4.Out"});
+	gsap.to(window, {duration: 0.5, scrollTo: ".heroPage"});
 }
 
 function descentBtnAbout() {
@@ -184,9 +184,9 @@ function ascentBtnSkills() {
 	gsap.to(meterProjects, 0.5, {stroke: "#999"});
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
 
-	gsap.to(window, {duration: 0.5, scrollTo: ".aboutPage"});
 	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
 	gsap.to(".subMarine", 0.5, {bottom: "60vh", ease:"power1.inOut"});
+	gsap.to(window, {duration: 0.5, scrollTo: ".aboutPage"});
 	fishTl.play();
 	// jellyTl.pause();
 }
@@ -201,11 +201,10 @@ function descentBtnSkills() {
 	gsap.to(meterProjects, 0.5, {stroke: "#eeea80"});
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
 	
+	gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.3});
+	gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.3});
 	gsap.to(window, {duration: 0.5, scrollTo: ".projectPage"});
-	gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.5});
-	gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.5});
-	projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.2, repeat: 0})
-		.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 0.5, repeat: 0});
+	projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.2, repeat: 0});
 	projectsT1.play();
 
 
@@ -314,17 +313,18 @@ function nukeBlueprint() {
 
 $(document).ready(function(){
 
-	$(window).on('beforeunload', function(){$(window).scrollTop(0);});
+	$(window).on('beforeunload', function(){
+		$(window).scrollTop(0);
+	});
 	section = 0;
-
+	// cloud animation
+	cloudFn();
+	// plane animation
+	planeTlFn();
 	// welcome animation
 	welcomeContaineFn();
 	// submarine animation
 	subAnimation();
-	// plane animation
-	planeTlFn()
-	// cloud animation
-	cloudFn();
 	// ship1 animation
 	shipFn();
 	// divetext animation
