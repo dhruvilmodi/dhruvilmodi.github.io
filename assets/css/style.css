@@ -149,6 +149,7 @@ body::-webkit-scrollbar {
 .loadingText{
     transition: 0.5s;
 }
+
 /* --------------- keyboardHint --------------- */
 .keyboardHint{
     width: 100vw;

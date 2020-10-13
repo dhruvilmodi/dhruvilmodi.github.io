@@ -89,7 +89,8 @@ function welcomeContainerFn() {
 		.fromTo(welcomeText1, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 0.5}, 0)
 		.fromTo(welcomeText2, {letterSpacing: 0}, {letterSpacing: 3, ease: "power1.inOut", duration: 0.5}, 0)
 		.fromTo(welcomeContainer, {opacity: 1, display: "flex"}, {opacity: 0, display: "none", ease: "power1.inOut", duration: 0.5, delay: 1})
-		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0.3});
+		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0.3})
+		.to(".keyboardHint", {opacity: 1, display: "flex", duration: 0.5, delay: 0.5});
 }
 
 function planeFn() {
@@ -419,6 +420,7 @@ $(document).ready(function(){
 		// for esc key
 		if(key == 27){
 			gsap.to(".facts", {opacity: 0, display: "none", duration: 0.5});
+			gsap.to(".keyboardHint", {opacity: 0, display: "none", duration: 0.5});
 		}
 	});
 
