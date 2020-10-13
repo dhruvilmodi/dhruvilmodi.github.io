@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="./css/style.css" type="text/svg"?>
+<?xml-stylesheet href="./assets/css/style.css" type="text/svg"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 413 172">
     <defs>
-        <style>
+        <style  type="text/css">
             .prefix__cls-2 {
-                fill: #fff
+                fill: #fff;
+                font-family: arial;
             }
         </style>
     </defs>
@@ -80,10 +81,10 @@
             <path id="prefix__downKey" class="prefix__cls-2"
                 d="M367 157.5l-1.63-2.82-1.63-2.82h6.52l-1.63 2.82-1.63 2.82z" /><text
                 transform="translate(366.1 99.58)" letter-spacing="-.02em" font-size="12"
-                font-family="Raleway-Regular,Raleway" class="returnText" fill="#fff">r<tspan x="4.02" y="0" class="returnText" letter-spacing="-.01em">e
+                font-family="arial" class="returnText" fill="#fff">r<tspan x="4.02" y="0" class="returnText" letter-spacing="-.01em">e
                 </tspan>
                 <tspan x="11" y="0" class="returnText" letter-spacing="0">turn</tspan>
-            </text><text transform="translate(15.1 23.58)" class="escText" font-size="12" font-family="Raleway-Regular,Raleway"
+            </text><text transform="translate(15.1 23.58)" class="escText" font-size="12" font-family="arial"
                 fill="#fff">esc</text>
         </g>
     </g>
