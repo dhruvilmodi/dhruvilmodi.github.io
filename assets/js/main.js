@@ -71,7 +71,12 @@ function welcomeContaineFn() {
 		.fromTo(welcomeContainer, {opacity: 1, display: "flex"}, {opacity: 0, display: "none", ease: "power1.inOut", duration: 0.5, delay: 1})
 		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0})
 		.fromTo(homeSubText, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0})
+		.fromTo(".subMarine", {x: -500}, {x: 0, ease: "power1.inOut", duration: 2}, 2)
+		.fromTo(".depthMeter", 1, {scale: 2}, {opacity: 1, scale: 1, ease: "back.in"})
 		.to(".keyboardHint", {opacity: 1, display: "flex", duration: 0.5, delay: 0.5});
+		gsap.to(meterSurface, 0.5, {stroke: "#000000"});
+
+		gsap.fromTo(".ship1", {x: "-60vw"}, {x: 0, ease: "none", duration: 4});
 }
 
 function planeTlFn() {
@@ -85,8 +90,7 @@ function cloudFn() {
 }
 
 function depthMeterFn() {
-	gsap.fromTo(".depthMeter", 1, {scale: 2}, {opacity: 1, scale: 1, delay: 3, ease: "back.in"});
-	gsap.to(meterSurface, 0.5, {stroke: "#000000"});
+	
 }
 
 function shipFn() {
