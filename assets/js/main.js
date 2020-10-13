@@ -365,7 +365,7 @@ $(document).ready(function(){
 
 
 	// up and down arrow key functions
-	// $(document).keydown(function(e){e.preventDefault()});
+	$(document).keydown(function(e){e.preventDefault()});
 	$(document).keyup(function(e){
 
 		var key = e.keyCode;
