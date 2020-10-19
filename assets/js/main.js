@@ -181,8 +181,14 @@ function ascentBtnAbout() {
 	gsap.to(meterProjects, 0.5, {stroke: "#999"});
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
 
-	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
-	gsap.to(".subMarine", 0.5, {bottom: "10vh", ease:"power4.Out"});
+	if (vpX1280.matches) {
+		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
+		gsap.to(".subMarine", 0.5, {bottom: "15vh", ease:"power4.Out"});
+	} else {
+		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
+		gsap.to(".subMarine", 0.5, {bottom: "10vh", ease:"power4.Out"});
+	}
+	
 	gsap.to(window, {duration: 0.5, scrollTo: ".heroPage"});
 }
 
@@ -348,9 +354,12 @@ function backToTopBtnContact() {
 	sharksTl.pause();
 	jellyTl.pause();
 	diveTextTl.play();
-
-	gsap.to(".depthMeter", {opacity: 0});
-	gsap.to(".subMarine", {x: 0, bottom: "10vh", duration: 0.1, ease:"power1.inOut"});
+	if (vpX1280.matches) {
+		gsap.to(".subMarine", {x: 0, bottom: "15vh", duration: 0.1, ease:"power1.inOut"});
+	} else {
+		gsap.to(".depthMeter", {opacity: 0});
+		gsap.to(".subMarine", {x: 0, bottom: "10vh", duration: 0.1, ease:"power1.inOut"});
+	}
 	gsap.to(window, {duration: 4, scrollTo: "body", delay: 0.1});
 	gsap.to(".subMarine", {opacity: 1, duration: 0.1, delay: 0.5});
 	gsap.to(".depthMeter", {opacity: 1, delay: 4});	
