@@ -604,6 +604,7 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-device-width: 1280px) {
+
     /* --------------- submarine --------------- */
 
     .subMarine{
@@ -701,8 +702,29 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (device-aspect-ratio: 375/667) {
+
     .grid-container{
         width: 60vw;
+    }
+
+   /* --------------- welcomeContainer --------------- */
+
+   .welcomeContainer{
+        width: 100vw;
+        height: 100vh;
+        background-color: #131922;
+        position: fixed;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .welcomeText1, .welcomeText2{
+        transition: 1s;
+        opacity: 0;
+        font-size: 10pt;
     }
 
     /* --------------- submarine --------------- */
