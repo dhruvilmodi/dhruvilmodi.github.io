@@ -91,8 +91,8 @@ function planeTlFn() {
 
 function cloudFn() {
 	if (vpX1280.matches) {
-		gsap.fromTo(cloud1, {x: "-70vw", y: -15}, {x: "100vw", duration: 20, ease: "none", repeat: -1, delay: -0});
-		gsap.fromTo(cloud2, {x: "-80vw", y: -15}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -5});
+		gsap.fromTo(cloud1, {x: "-75vw", y: 0}, {x: "100vw", duration: 20, ease: "none", repeat: -1, delay: -0});
+		gsap.fromTo(cloud2, {x: "-85vw", y: 0}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -5});
 	} else {
 		gsap.fromTo(cloud1, {x: "-30vw", y: -70}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -15});
 		gsap.fromTo(cloud2, {x: "-50vw", y: -70}, {x: "100vw", duration: 40, ease: "none", repeat: -1, delay: -15});
