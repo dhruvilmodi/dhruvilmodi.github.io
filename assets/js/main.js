@@ -1,6 +1,11 @@
 /* -------------------- global variables -------------------- */
 var section;
 
+// viewport
+var vpX1280 = window.matchMedia("(max-width: 1280px)");
+var vpX375 = window.matchMedia("(min-width: 375px)");
+var vpY700 = window.matchMedia("(max-height: 700px)");
+
 // welcomeContainer
 let welcomeContainer = document.querySelector(".welcomeContainer");
 let welcomeText1 = document.querySelector(".welcomeText1");
@@ -85,8 +90,21 @@ function planeTlFn() {
 }
 
 function cloudFn() {
-	gsap.fromTo(cloud1, {x: "-30vw", y: -70}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -15});
-	gsap.fromTo(cloud2, {x: "-50vw", y: -70}, {x: "100vw", duration: 40, ease: "none", repeat: -1, delay: -15});
+	if (vpX1280.matches) {
+		gsap.fromTo(cloud1, {x: "-30vw", y: -30}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -15});
+		gsap.fromTo(cloud2, {x: "-50vw", y: -30}, {x: "100vw", duration: 40, ease: "none", repeat: -1, delay: -15});
+	} else {
+		gsap.fromTo(cloud1, {x: "-30vw", y: -70}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -15});
+		gsap.fromTo(cloud2, {x: "-50vw", y: -70}, {x: "100vw", duration: 40, ease: "none", repeat: -1, delay: -15});
+	}
+
+	if (vpX375.matches) {
+		gsap.fromTo(cloud1, {x: "-60vw", y: -10}, {x: "100vw", duration: 20, ease: "none", repeat: -1, delay: 0});
+		gsap.fromTo(cloud2, {x: "-70vw", y: -10}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -5});
+	}
+
+	
+	
 }
 
 function depthMeterFn() {

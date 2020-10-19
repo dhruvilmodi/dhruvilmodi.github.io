@@ -769,3 +769,139 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
 }
+
+
+@media screen and (max-device-width: 1280px) {
+    /* --------------- submarine --------------- */
+
+    .subMarine{
+        height: 60px;
+        position: fixed;
+        z-index: 300;
+        bottom: 10vh;
+        left: 3vw;
+        opacity: 0;
+    }
+
+    /* --------------- heropage --------------- */
+
+    .heroPage{
+        height: 100vh;
+        width: 100vw;
+        background: #131922;
+        color: #FFFFFF;
+        background-image: url(../images/projects_heroPage.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+    }
+
+    .airSpace{
+        position: absolute;
+        width: 100vw;
+        top: 5vh;
+        z-index: 0;
+    }
+
+    .plane, .plane2, .plane3, .plane4{
+        height: 35px;
+        z-index: 0 !important;
+    }
+
+    .blast1, .blast2, .blast3, .blast4{
+        z-index: 0 !important;
+        position: absolute;
+    }
+
+    .blast1{
+        height: 50px;
+        left: 10vw;
+        top: 22vh;
+    }
+
+    .blast2{
+        height: 60px;
+        right: 10vw;
+        top: 12vh;
+    }
+
+    .blast3{
+        height: 40px;
+        left: 45vw;
+        top: 32vh;
+    }
+
+    .blast4{
+        height: 50px;
+        right: 35vw;
+        top: 25vh;
+    }
+
+    .cloud1{
+        height: 150px;
+        z-index: 100 !important;
+    }
+
+    .cloud2{
+        height: 150px;
+        z-index: 200 !important;
+    }
+    .cloud1{
+        height: 150px;
+        z-index: 100 !important;
+    }
+
+    .ship1{
+        position: absolute;
+        height: 100px;
+        bottom: 26vh;
+        right: 3vw;
+        margin: 0 auto;
+    }
+
+    .ship2{
+        position: absolute;
+        height: 100px;
+        bottom: 26vh;
+        left: 3vw;
+        margin: 0 auto;
+    }
+
+    .heroContent{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    #animation_container{
+        height: 100vh !important;
+    }
+
+    .diveButton{
+        width: 150px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 5vh;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #DDDDDD;
+        padding: 10px;
+        color: #DDDDDD;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .diveButton:hover{
+        color: #222222;
+        background-color: #DDDDDD;
+        opacity: 1 !important;
+    }
+
+}
