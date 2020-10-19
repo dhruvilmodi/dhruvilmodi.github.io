@@ -734,7 +734,7 @@ body::-webkit-scrollbar {
         height: 30px;
         position: fixed;
         z-index: 300;
-        bottom: 10vh;
+        bottom: 15vh;
         left: 2vw;
         opacity: 0;
     }
@@ -801,11 +801,11 @@ body::-webkit-scrollbar {
     }
 
     .diveButton{
-        width: 150px;
+        width: 100px;
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 5vh;
+        bottom: 15vh;
         margin: 0 auto;
         text-align: center;
         border: 1px solid #DDDDDD;
@@ -813,6 +813,7 @@ body::-webkit-scrollbar {
         color: #DDDDDD;
         cursor: pointer;
         opacity: 0;
+        font-size: 10pt;
     }
 
     .diveButton:hover{
