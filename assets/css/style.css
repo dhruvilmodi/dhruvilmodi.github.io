@@ -605,6 +605,32 @@ body::-webkit-scrollbar {
 
 @media screen and (max-device-width: 1280px) {
 
+    .bottomBtnContainer{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15vh;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .bottomButton{
+        color: #DDDDDD;
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+        opacity: 0;
+        margin: auto 5px auto 5px;
+    }
+    
+    .bottomButton:hover{
+        background-color: #DDDDDD;
+        color: #222222;
+        opacity: 1 !important;
+    }
+
     /* --------------- submarine --------------- */
 
     .subMarine{
@@ -1102,7 +1128,7 @@ body::-webkit-scrollbar {
         margin: 0 auto;
         left: 0;
         right: 0;
-        bottom: 5vh;
+        bottom: 15vh;
         text-align: center;
     }
 }
