@@ -31,7 +31,7 @@ var homeTl = gsap.timeline();
 var aboutTl = gsap.timeline();
 var jellyTl = gsap.timeline();
 var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
-var projectsT1 = gsap.timeline();
+var projectsT1 = gsap.timeline({repeat: 0, autoRemoveChildren: true});
 gsap.registerPlugin(TextPlugin);
 
 
@@ -230,19 +230,21 @@ function descentBtnSkills() {
 	gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.3});
 	gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.3});
 	gsap.to(window, {duration: 0.5, scrollTo: ".projectPage"});
-	projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.2, repeat: 0});
-	projectsT1.play();
-
-
+	
 	sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
 		.fromTo(".shark2", {x: "0"},{x:"-120vw", ease: "power1.in", duration: 12}, 0.1);
 	
 	sharksTl.play();
+
+	projectsT1.fromTo(".project", {y: 50, opacity: 0}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.2, repeat: 0});
+	projectsT1.play();
+	
 }
 
 function ascentBtnProjects() {
 	section = 2;
 
+	gsap.to(".project", {y: 0, opacity: 1});
 	projectsT1.pause();
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
 	gsap.to(meterAbout, 0.5, {stroke: "#999"});
