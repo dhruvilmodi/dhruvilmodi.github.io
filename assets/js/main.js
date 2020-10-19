@@ -71,9 +71,9 @@ function welcomeContaineFn() {
 		.fromTo(welcomeContainer, {opacity: 1, display: "flex"}, {opacity: 0, display: "none", ease: "power1.inOut", duration: 0.5, delay: 1})
 		.fromTo(homeName, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0})
 		.fromTo(homeSubText, {opacity: 0}, {opacity: 1, ease: "power1.inOut", duration: 0.5, delay: 0})
-		.fromTo(".subMarine", {x: -500}, {x: 0, ease: "power1.inOut", duration: 2}, 2)
-		.fromTo(".depthMeter", 1, {scale: 2}, {opacity: 1, scale: 1, ease: "back.in"})
-		.to(".keyboardHint", {opacity: 1, display: "flex", duration: 0.5, delay: 0.5});
+		.fromTo(".subMarine", {x: -500}, {x: 0, ease: "power1.inOut", duration: 1.5}, 2)
+		.fromTo(".depthMeter", 0.5, {scale: 2}, {opacity: 1, scale: 1, ease: "back.in"})
+		.to(".keyboardHint", {opacity: 1, display: "flex", duration: 0.5, delay: 0.1});
 		gsap.to(meterSurface, 0.5, {stroke: "#000000"});
 
 		gsap.fromTo(".ship1", {x: "-60vw"}, {x: 0, ease: "none", duration: 4});
@@ -220,6 +220,7 @@ function ascentBtnSkills() {
 function descentBtnSkills() {
 	section = 3;
 
+	gsap.to(".skills", {opacity: 1, duration: 0.1, ease: "back"});
 	aboutTl.pause();
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
 	gsap.to(meterAbout, 0.5, {stroke: "#999"});
@@ -262,6 +263,7 @@ function ascentBtnProjects() {
 function descentBtnProjects() {
 	section = 4;
 
+	gsap.to(".project", {y: 0, opacity: 1, duration: 0.1, ease: "back"});
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
 	gsap.to(meterAbout, 0.5, {stroke: "#999"});
 	gsap.to(meterSkills, 0.5, {stroke: "#999"});
@@ -390,7 +392,10 @@ $(document).ready(function(){
 
 
 	// up and down arrow key functions
-	$(document).keydown(function(e){e.preventDefault()});
+	// $(document).keydown(function(e){e.preventDefault()});
+	$(document).on('keypress keydown',function (e) {
+		return e.which !== 9 && e.which !== 32;
+	});
 	$(document).keyup(function(e){
 
 		var key = e.keyCode;

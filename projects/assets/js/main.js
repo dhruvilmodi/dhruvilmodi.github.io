@@ -5,13 +5,13 @@ var planeTl = gsap.timeline();
 var blastTl = gsap.timeline();
 var cloudTl = gsap.timeline();
 var diveTextTl = gsap.timeline();
-var homeTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
-var firstPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
-var secondPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
-var thirdPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
-var forthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
-var fifthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
-var sixthPageTl = gsap.timeline({autoRemoveChildren:true, duration:0.5, repeat: 0, autoAlpha: 1});
+var homeTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
+var firstPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
+var secondPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
+var thirdPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
+var forthPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
+var fifthPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
+var sixthPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
 var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
 gsap.registerPlugin(TextPlugin);
 var ship1Tl = gsap.timeline();
@@ -378,7 +378,10 @@ $(document).ready(function(){
 	$(document).on('click', 'body .backToPresentBtnContact', function() {backToPresentBtnContact();});
 
 	// up and down arrow key functions
-	$(document).keydown(function(e){e.preventDefault()});
+	// $(document).keydown(function(e){e.preventDefault()});
+	$(document).on('keypress keydown',function (e) {
+		return e.which !== 9 && e.which !== 32;
+	});
 	$(document).keyup(function(e){
 		var key = e.keyCode;
 		// dor up arrow key
