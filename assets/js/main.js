@@ -3,7 +3,7 @@ var section;
 
 // viewport
 var vpX1280 = window.matchMedia("(max-width: 1280px)");
-var vpX375 = window.matchMedia("(min-width: 375px)");
+var vpX375 = window.matchMedia("(max-width: 375px)");
 var vpY700 = window.matchMedia("(max-height: 700px)");
 
 // welcomeContainer
@@ -91,16 +91,11 @@ function planeTlFn() {
 
 function cloudFn() {
 	if (vpX1280.matches) {
-		gsap.fromTo(cloud1, {x: "-30vw", y: -30}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -15});
-		gsap.fromTo(cloud2, {x: "-50vw", y: -30}, {x: "100vw", duration: 40, ease: "none", repeat: -1, delay: -15});
+		gsap.fromTo(cloud1, {x: "-70vw", y: -15}, {x: "100vw", duration: 20, ease: "none", repeat: -1, delay: -0});
+		gsap.fromTo(cloud2, {x: "-80vw", y: -15}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -5});
 	} else {
 		gsap.fromTo(cloud1, {x: "-30vw", y: -70}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -15});
 		gsap.fromTo(cloud2, {x: "-50vw", y: -70}, {x: "100vw", duration: 40, ease: "none", repeat: -1, delay: -15});
-	}
-
-	if (vpX375.matches) {
-		gsap.fromTo(cloud1, {x: "-60vw", y: -10}, {x: "100vw", duration: 20, ease: "none", repeat: -1, delay: 0});
-		gsap.fromTo(cloud2, {x: "-70vw", y: -10}, {x: "100vw", duration: 30, ease: "none", repeat: -1, delay: -5});
 	}
 
 	
@@ -156,10 +151,10 @@ function meterAboutFn() {
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
 
 	fishTl.fromTo(".fish1About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-		.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-		.fromTo(".fish3About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-		.fromTo(".fish4About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
-		.fromTo(".fish5About", {x: "100vw"}, {x: -800, ease: "power4.in", duration: 6}, 1);
+	.fromTo(".fish2About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
+	.fromTo(".fish3About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
+	.fromTo(".fish4About", {x: "100vw"}, {x: -700, ease: "power4.in", duration: 6}, 1)
+	.fromTo(".fish5About", {x: "100vw"}, {x: -800, ease: "power4.in", duration: 6}, 1);
 	fishTl.play();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".aboutPage"});
@@ -231,6 +226,7 @@ function ascentBtnSkills() {
 	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
 	gsap.to(".subMarine", 0.5, {bottom: "60vh", ease:"power1.inOut"});
 	gsap.to(window, {duration: 0.5, scrollTo: ".aboutPage"});
+	
 	fishTl.play();
 	// jellyTl.pause();
 }
@@ -245,9 +241,14 @@ function descentBtnSkills() {
 	gsap.to(meterSkills, 0.5, {stroke: "#999"});
 	gsap.to(meterProjects, 0.5, {stroke: "#eeea80"});
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
-	
-	gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.3});
-	gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.3});
+
+	if (vpX1280.matches) {
+		gsap.to(".subMarine", {opacity: 1, x: 0,  bottom: "35vh", ease: "power1", duration: 0.3});
+	} else {
+		gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.3});
+		gsap.to(".subMarine", {x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.3});
+	}
+
 	gsap.to(window, {duration: 0.5, scrollTo: ".projectPage"});
 	
 	sharksTl.fromTo(".shark1", {x: "0"},{x:"-130vw", ease: "power1.in", duration: 12}, 0.1)
@@ -271,9 +272,14 @@ function ascentBtnProjects() {
 	gsap.to(meterProjects, 0.5, {stroke: "#999"});
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
 
-	gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
-	gsap.to(".subMarine", 0.5, {bottom: "47vh", ease:"power1.inOut", delay: 0.2});
-	gsap.to(window, {duration: 0.5, scrollTo: ".skillsPage", delay: 0.5});
+	if (vpX1280.matches) {
+		gsap.to(window, {duration: 0.5, scrollTo: ".skillsPage"});
+	} else {
+		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
+		gsap.to(".subMarine", 0.5, {bottom: "47vh", ease:"power1.inOut", delay: 0.2});
+		gsap.to(window, {duration: 0.5, scrollTo: ".skillsPage", delay: 0.5});
+	}
+	
 	// sharksTl.pause();
 	jellyTl.play();
 }
@@ -309,8 +315,15 @@ function ascentBtnContact() {
 	gsap.to(meterContact, 0.5, {stroke: "#999"});
 
 	// gsap.to(".subMarine", {opacity: 1, bottom: "35vh", ease: "power1", duration: 0.1});
-	gsap.to(".subMarine", {opacity: 1,x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.4});
-	gsap.to(window, {duration: 0.5, scrollTo: ".projectPage"});
+	
+
+	if (vpX1280.matches) {
+		gsap.to(".subMarine", {opacity: 1, ease: "power1", duration: 1, delay: 0.1});
+		gsap.to(window, {duration: 0.5, scrollTo: ".projectPage"});
+	} else {
+		gsap.to(".subMarine", {opacity: 1,x: 300, bottom: "20vh", ease: "power1", duration: 1, delay: 0.4});
+		gsap.to(window, {duration: 0.5, scrollTo: ".projectPage"});
+	}
 
 	projectsT1.fromTo(".project", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "back", delay: 0.2,  repeat: 0})
 		.fromTo(".nukeBlueprint", {scale: 1}, {scale: 1.1, yoyo: true, ease: "power1.inOut", duration: 0.2, repeat: 0});
