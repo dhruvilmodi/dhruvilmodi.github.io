@@ -1063,7 +1063,7 @@ body::-webkit-scrollbar {
     .nukeBlueprint{
         height: 200px;
         z-index: 200;
-        margin: 5px auto 5px auto;
+        margin: 10px auto 10px auto;
         cursor: pointer;
     }
 
