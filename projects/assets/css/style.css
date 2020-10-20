@@ -1175,6 +1175,12 @@ body::-webkit-scrollbar {
         border-radius: 5px;
     }
 
+    .projectIcons{
+        min-height: 15px;
+        max-height: 30px;
+        margin-right: 10px;
+    }
+
     .projectImages:hover{
         box-shadow: 0px 0px 20px #1e90ff;
     }
