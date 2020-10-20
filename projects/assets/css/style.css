@@ -1176,9 +1176,9 @@ body::-webkit-scrollbar {
     }
 
     .projectIcons{
-        min-height: 15px;
-        max-height: 30px;
-        margin-right: 10px;
+        min-height: 15px !important;
+        max-height: 30px !important;
+        margin-right: 10px !important;
     }
 
     .projectImages:hover{
