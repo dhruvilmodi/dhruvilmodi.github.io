@@ -1156,6 +1156,15 @@ body::-webkit-scrollbar {
         opacity: 1;
     }
 
+    .iconsContainer{
+        display: flex;
+        position: relative;
+        max-width: 40vw;
+        flex-direction: row;
+        justify-content: left !important;
+        /* padding: 10px; */
+    }
+
     .mobileTechIcons{
         margin: 7px auto;
     }
