@@ -513,13 +513,13 @@ body::-webkit-scrollbar {
     padding-bottom: 20px;
 }
 
-.iconsContainer{
+/* .iconsContainer{
     width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 10px auto 60px auto;
-}
+} */
 
 .secondStagger{
     opacity: 0;
@@ -1306,6 +1306,7 @@ body::-webkit-scrollbar {
         bottom: 40vh;
         margin: 0 auto;
         text-align: center;
+        opacity: 1;
     }
 
     .contactBtn{
@@ -1315,8 +1316,10 @@ body::-webkit-scrollbar {
         padding: 10px;
         cursor: pointer;
         transition: 0.2s;
-        opacity: 0;
+        opacity: 1;
         margin: auto 5px auto 5px;
+        position: relative;
+        top: 30px;
     }
 
     .contactBtn:hover{
