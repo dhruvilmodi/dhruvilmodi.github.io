@@ -270,6 +270,7 @@ function descentBtnSkills() {
 function ascentBtnProjects() {
 	section = 2;
 
+	gsap.to(".subMarine", 0.5, {bottom: "47vh", ease:"power1.inOut", delay: 0.2});
 	gsap.to(".project", {y: 0, opacity: 1});
 	projectsT1.pause();
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
@@ -282,7 +283,6 @@ function ascentBtnProjects() {
 		gsap.to(window, {duration: 0.5, scrollTo: ".skillsPage"});
 	} else {
 		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, ease:"power1.inOut"});
-		gsap.to(".subMarine", 0.5, {bottom: "47vh", ease:"power1.inOut", delay: 0.2});
 		gsap.to(window, {duration: 0.5, scrollTo: ".skillsPage", delay: 0.5});
 	}
 	
@@ -477,6 +477,10 @@ $(document).ready(function(){
 			gsap.to(".facts", {opacity: 0, display: "none", duration: 0.5});
 			gsap.to(".keyboardHint", {opacity: 0, display: "none", duration: 0.5});
 		}
+	});
+
+	$(document).on('click', 'body .escBlink', function() {
+		gsap.to(".keyboardHint", {opacity: 0, display: "none", duration: 0.5});
 	});
 
 });
