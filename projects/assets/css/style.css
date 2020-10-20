@@ -1367,3 +1367,464 @@ body::-webkit-scrollbar {
     }
 
 }
+
+
+/* iphone 5 */
+@media screen and (min-width: 320px) and (max-width: 374px) {
+
+    /* --------------- welcomeContainer --------------- */
+
+    .welcomeContainer{
+        width: 100vw;
+        height: 100vh;
+        background-color: #131922;
+        position: fixed;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .welcomeText1, .welcomeText2{
+        /* transition: 1s; */
+        opacity: 0;
+        font-size: 8pt;
+        text-align: center;
+    }
+
+    .para{
+        color: #FFFFFF;
+        text-shadow: 0px 1px #00000050;
+        font-size: 8pt;
+        text-align: justify;
+    }    
+    
+    .textShadow{
+        color: #707070;
+        text-shadow: 0px 0.5px #70707050;
+    }
+
+    .bottomBtnContainer{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10vh;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 0;
+    }
+    
+    .bottomButton{
+        color: #DDDDDD;
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+        opacity: 1;
+        margin: auto 5px auto 5px;
+    }
+    
+    .bottomButton:hover{
+        background-color: #DDDDDD;
+        color: #222222;
+        opacity: 1 !important;
+    }
+
+    .grid-container{
+        width: 70vw;
+    }
+
+    /* --------------- submarine --------------- */
+
+    .subMarine{
+        height: 20px;
+        position: fixed;
+        z-index: 300;
+        bottom: 15vh;
+        left: 1vw;
+        opacity: 0;
+    }
+
+    /* --------------- heropage --------------- */
+
+    .heroPage{
+        height: 100vh;
+        width: 100vw;
+        background: #131922;
+        color: #FFFFFF;
+        background-image: url(../images/projects_heroPage.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+    }
+
+    .airSpace{
+        position: absolute;
+        width: 100vw;
+        top: 5vh;
+        z-index: 0;
+    }
+
+    .plane, .plane2, .plane3, .plane4{
+        height: 20px;
+        z-index: 0 !important;
+        position: absolute;
+    }
+
+    .plane{
+        top: 5vh;
+    }
+    .plane2{
+        top: 6vh;
+    }
+
+    .plane3{
+        top: 8vh;
+    }
+
+    .plane4{
+        top: 5vh;
+    }
+
+    .blast1, .blast2, .blast3, .blast4{
+        z-index: 0 !important;
+        position: absolute;
+    }
+
+    .blast1{
+        height: 20px;
+        left: 10vw;
+        top: 22vh;
+    }
+
+    .blast2{
+        height: 30px;
+        right: 10vw;
+        top: 12vh;
+    }
+
+    .blast3{
+        height: 35px;
+        left: 45vw;
+        top: 32vh;
+    }
+
+    .blast4{
+        height: 25px;
+        right: 35vw;
+        top: 25vh;
+    }
+
+    .cloud1{
+        height: 70px;
+        z-index: 100 !important;
+        position: absolute;
+        top: -1vh;
+    }
+
+    .cloud2{
+        height: 70px;
+        z-index: 200 !important;
+        position: absolute;
+        top: 10vh;
+    }
+
+    .ship1{
+        position: absolute;
+        height: 30px;
+        bottom: 38vh;
+        right: 1vw;
+        margin: 0 auto;
+    }
+
+    .ship2{
+        position: absolute;
+        height: 30px;
+        bottom: 38vh;
+        left: 1vw;
+        margin: 0 auto;
+    }
+
+    .heroContent{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    #animation_container{
+        height: 100vh !important;
+    }
+
+    .diveButton{
+        width: 100px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15vh;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #DDDDDD;
+        padding: 10px;
+        color: #DDDDDD;
+        cursor: pointer;
+        opacity: 0;
+        font-size: 10pt;
+    }
+
+    .diveButton:hover{
+        color: #222222;
+        background-color: #DDDDDD;
+        opacity: 1 !important;
+    }
+
+    /* --------------- firstPage --------------- */
+
+    .firstPage{
+        height: 100vh;
+        width: 100vw;
+        background: #131922;
+        color: #FFFFFF;
+        background-image: url(../images/projects_firstPage.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        padding-top: 40px;
+    }
+
+    .pageHead{
+        position: relative;
+        display: block !important;
+        text-align: center;
+        font-size: 12pt;
+    }
+
+    .firstStagger{
+        /* display: none; */
+        opacity: 0;
+    }
+
+    .firstStagger::after{
+        display: flex;
+        opacity: 1;
+    }
+
+    .iconsContainer{
+        display: flex;
+        position: relative;
+        max-width: 40vw;
+        flex-direction: row;
+        justify-content: left !important;
+        /* padding: 10px; */
+    }
+
+    .projectIcons{
+        min-height: 15px !important;
+        max-height: 20px !important;
+        margin-right: 10px !important;
+    }
+
+    .mobileTechIcons{
+        margin: 7px auto;
+    }
+
+    .projectImages{
+        position: relative;
+        display: block !important;
+        text-align: center !important;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: 50px;
+        max-height: 70px;
+        object-fit: fill;
+        border-radius: 5px;
+    }
+
+    .projectImages:hover{
+        box-shadow: 0px 0px 20px #1e90ff;
+    }
+
+    .otherProjectImages{
+        position: relative;
+        display: block !important;
+        text-align: center !important;
+        left: 0;
+        right: 0;
+        margin: auto;
+        min-width: 50px;
+        max-width: 75px;
+        min-height: 50px;
+        max-height: 75px;
+        border-radius: 3px;
+    }
+
+    .otherProjectImages:hover{
+        box-shadow: 0px 0px 20px #1e90ff;
+    }
+
+    
+    .captions{
+        margin-top: 10px;
+        font-size: 7pt;
+    }
+
+    .aboutHead{
+        opacity: 0;
+        text-align: center;
+        margin: 0px auto 20px auto;
+        z-index: 150;
+    }
+
+    .aboutContent{
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        z-index: 150;
+        font-size: 10pt;
+    }
+
+    .aboutContainer{
+        /* width: 70vw; */
+        height: 50vh;
+        position: relative;
+        top: 10vh;
+    }
+
+    .dhruvilImage{
+        max-height: 300px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        opacity: 0;
+        z-index: 150;
+    }
+
+    .aboutSub{
+        text-align: justify;
+        /* margin-top: 10px; */
+        opacity: 0;
+        z-index: 150;
+    }
+
+    
+    .shark1{
+        height: 40px;
+        display: inline-block;
+        position: absolute;
+        bottom: 40vh;
+        right: -30vw;
+        opacity: 0.6;
+        z-index: 0;
+
+    }
+
+    .shark2{
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        bottom: 47vh;
+        right: -20vw;
+        opacity: 0.6;
+        z-index: 0;
+    }
+
+    /* --------------- contactPage --------------- */
+
+    .contactPage{
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        background: #131922;
+        color: #FFFFFF;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+
+    .contact{
+        opacity: 0;
+    }
+
+    .contactHead{
+        text-align: center;
+        position: relative;
+        top: 10vh;
+    }
+
+    .contactContainer{
+        position: relative;
+        top: 20vh;
+    }
+
+    .contactIcons{
+        min-height: 20px;
+        max-height: 25px;
+        cursor: pointer;
+    }
+
+    .footerContainer{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 40vh;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 1;
+        font-size: 8pt;
+    }
+
+    .contactBtn{
+        color: #DDDDDD;
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+        padding: 7px;
+        cursor: pointer;
+        transition: 0.2s;
+        opacity: 1;
+        margin: auto 5px auto 5px;
+        position: relative;
+        top: 100px;
+    }
+
+    .contactBtn:hover{
+        background-color: #DDDDDD;
+        color: #222222;
+        opacity: 1 !important;
+    }
+
+    .copyright{
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 15vh;
+        text-align: center;
+        font-size: 10pt;
+    }
+
+    .loadToPresent{
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        background: #131922;
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
