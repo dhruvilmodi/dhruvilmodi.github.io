@@ -735,7 +735,7 @@ body::-webkit-scrollbar {
     }
 
     .grid-container{
-        width: 65vw;
+        width: 70vw;
     }
 
    /* --------------- welcomeContainer --------------- */
@@ -761,7 +761,7 @@ body::-webkit-scrollbar {
     /* --------------- submarine --------------- */
 
     .subMarine{
-        height: 30px;
+        height: 25px;
         position: fixed;
         z-index: 300;
         bottom: 15vh;
@@ -945,7 +945,7 @@ body::-webkit-scrollbar {
 
     .aboutSub{
         text-align: justify;
-        font-size: 12pt;
+        font-size: 11pt;
         opacity: 0;
         z-index: 150;
     }
