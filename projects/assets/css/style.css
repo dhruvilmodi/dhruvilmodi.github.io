@@ -1335,7 +1335,7 @@ body::-webkit-scrollbar {
         opacity: 1;
         margin: auto 5px auto 5px;
         position: relative;
-        top: 30px;
+        top: 50px;
     }
 
     .contactBtn:hover{
