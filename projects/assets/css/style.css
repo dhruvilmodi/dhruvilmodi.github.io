@@ -1165,6 +1165,12 @@ body::-webkit-scrollbar {
         /* padding: 10px; */
     }
 
+    .projectIcons{
+        min-height: 15px !important;
+        max-height: 20px !important;
+        margin-right: 10px !important;
+    }
+
     .mobileTechIcons{
         margin: 7px auto;
     }
@@ -1182,12 +1188,6 @@ body::-webkit-scrollbar {
         max-height: 100px;
         object-fit: fill;
         border-radius: 5px;
-    }
-
-    .projectIcons{
-        min-height: 15px !important;
-        max-height: 30px !important;
-        margin-right: 10px !important;
     }
 
     .projectImages:hover{
