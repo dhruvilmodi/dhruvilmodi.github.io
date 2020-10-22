@@ -9,13 +9,13 @@ var planeTl = gsap.timeline();
 var blastTl = gsap.timeline();
 var cloudTl = gsap.timeline();
 var diveTextTl = gsap.timeline();
-var homeTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
-var firstPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
-var secondPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
-var thirdPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
-var forthPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
-var fifthPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
-var sixthPageTl = gsap.timeline({autoRemoveChildren:true, repeat: 0});
+var homeTl = gsap.timeline({repeat: 0});
+var firstPageTl = gsap.timeline({repeat: 0});
+var secondPageTl = gsap.timeline({repeat: 0});
+var thirdPageTl = gsap.timeline({repeat: 0});
+var forthPageTl = gsap.timeline({repeat: 0});
+var fifthPageTl = gsap.timeline({repeat: 0});
+var sixthPageTl = gsap.timeline({repeat: 0});
 var sharksTl = gsap.timeline({duration:1, repeat: -1, repeatDelay: 2});
 gsap.registerPlugin(TextPlugin);
 var ship1Tl = gsap.timeline();
@@ -150,7 +150,7 @@ function diveIn() {
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".firstPage"});
 	
-	homeTl.fromTo(".firstStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", repeat: 0, autoRemoveChildren:true});
+	homeTl.fromTo(".firstStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", repeat: 0, });
 	
 	homeTl.play();
 	diveTextTl.pause();
@@ -180,7 +180,7 @@ function descentToSecond() {
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".secondPage"});
 
-	firstPageTl.fromTo(".secondStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", repeat: 0, autoRemoveChildren:true});
+	firstPageTl.fromTo(".secondStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", repeat: 0, });
 	
 	firstPageTl.play();
 }
@@ -200,7 +200,7 @@ function descentToThird() {
 	section = 3;
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".thirdPage"});
-	secondPageTl.fromTo(".thirdStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, autoRemoveChildren:true});
+	secondPageTl.fromTo(".thirdStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, });
 	secondPageTl.play();
 	firstPageTl.pause();
 
@@ -224,7 +224,7 @@ function descentToForth() {
 	secondPageTl.pause();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".forthPage"});
-	thirdPageTl.fromTo(".forthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, autoRemoveChildren:true});
+	thirdPageTl.fromTo(".forthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, });
 	thirdPageTl.play();
 }
 
@@ -249,7 +249,7 @@ function descentToFifth() {
 	thirdPageTl.pause();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".fifthPage"});
-	forthPageTl.fromTo(".fifthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, autoRemoveChildren:true});
+	forthPageTl.fromTo(".fifthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, });
 	forthPageTl.play();
 }
 
@@ -281,7 +281,7 @@ function descentToSixth() {
 	sharksTl.play();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".sixthPage"});
-	fifthPageTl.fromTo(".sixthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0, autoRemoveChildren:true});
+	fifthPageTl.fromTo(".sixthStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0, });
 	fifthPageTl.play();
 }
 
@@ -312,7 +312,7 @@ function descentToContact() {
 
 	gsap.to(".subMarine", {opacity: 0, duration: 0.1, delay: 0.3});
 	gsap.to(window, {duration: 0.5, scrollTo: ".contactPage"});
-	sixthPageTl.fromTo(".contact", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, autoRemoveChildren:true});
+	sixthPageTl.fromTo(".contact", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, });
 	sixthPageTl.play();
 }
 
