@@ -974,7 +974,7 @@ body::-webkit-scrollbar {
     }
 
     .grid-container{
-        width: 70vw;
+        width: 90vw;
     }
 
     /* --------------- submarine --------------- */
@@ -1436,7 +1436,7 @@ body::-webkit-scrollbar {
     }
 
     .grid-container{
-        width: 70vw;
+        width: 90vw;
     }
 
     /* --------------- submarine --------------- */
@@ -1632,11 +1632,12 @@ body::-webkit-scrollbar {
     .projectIcons{
         min-height: 15px !important;
         max-height: 20px !important;
-        margin-right: 10px !important;
+        margin-right: 5px !important;
     }
 
     .mobileTechIcons{
-        margin: 7px auto;
+        margin: 5px auto;
+        width: auto;
     }
 
     .projectImages{
