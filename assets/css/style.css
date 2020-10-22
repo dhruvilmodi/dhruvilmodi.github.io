@@ -1097,7 +1097,7 @@ body::-webkit-scrollbar {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 15vh;
+        bottom: 18vh;
         margin: 0 auto;
         text-align: center;
     }
@@ -1537,7 +1537,7 @@ body::-webkit-scrollbar {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 12vh;
+        bottom: 18vh;
         margin: 0 auto;
         text-align: center;
     }

@@ -949,7 +949,7 @@ body::-webkit-scrollbar {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 10vh;
+        bottom: 18vh;
         margin: 0 auto;
         text-align: center;
         opacity: 0;
@@ -1411,7 +1411,7 @@ body::-webkit-scrollbar {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 10vh;
+        bottom: 15vh;
         margin: 0 auto;
         text-align: center;
         opacity: 0;
@@ -1871,7 +1871,7 @@ body::-webkit-scrollbar {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 10vh;
+        bottom: 18vh;
         margin: 0 auto;
         text-align: center;
         opacity: 0;
@@ -2329,7 +2329,7 @@ body::-webkit-scrollbar {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 10vh;
+        bottom: 18vh;
         margin: 0 auto;
         text-align: center;
         opacity: 0;
