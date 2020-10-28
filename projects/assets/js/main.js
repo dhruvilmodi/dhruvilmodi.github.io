@@ -142,6 +142,10 @@ function diveTextFn() {
 function diveIn() {
 	section = 1;
 
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".firstNav", {right: 0, duration: 0.2});
+	gsap.to(".firstNav", {right: "-100px", duration: 0.2, delay: 1.5});
+
 	if (vpX1280.matches) {
 		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, bottom: "75vh", ease:"power1.inOut"});
 	} else {
@@ -158,6 +162,10 @@ function diveIn() {
 
 function ascentToHome() {
 	section = 0;
+
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".heroPageNav", {right: 0, duration: 0.2});
+	gsap.to(".heroPageNav", {right: "-100px", duration: 0.2, delay: 1.5});
 
 	homeTl.pause();
 
@@ -176,6 +184,10 @@ function ascentToHome() {
 function descentToSecond() {
 	section = 2;
 
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".secondNav", {right: 0, duration: 0.2});
+	gsap.to(".secondNav", {right: "-100px", duration: 0.2, delay: 1.5});
+
 	homeTl.pause();
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".secondPage"});
@@ -187,6 +199,11 @@ function descentToSecond() {
 
 function ascentToFirst() {
 	section = 1
+	
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".firstNav", {right: 0, duration: 0.2});
+	gsap.to(".firstNav", {right: "-100px", duration: 0.2, delay: 1.5});
+
 	gsap.to(".firstStagger", {y: 0, opacity: 1, duration: 0.1, ease: "back"});
 
 
@@ -198,6 +215,10 @@ function ascentToFirst() {
 
 function descentToThird() {
 	section = 3;
+	
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".thirdNav", {right: 0, duration: 0.2});
+	gsap.to(".thirdNav", {right: "-100px", duration: 0.2, delay: 1.5});
 
 	gsap.to(window, {duration: 0.5, scrollTo: ".thirdPage"});
 	secondPageTl.fromTo(".thirdStagger", {opacity: 0, y: 50}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.1, ease: "back", delay: 0.1, });
@@ -208,6 +229,10 @@ function descentToThird() {
 
 function ascentToSecond() {
 	section = 2;
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".secondNav", {right: 0, duration: 0.2});
+	gsap.to(".secondNav", {right: "-100px", duration: 0.2, delay: 1.5});
+
 	gsap.to(".secondStagger", {y: 0, opacity: 1, duration: 0.1, ease: "back"});
 
 	firstPageTl.pause();
@@ -219,6 +244,9 @@ function ascentToSecond() {
 
 function descentToForth() {
 	section = 4;
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".forthNav", {right: 0, duration: 0.2});
+	gsap.to(".forthNav", {right: "-100px", duration: 0.2, delay: 1.5});
 
 	firstPageTl.pause();
 	secondPageTl.pause();
@@ -230,6 +258,10 @@ function descentToForth() {
 
 function ascentToThird() {
 	section = 3;
+
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".thirdNav", {right: 0, duration: 0.2});
+	gsap.to(".thirdNav", {right: "-100px", duration: 0.2, delay: 1.5});
 
 	gsap.to(".thirdStagger", {y: 0, opacity: 1, duration: 0.1, ease: "back"});
 
@@ -244,6 +276,10 @@ function ascentToThird() {
 function descentToFifth() {
 	section = 5;
 
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".fifthNav", {right: 0, duration: 0.2});
+	gsap.to(".fifthNav", {right: "-100px", duration: 0.2, delay: 1.5});
+
 	firstPageTl.pause();
 	secondPageTl.pause();
 	thirdPageTl.pause();
@@ -255,6 +291,10 @@ function descentToFifth() {
 
 function ascentToForth() {
 	section = 4;
+
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".forthNav", {right: 0, duration: 0.2});
+	gsap.to(".forthNav", {right: "-100px", duration: 0.2, delay: 1.5});
 
 	gsap.to(".forthStagger", {y: 0, opacity: 1, duration: 0.1, ease: "back"});
 
@@ -269,6 +309,9 @@ function ascentToForth() {
 
 function descentToSixth() {
 	section = 6;
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".sixthNav", {right: 0, duration: 0.2});
+	gsap.to(".sixthNav", {right: "-100px", duration: 0.2, delay: 1.5});
 
 	firstPageTl.pause();
 	secondPageTl.pause();
@@ -287,6 +330,10 @@ function descentToSixth() {
 
 function ascentToFifth() {
 	section = 5;
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".fifthNav", {right: 0, duration: 0.2});
+	gsap.to(".fifthNav", {right: "-100px", duration: 0.2, delay: 1.5});
+
 	gsap.to(".fifthStagger", {y: 0, opacity: 1, duration: 0.1, ease: "back"});
 
 	firstPageTl.pause();
@@ -303,6 +350,9 @@ function ascentToFifth() {
 
 function descentToContact() {
 	section = 7;
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".contactNav", {right: 0, duration: 0.2});
+	gsap.to(".contactNav", {right: "-100px", duration: 0.2, delay: 1.5});
 
 	firstPageTl.pause();
 	secondPageTl.pause();
@@ -318,6 +368,9 @@ function descentToContact() {
 
 function ascentBtnContact() {
 	section = 6;
+	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+	gsap.to(".sixthNav", {right: 0, duration: 0.2});
+	gsap.to(".sixthNav", {right: "-100px", duration: 0.2, delay: 1.5});
 
 	gsap.to(".sixthStagger", {y: 0, opacity: 1, duration: 0.1, ease: "back"});
 
@@ -373,9 +426,9 @@ $(document).ready(function(){
 		document.querySelector("#myBar").style.width = scrolled + "%";
 
 		if (section > 0) {
-			gsap.to(".projectNav", {opacity: 1, stagger: 0.1, duration: 0.1});
+			gsap.to(".projectNav", {opacity: 1, stagger: 0.03, duration: 0.1});
 		} else {
-			gsap.to(".projectNav", {opacity: 0, stagger: 0.1, duration: 0.1});
+			gsap.to(".projectNav", {opacity: 0, stagger: 0.03, duration: 0.1});
 		}
 	});
 
@@ -397,35 +450,35 @@ $(document).ready(function(){
 	escBlink();
 	
 	// onclick animation for homePage
-	$(document).on('click', 'body .diveButton', function() {diveIn();});
+	$(document).on('click', 'body .diveButton , .firstNav', function() {diveIn();});
 
 	// onclick animation for firstPage
-	$(document).on('click', 'body .ascentToHome', function() {ascentToHome();});
-	$(document).on('click', 'body .descentToSecond', function() {descentToSecond();});
+	$(document).on('click', 'body .ascentToHome, .heroPageNav', function() {ascentToHome();});
+	$(document).on('click', 'body .descentToSecond, .secondNav', function() {descentToSecond();});
 
 	// onclick animation for secondPage
-	$(document).on('click', 'body .ascentToFirst', function() {ascentToFirst();});
-	$(document).on('click', 'body .descentToThird', function() {descentToThird();});
+	$(document).on('click', 'body .ascentToFirst, .firstNav', function() {ascentToFirst();});
+	$(document).on('click', 'body .descentToThird, .thirdNav', function() {descentToThird();});
 
 	// onclick animation for thirdPage
-	$(document).on('click', 'body .ascentToSecond', function() {ascentToSecond();});
-	$(document).on('click', 'body .descentToForth', function() {descentToForth();});
+	$(document).on('click', 'body .ascentToSecond, .secondNav', function() {ascentToSecond();});
+	$(document).on('click', 'body .descentToForth, .forthNav', function() {descentToForth();});
 
 	// onclick animation for forthPage
-	$(document).on('click', 'body .ascentToThird', function() {ascentToThird();});
-	$(document).on('click', 'body .descentToFifth', function() {descentToFifth();});
+	$(document).on('click', 'body .ascentToThird, .thirdNav', function() {ascentToThird();});
+	$(document).on('click', 'body .descentToFifth, .fifthNav', function() {descentToFifth();});
 
 	// onclick animation for fifthPage
-	$(document).on('click', 'body .ascentToForth', function() {ascentToForth();});
-	$(document).on('click', 'body .descentToSixth', function() {descentToSixth();});
+	$(document).on('click', 'body .ascentToForth, .forthNav', function() {ascentToForth();});
+	$(document).on('click', 'body .descentToSixth, .sixthNav', function() {descentToSixth();});
 
 	// onclick animation for sixthPage
-	$(document).on('click', 'body .ascentToFifth', function() {ascentToFifth();});
-	$(document).on('click', 'body .descentToContact', function() {descentToContact();});
+	$(document).on('click', 'body .ascentToFifth, .fifthNav', function() {ascentToFifth();});
+	$(document).on('click', 'body .descentToContact, .contactNav', function() {descentToContact();});
 
 	// onclick animation for contactPage
-	$(document).on('click', 'body .ascentBtnContact', function() {ascentBtnContact();});
-	$(document).on('click', 'body .backToTopBtnContact', function() {backToTopBtnContact();});
+	$(document).on('click', 'body .ascentBtnContact, .sixthNav', function() {ascentBtnContact();});
+	$(document).on('click', 'body .backToTopBtnContact, .heroPageNav', function() {backToTopBtnContact();});
 	$(document).on('click', 'body .backToPresentBtnContact', function() {backToPresentBtnContact();});
 
 	// up and down arrow key functions

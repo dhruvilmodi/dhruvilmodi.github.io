@@ -43,7 +43,7 @@
 }
   
 #mySidenav a:hover {
-    right: 0;
+    right: 0 !important;
     cursor: pointer;
 }
 
