@@ -393,6 +393,7 @@ $(document).ready(function(){
 		var scrolled = (winScroll / height) * 100;
 		document.querySelector("#myBar").style.width = scrolled + "%";
 	});
+	
 	section = 0;
 	// cloud animation
 	cloudFn();
