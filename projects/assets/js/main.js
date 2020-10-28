@@ -371,8 +371,14 @@ $(document).ready(function(){
 		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 		var scrolled = (winScroll / height) * 100;
 		document.querySelector("#myBar").style.width = scrolled + "%";
+
+		if (section > 0) {
+			gsap.to(".projectNav", {opacity: 1, stagger: 0.1, duration: 0.1});
+		} else {
+			gsap.to(".projectNav", {opacity: 0, stagger: 0.1, duration: 0.1});
+		}
 	});
-	
+
 	// welcomeContainer
 	welcomeContainerFn();
 	// plane animation

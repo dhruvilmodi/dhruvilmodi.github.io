@@ -23,6 +23,74 @@
     border-radius: 0px 50px 50px 0px;
 }
 
+.sidenav{
+    z-index: 800;
+    transition: 1s;
+}
+
+#mySidenav a {
+    position: fixed;
+    right: -100px;
+    transition: 0.3s;
+    padding: 5px;
+    padding-left: 20px;
+    width: 120px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 0px 0px 25px;
+    z-index: 800;
+}
+  
+#mySidenav a:hover {
+    right: 0;
+    cursor: pointer;
+}
+
+.projectNav{
+    opacity: 0;
+}
+
+.heroPageNav {
+    top: 20vh;
+    background-color: #4CAF5095;
+}
+  
+.firstNav {
+    top: 27vh;
+    background-color: #4CAF5095;
+}
+  
+.secondNav {
+    top: 34vh;
+    background-color: #4CAF5095;
+}
+  
+.thirdNav {
+    top: 41vh;
+    background-color: #aab33695;
+}
+  
+.forthNav {
+    top: 48vh;
+    background-color: #aab33695;
+}
+  
+.fifthNav {
+    top: 55vh;
+    background-color: #aab33695;
+}
+  
+.sixthNav {
+    top: 62vh;
+    background-color: #b3363695;
+}
+  
+.contactNav {
+    top: 69vh;
+    background-color: #b3363695;
+}
+
 object{
     font-family: 'Raleway', sans-serif !important;
 }
@@ -418,10 +486,12 @@ body::-webkit-scrollbar {
     max-height: 200px;
     object-fit: fill;
     border-radius: 5px;
+    transition: 0.5s;
 }
 
 .projectImages:hover{
     box-shadow: 0px 0px 20px #1e90ff;
+    transform: scale(1.05) !important;
 }
 
 .otherProjectImages{
@@ -436,10 +506,13 @@ body::-webkit-scrollbar {
     min-height: 150px;
     max-height: 175px;
     border-radius: 3px;
+    transition: 0.5s;
+
 }
 
 .otherProjectImages:hover{
     box-shadow: 0px 0px 20px #1e90ff;
+    transform: scale(1.05) !important;
 }
 
 .fish1About{
