@@ -117,6 +117,7 @@ function diveTextFn() {
 
 function diveButton() {
 	section = 1;
+	console.log(section);
 
 	$(".aboutFishes").fadeIn("fast");
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
@@ -142,6 +143,8 @@ function diveButton() {
 
 function meterAboutFn() {
 	section = 1;
+	console.log(section);
+
 
 	$(".aboutFishes").fadeIn("fast");
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
@@ -169,6 +172,8 @@ function meterAboutFn() {
 
 function ascentBtnAbout() {
 	section = 0;
+	console.log(section);
+
 
 	homeTl.pause();
 	diveTextTl.play();
@@ -194,6 +199,8 @@ function ascentBtnAbout() {
 
 function descentBtnAbout() {
 	section = 2;
+	console.log(section);
+
 
 	homeTl.pause();
 
@@ -221,6 +228,8 @@ function descentBtnAbout() {
 
 function ascentBtnSkills() {
 	section = 1;
+	console.log(section);
+
 
 	aboutTl.pause();
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
@@ -239,6 +248,8 @@ function ascentBtnSkills() {
 
 function descentBtnSkills() {
 	section = 3;
+	console.log(section);
+
 
 	gsap.to(".skills", {opacity: 1, duration: 0.1, ease: "back"});
 	aboutTl.pause();
@@ -269,6 +280,8 @@ function descentBtnSkills() {
 
 function ascentBtnProjects() {
 	section = 2;
+	console.log(section);
+
 
 	gsap.to(".subMarine", 0.5, {bottom: "47vh", ease:"power1.inOut", delay: 0.2});
 	gsap.to(".project", {y: 0, opacity: 1});
@@ -292,6 +305,8 @@ function ascentBtnProjects() {
 
 function descentBtnProjects() {
 	section = 4;
+	console.log(section);
+
 
 	gsap.to(".project", {y: 0, opacity: 1, duration: 0.1, ease: "back"});
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
@@ -313,6 +328,8 @@ function descentBtnProjects() {
 
 function ascentBtnContact() {
 	section = 3;
+	console.log(section);
+
 
 	gsap.to(meterSurface, 0.5, {stroke: "#999"});
 	gsap.to(meterAbout, 0.5, {stroke: "#999"});
@@ -343,6 +360,8 @@ function ascentBtnContact() {
 
 function backToTopBtnContact() {
 	section = 0;
+	console.log(section);
+
 	
 	gsap.to(meterSurface, 0.5, {stroke: "#000000"});
 	gsap.to(meterAbout, 0.5, {stroke: "#999"});
@@ -395,6 +414,8 @@ $(document).ready(function(){
 	});
 	
 	section = 0;
+	console.log(section);
+
 	// cloud animation
 	cloudFn();
 	// plane animation
