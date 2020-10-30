@@ -2,6 +2,7 @@
 
 // viewports
 var vpX1280 = window.matchMedia("(max-width: 1280px)");
+var vpX414 = window.matchMedia("(max-width: 414px)");
 
 
 var welcomeTl = gsap.timeline();
@@ -140,11 +141,17 @@ function diveTextFn() {
 }
 
 function diveIn() {
-	section = 1;
+	section = 1;	
 
-	gsap.to(".projectNav", {right: "-100px", duration: 0.2});
-	gsap.to(".firstNav", {right: 0, duration: 0.2});
-	gsap.to(".firstNav", {right: "-100px", duration: 0.2, delay: 1.5});
+	if (vpX414.matches) {
+		gsap.to(".projectNav", {right: "-100px", duration: 0.2});
+		gsap.to(".firstNav", {right: 0, duration: 0.2});
+		gsap.to(".firstNav", {right: "-100px", duration: 0.2, delay: 1.5});
+	} else {
+		gsap.to(".projectNav", {right: "-60px", duration: 0.2});
+		gsap.to(".firstNav", {right: 0, duration: 0.2});
+		gsap.to(".firstNav", {right: "-60px", duration: 0.2, delay: 1.5});
+	}
 
 	if (vpX1280.matches) {
 		gsap.to(".subMarine", 0.5, {x: 0, opacity: 1, bottom: "75vh", ease:"power1.inOut"});

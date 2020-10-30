@@ -1019,6 +1019,76 @@ body::-webkit-scrollbar {
         border-radius: 0px 50px 50px 0px;
     }
 
+    /* sidenav */
+
+    .sidenav{
+        z-index: 800;
+        transition: 1s;
+    }
+    
+    #mySidenav a {
+        position: fixed;
+        right: -60px !important;
+        transition: 0.3s;
+        padding: 5px;
+        padding-left: 20px;
+        width: 80px;
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+        border-radius: 5px 0px 0px 25px;
+        z-index: 800;
+    }
+      
+    #mySidenav a:hover {
+        right: 0 !important;
+        cursor: pointer;
+    }
+    
+    .projectNav{
+        opacity: 0;
+    }
+    
+    .heroPageNav {
+        top: 20vh;
+        background-color: #4CAF50;
+    }
+      
+    .firstNav {
+        top: 27vh;
+        background-color: #4CAF50;
+    }
+      
+    .secondNav {
+        top: 34vh;
+        background-color: #4CAF50;
+    }
+      
+    .thirdNav {
+        top: 41vh;
+        background-color: #aab336;
+    }
+      
+    .forthNav {
+        top: 48vh;
+        background-color: #aab336;
+    }
+      
+    .fifthNav {
+        top: 55vh;
+        background-color: #aab336;
+    }
+      
+    .sixthNav {
+        top: 62vh;
+        background-color: #b33636;
+    }
+      
+    .contactNav {
+        top: 69vh;
+        background-color: #b33636;
+    }
+
     /* --------------- welcomeContainer --------------- */
 
     .welcomeContainer{
